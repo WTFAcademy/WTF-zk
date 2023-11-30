@@ -10,7 +10,7 @@
 
 ### 第1章 数学基础
 
-**1.1 整数运算基础**：[Code](./01_Integer/Integer.ipynb) | [教程](./01_Integer/readme.md) 
+**第1讲 整数运算基础**：[Code](./01_Integer/Integer.ipynb) | [教程](./01_Integer/readme.md) 
 
 
 ## Reference
@@ -20,3 +20,5 @@
 2. [zk-learning MOOC](https://zk-learning.org/)
 
 3. [The RareSkills Book of Zero Knowledge](https://www.rareskills.io/zk-book)
+
+4. 
