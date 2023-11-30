@@ -10,7 +10,7 @@
 
 ### 第一章
 
-**第1讲：整数运算基础**：[Code](./01_Integer/Integer.ipynb) | [教程](./01_Integer/Integer.ipynb) 
+**第1讲：整数运算基础**：[Code](./01_Integer/Integer.ipynb) | [教程](./01_Integer/readme.md) 
 
 
 ## Reference
