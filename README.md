@@ -18,3 +18,5 @@
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
 
 2. [zk-learning MOOC](https://zk-learning.org/)
+
+3. [The RareSkills Book of Zero Knowledge](https://www.rareskills.io/zk-book)
