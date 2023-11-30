@@ -8,32 +8,32 @@
 
 整数是没有小数部分的数，可以是正数、负数或零。我们用 $\mathbb{Z}$ 表示所有整数的集合。
 
-$
+$$
 \mathbb{Z} = \lbrace \ldots, -3, -2, -1, 0, 1, 2, 3, \ldots \rbrace
-$
+$$
 
 对于整数 $a \in \mathbb{Z}$，那么我们用 $\lvert a \rvert$ 表示 $a$ 的绝对值，也就是 $a$ 的非负值，不考虑其符号。
 
-$
+$$
 \lvert 69 \rvert = 69
-$
+$$
 
-$
+$$
 \lvert -69 \rvert = 69
-$
+$$
 
 
 我们经常会用到自然数 $\mathbb{N}$，它是整数的子集，包含所有正整数。
 
-$
+$$
 \mathbb{N} = \lbrace 1, 2, 3, \ldots \rbrace
-$
+$$
 
 另外，我们有时会用到非负整数，我们用 $\mathbb{N_0}$ 表示：
 
-$
+$$
 \mathbb{N_0} = \lbrace 0, 1, 2, 3, \ldots \rbrace
-$
+$$
 
 ## 2. 整数运算
 
