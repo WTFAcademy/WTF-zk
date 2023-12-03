@@ -12,6 +12,7 @@
 
 **第2讲 质数基础**：[Code](./02_Prime/Prime.ipynb) | [教程](./02_Prime/readme.md) 
 
+**第3讲 欧几里得算法**：[Code](./03_Euclidean/Euclidean.ipynb) | [教程](./03_Euclidean/readme.md) 
 
 ## Reference
 
