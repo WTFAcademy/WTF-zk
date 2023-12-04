@@ -14,6 +14,8 @@
 
 **第3讲 欧几里得算法**：[Code](./03_Euclidean/Euclidean.ipynb) | [教程](./03_Euclidean/readme.md) 
 
+**第4讲 拓展欧几里得算法**：[Code](./04_EEA/EEA.ipynb) | [教程](./04_EEA/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
