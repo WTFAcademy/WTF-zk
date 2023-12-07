@@ -16,6 +16,8 @@
 
 **第4讲 拓展欧几里得算法**：[Code](./04_EEA/EEA.ipynb) | [教程](./04_EEA/readme.md) 
 
+**第5讲 模运算基础**：[Code](./05_Modular/Modular.ipynb) | [教程](./05_Modular/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
