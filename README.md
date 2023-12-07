@@ -25,3 +25,5 @@
 2. [zk-learning MOOC](https://zk-learning.org/)
 
 3. [The RareSkills Book of Zero Knowledge](https://www.rareskills.io/zk-book)
+
+4. [Number Theory Notes](https://crypto.stanford.edu/pbc/notes/numbertheory/)
