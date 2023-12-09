@@ -18,6 +18,8 @@
 
 **第5讲 模运算基础**：[Code](./05_Modular/Modular.ipynb) | [教程](./05_Modular/readme.md) 
 
+**第6讲 模运算除法**：[Code](./06_Division/Division.ipynb) | [教程](./06_Division/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
