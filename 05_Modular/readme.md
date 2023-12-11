@@ -102,13 +102,25 @@ $$
 
 ## 3. 基础模运算
 
-1. 平移：对于任何整数 $k$，如果 $a \equiv b \pmod{n}$，那么 $a+k \equiv b+k \pmod{n}$。当 $k < 0$ 时，它的效果就是减法。例子：$4 \equiv 7 \pmod{3}$，两边同时加 4，我们得到 $8 \equiv 11 \pmod{3}$，仍然成立。
+1. 平移：对于任何整数 $k$，如果 $a \equiv b \pmod{n}$，那么 $a+k \equiv b+k \pmod{n}$。当 $k < 0$ 时，它的效果就是减法。
 
-2. 缩放：对于任何整数 $k$，如果 $a \equiv b \pmod{n}$，那么 $a \cdot k \equiv b \cdot k \pmod{n}$。例子：$4 \equiv 7 \pmod{3}$，两边同时乘 4，我们得到 $16 \equiv 28 \pmod{3}$，仍然成立。
+    例子：$4 \equiv 7 \pmod{3}$，两边同时加 4，我们得到 $8 \equiv 11 \pmod{3}$，仍然成立。
 
-3. 加法：如果 $a_1 \equiv a_2 \pmod{n}$ 且 $b_1 \equiv b_2 \pmod{n}$，那么有 $a_1 + b_1 \equiv a_2 + b_2 \pmod{n}$。例子：$4 \equiv 7 \pmod{3}$，且 $2 \equiv 5 \pmod{3}$，我们将两边相加，得到 $6 \equiv 12 \pmod{3}$，仍然成立。
+2. 缩放：对于任何整数 $k$，如果 $a \equiv b \pmod{n}$，那么 $a \cdot k \equiv b \cdot k \pmod{n}$。
 
-3. 乘法：如果 $a_1 \equiv a_2 \pmod{n}$ 且 $b_1 \equiv b_2 \pmod{n}$，那么有 $a_1 b_1 \equiv a_2  b_2 \pmod{n}$。例子：$4 \equiv 7 \pmod{3}$，且 $2 \equiv 5 \pmod{3}$，我们将两边相乘，得到 $8 \equiv 35 \pmod{3}$，仍然成立。
+    例子：$4 \equiv 7 \pmod{3}$，两边同时乘 4，我们得到 $16 \equiv 28 \pmod{3}$，仍然成立。
+
+3. 加法：如果 $a_1 \equiv a_2 \pmod{n}$ 且 $b_1 \equiv b_2 \pmod{n}$，那么有 $a_1 + b_1 \equiv a_2 + b_2 \pmod{n}$。
+
+    例子：$4 \equiv 7 \pmod{3}$，且 $2 \equiv 5 \pmod{3}$，我们将两边相加，得到 $6 \equiv 12 \pmod{3}$，仍然成立。
+
+4. 乘法：如果 $a_1 \equiv a_2 \pmod{n}$ 且 $b_1 \equiv b_2 \pmod{n}$，那么有 $a_1 b_1 \equiv a_2  b_2 \pmod{n}$。
+
+    例子：$4 \equiv 7 \pmod{3}$，且 $2 \equiv 5 \pmod{3}$，我们将两边相乘，得到 $8 \equiv 35 \pmod{3}$，仍然成立。
+
+5. 如果整数 $k$ 和 $n$互质，即 $\gcd(k,n) = 1$，且 $k \cdot a \equiv k \cdot b \pmod{n}$ ，那么有 $a \equiv b \pmod{n}$。
+
+    例子：已知 $8 \equiv 14 \pmod{3}$，且 $\gcd(2, 3) = 1$，我们将等式两边同除以 $2$，得到 $4 \equiv 7 \pmod{3}$，仍然成立。
 
 ## 4. 总结
 
