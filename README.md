@@ -6,7 +6,7 @@
 
 ## 入门
 
-### 第1章 数学基础
+### 第1章 算数基础
 
 **第1讲 整数运算基础**：[Code](./01_Integer/Integer.ipynb) | [教程](./01_Integer/readme.md) 
 
@@ -19,6 +19,8 @@
 **第5讲 模运算基础**：[Code](./05_Modular/Modular.ipynb) | [教程](./05_Modular/readme.md) 
 
 **第6讲 模运算除法**：[Code](./06_Division/Division.ipynb) | [教程](./06_Division/readme.md) 
+
+**第7讲 模幂和费马小定理**：[Code](./07_Exp/Exp.ipynb) | [教程](./07_Exp/readme.md) 
 
 ## Reference
 
