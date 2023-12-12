@@ -118,7 +118,12 @@ $$
 
     例子: $4 \equiv 7 \pmod{3}$，且 $2 \equiv 5 \pmod{3}$，我们将两边相乘，得到 $8 \equiv 35 \pmod{3}$，仍然成立。
 
-5. 如果整数 $k$ 和 $n$互质，即 $\gcd(k,n) = 1$，且 $k \cdot a \equiv k \cdot b \pmod{n}$ ，那么有 $a \equiv b \pmod{n}$。
+5. 如果 $d=\gcd(k,n)$，且 $k \cdot a \equiv k \cdot b \pmod{n}$，那么有 $a \equiv b \pmod{n/d}$，即 $a$ 和 $b$ 在模 $n/d$ 下同余。
+
+    例子: $20 \equiv 2 \pmod{6}$，且 $\gcd(2, 6) = 2$，我们将两边和模同除以 $2$，得到 $10 \equiv 1 \pmod{3}$，仍然成立。
+
+
+6. 如果整数 $k$ 和 $n$互质，即 $\gcd(k,n) = 1$，且 $k \cdot a \equiv k \cdot b \pmod{n}$ ，那么有 $a \equiv b \pmod{n}$。
 
     例子：已知 $8 \equiv 14 \pmod{3}$，且 $\gcd(2, 3) = 1$，我们将等式两边同除以 $2$，得到 $4 \equiv 7 \pmod{3}$，仍然成立。
 
