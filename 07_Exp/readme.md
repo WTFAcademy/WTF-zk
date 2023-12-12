@@ -1,12 +1,12 @@
 ---
-title: 07. 模幂和费马小定理
+title: 07. 费马小定理
 tags:
   - zk
   - basic
   - chinese remainder theorem
 ---
 
-# WTF zk教程第7讲：模幂和费马小定理
+# WTF zk教程第7讲：费马小定理
 
 之前我们介绍了模运算中的加减乘除，这一讲，我们介绍模幂和小费马定理。
 
