@@ -22,6 +22,8 @@
 
 **第7讲 费马小定理**：[Code](./07_Exp/Exp.ipynb) | [教程](./07_Exp/readme.md) 
 
+**第8讲 中国剩余定理**：[Code](./08_Remainder/08_Remainder.ipynb) | [教程](./08_Remainder/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
