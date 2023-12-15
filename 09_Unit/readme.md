@@ -79,12 +79,7 @@ $$
 
 **证明**
 
-<<<<<<< Updated upstream
-<details><summary>点我展开证明👀</summary>
 我们要证明 ${ \mathbb{Z}_{mn}^* }$ 和 $\mathbb{Z}_m^* \times \mathbb{Z}_n^*$ 存在双射关系，即 ${\mathbb{Z}_{mn}^*}$ 和 $\mathbb{Z}_m^* \times \mathbb{Z}_n^*$ 的元素一一对应，那么他们的元素个数就是相等的。而左边元素的个数是 $\phi(mn)$，右边的是 $\phi(m)\phi(n)$，因此 $\phi(mn) = \phi(m)\phi(n)$。
-=======
-我们要证明 ${\mathbb{Z}_{mn}^*}$ 和 $\mathbb{Z}_m^* \times \mathbb{Z}_n^*$ 存在双射关系，即 ${\mathbb{Z}_{mn}^*}$ 和 $\mathbb{Z}_m^* \times \mathbb{Z}_n^*$ 的元素一一对应，那么他们的元素个数就是相等的。而左边元素的个数是 $\phi(mn)$，右边的是 $\phi(m)\phi(n)$，因此 $\phi(mn) = \phi(m)\phi(n)$。
->>>>>>> Stashed changes
 
 我们建立一个映射关系 $f: \mathbb{Z}_{mn}^* \to{\mathbb{Z}_m^* \times \mathbb{Z}_n^*}$，它对模 $m$ 和模 $n$ 的余数 $a, b$ 都是唯一确定的，所以这个映射是定义明确的。
 
