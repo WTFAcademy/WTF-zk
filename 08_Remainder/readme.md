@@ -170,7 +170,7 @@ $$
 
 其中 $p_1 = p^{-1} \pmod{q}$， $q_1 = q^{-1} \pmod{p}$。
 
-#### 证明
+<details><summary>点我展开证明👀</summary>
 
 用上式模 $p$，我们得到 $x \equiv aqq_1 \pmod{p}$，因为 $bpp_1$ 可以被 $p$ 整除。又因为 $qq_1\pmod{p} = 1$，因此有 $x \equiv a \pmod{p}$，满足条件。
 
@@ -188,6 +188,7 @@ $$
 
 3. 因为 $p$ 和 $q$ 互质，有 $pq|y-x$，因此 $y \equiv x \pmod{pq}$，解是唯一的。
 
+</details>
 #### 示例
 
 让我们用中国剩余定理来解 $3.2$ 中的示例：
@@ -239,9 +240,11 @@ $$
 
 其中 $b_i = M/m_i$（即除了 $m_i$ 以外的所有模数的乘积）， $b_i'=b_i^{-1} \pmod{m_i}$（即模 $m_i$ 下 $b_i$ 的逆元）。
 
-#### 证明
+<details><summary>点我展开证明👀</summary>
 
 用通解模 $m_i$，得到 $x \equiv a_ib_ib_i' \pmod{m_i}$，因为除了第 $i$ 项，其余项的中都可以被 $m_i$ 整除。又因为 $b_ib_i' \equiv 1 \pmod{m_i}$，因此有 $x \equiv a_i \pmod{m_i}$，满足条件，是方程组的解。
+
+</details>
 
 ### 4.3 解决物不知数问题
 
