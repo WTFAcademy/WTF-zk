@@ -78,13 +78,19 @@ $$
 
 
 <details><summary>点我展开证明👀</summary>
-我们要证明 ${\mathbb{Z}_{mn}^*}$ 和 $\mathbb{Z}_m^* \times \mathbb{Z}_n^*$ 存在双射关系，即 ${\mathbb{Z}_{mn}^*}$ 和 $\mathbb{Z}_m^* \times \mathbb{Z}_n^*$ 的元素一一对应，那么他们的元素个数就是相等的。而左边元素的个数是 $\phi(mn)$，右边的是 $\phi(m)\phi(n)$，因此 $\phi(mn) = \phi(m)\phi(n)$。
+我们要证明 ${ \mathbb{Z}_{mn}^* }$ 和 $\mathbb{Z}_m^* \times \mathbb{Z}_n^*$ 存在双射关系，即 ${\mathbb{Z}_{mn}^*}$ 和 $\mathbb{Z}_m^* \times \mathbb{Z}_n^*$ 的元素一一对应，那么他们的元素个数就是相等的。而左边元素的个数是 $\phi(mn)$，右边的是 $\phi(m)\phi(n)$，因此 $\phi(mn) = \phi(m)\phi(n)$。
 
-我们建立一个映射关系 $f: {\mathbb{Z}_{mn}^*} \to \mathbb{Z}_m^* \times \mathbb{Z}_n^*$，因为对于任意 $x \in {\mathbb{Z}_{mn}^*}$，它对模 $m$ 和模 $n$ 的余数 $a, b$ 都是唯一确定的，所以这个映射是定义明确的。
+我们建立一个映射关系 $f: \mathbb{Z}_{mn}^* \to{\mathbb{Z}_m^* \times \mathbb{Z}_n^*}$，它对模 $m$ 和模 $n$ 的余数 $a, b$ 都是唯一确定的，所以这个映射是定义明确的。
 
 **满射**: 由于 $m$ 和 $n$ 互质，通过中国剩余定理，我们知道对于任意的 $(a, b) \in \mathbb{Z}_m^* \times \mathbb{Z}_m^*$，考虑同余方程系统：
 
-$ \begin{cases} x \equiv a \pmod{n}, \\ x \equiv b \pmod{m}. \end{cases} $
+$$ 
+x \equiv a \pmod{n}
+$$
+
+$$
+x \equiv b \pmod{m}
+$$
 
 ，有唯一解 $x$。因此，对于 $\mathbb{Z}_m^* \times \mathbb{Z}_m^*$ 中的任意元素，都存在一个 $x$ 使得 $f(x) = (a, b)$。因此 $f$ 是满射，也就是说映射覆盖了整个集合 $\mathbb{Z}_m^* \times \mathbb{Z}_n^*$。
 
