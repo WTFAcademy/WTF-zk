@@ -84,21 +84,15 @@ $$
 
 **满射**: 由于 $m$ 和 $n$ 互质，通过中国剩余定理，我们知道对于任意的 $(a, b) \in \mathbb{Z}_m^* \times \mathbb{Z}_m^*$，考虑同余方程系统：
 
-$$ 
-x \equiv a \pmod{n}
-$$
+$x \equiv a \pmod{n}$
 
-$$
-x \equiv b \pmod{m}
-$$
+$x \equiv b \pmod{m}$
 
 ，有唯一解 $x$。因此，对于 $\mathbb{Z}_m^* \times \mathbb{Z}_m^*$ 中的任意元素，都存在一个 $x$ 使得 $f(x) = (a, b)$。因此 $f$ 是满射，也就是说映射覆盖了整个集合 $\mathbb{Z}_m^* \times \mathbb{Z}_n^*$。
 
 **单射**: 假设有两个不同的元素 $x_1$ 和 $x_2$。就有 $f(x_1) = f(x_2)$，也就是 
 
-$$
-(x_1 \mod n, x_1 \mod m) = (x_2 \mod n, x_2 \mod m)
-$$
+$(x_1 \mod n, x_1 \mod m) = (x_2 \mod n, x_2 \mod m)$
 
 这意味着 $x_1 \equiv x_2 \pmod{n}$ 且 $x_1 \equiv x_2 \pmod{m}$。因此有 $x_1 \equiv x_2 \pmod{nm}$。因此，$x_1$ 和 $x_2$ 在模 $nm$ 下是相等的，证明了 $f$ 是单射。
 
