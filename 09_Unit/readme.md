@@ -3,7 +3,6 @@ title: 09. 欧拉函数
 tags:
   - zk
   - basic
-  - euler's thereom
   - euler's totient function 
 ---
 
