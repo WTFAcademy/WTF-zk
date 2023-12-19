@@ -26,6 +26,8 @@
 
 **第9讲 欧拉函数**：[Code](./09_Unit/Unit.ipynb) | [教程](./09_Unit/readme.md) 
 
+**第10讲 欧拉定理**：[Code](./10_Euler/Euler.ipynb) | [教程](./10_Euler/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
