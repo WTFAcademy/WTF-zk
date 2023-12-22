@@ -4,9 +4,9 @@
 
 > 我们最近在学习zero-knowledge proof，巩固一下细节，也写一个“WTF zk极简入门”，供小白们使用（编程大佬可以另找教程），每周更新1-3讲。
 
-## 入门
+## 数学基础
 
-### 第1章 数论基础
+### 第1章 数论入门
 
 **第1讲 整数运算基础**：[Code](./01_Integer/Integer.ipynb) | [教程](./01_Integer/readme.md) 
 
@@ -27,8 +27,6 @@
 **第9讲 欧拉函数**：[Code](./09_Unit/Unit.ipynb) | [教程](./09_Unit/readme.md) 
 
 **第10讲 欧拉定理**：[Code](./10_Euler/Euler.ipynb) | [教程](./10_Euler/readme.md) 
-
-## 里程碑
 
 **里程碑01 RSA算法** [Code](./MS01_RSA/RSA.ipynb) | [教程](./MS01_RSA/readme.md) 
 
