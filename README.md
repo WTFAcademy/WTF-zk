@@ -34,6 +34,7 @@
 
 **第11讲 群**： [教程](./11_Group/readme.md) 
 
+**第12讲 子群**： [教程](./12_Subgroup/readme.md) 
 
 ## Reference
 
