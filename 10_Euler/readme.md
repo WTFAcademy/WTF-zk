@@ -81,7 +81,7 @@ $$
 j = qk + r
 $$
 
-其中 $0 \ge r < k$。然后将它代入原式，有
+其中 $0 \le r < k$。然后将它代入原式，有
 
 $$
 a^j = a^{qk+r} = a^{qk}a^r = (a^{k})^qa^r \equiv 1 \pmod{n}
@@ -93,7 +93,7 @@ $$
 a^r \equiv 1 \pmod{n}
 $$
 
-根据阶的定义，$k$ 是能让 $a^k \equiv 1 \pmod{n}$ 的最小整数，又因为 $0 \ge r < k$，所以 $r = 0$，有：
+根据阶的定义，$k$ 是能让 $a^k \equiv 1 \pmod{n}$ 的最小整数，又因为 $0 \le r < k$，所以 $r = 0$，有：
 
 $$
 j = qk
