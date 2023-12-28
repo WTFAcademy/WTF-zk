@@ -36,7 +36,7 @@
 
 **第12讲 子群**： [教程](./12_Subgroup/readme.md) 
 
-**第13讲 陪集**： [教程](./13_Coset/readme.md) 
+**第13讲 陪集和拉格朗日定理**： [教程](./13_Coset/readme.md) 
 
 ## Reference
 
