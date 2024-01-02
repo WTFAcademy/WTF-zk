@@ -38,9 +38,11 @@
 
 **第13讲 陪集和拉格朗日定理**： [教程](./13_Coset/readme.md) 
 
-**第14讲 商群**： [教程](./14_Quotient/readme.md) 
+**第14讲 正规子群和商群**： [教程](./14_Quotient/readme.md) 
 
 **第15讲 同态和同构**： [教程](./15_Homomorphism/readme.md) 
+
+**第16讲 Abel群**： [教程](./16_Abel/readme.md) 
 
 ## Reference
 
