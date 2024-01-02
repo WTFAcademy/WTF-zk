@@ -4,8 +4,7 @@ tags:
   - zk
   - abstract algebra
   - group theory
-  - abel group
-  - cyclic group
+  - abelian group
 ---
 
 # WTF zk教程第16讲：Abel群和循环群
