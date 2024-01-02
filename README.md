@@ -40,7 +40,7 @@
 
 **第14讲 商群**： [教程](./14_Quotient/readme.md) 
 
-**第15讲 同态和同构**： [教程](./15_Quotient/readme.md) 
+**第15讲 同态和同构**： [教程](./15_Homomorphism/readme.md) 
 
 ## Reference
 
