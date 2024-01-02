@@ -1,5 +1,5 @@
 ---
-title: 16. Abel群和循环群
+title: 16. Abel群
 tags:
   - zk
   - abstract algebra
@@ -7,7 +7,7 @@ tags:
   - abelian group
 ---
 
-# WTF zk教程第16讲：Abel群和循环群
+# WTF zk教程第16讲：Abel群
 
 这一讲，我们将介绍两类在密码学中常用的群：Abel群和循环群。Abel群是满足交换律的群；循环群由一个元素循环生成，是特殊的Abel群。
 
