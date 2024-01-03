@@ -53,3 +53,5 @@
 3. [The RareSkills Book of Zero Knowledge](https://www.rareskills.io/zk-book)
 
 4. [Number Theory Notes](https://crypto.stanford.edu/pbc/notes/numbertheory/)
+
+5. [密码学的数学基础](https://space.bilibili.com/552018206/channel/collectiondetail?sid=436262)
