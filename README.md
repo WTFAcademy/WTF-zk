@@ -44,6 +44,8 @@
 
 **第16讲 Abel群**： [教程](./16_Abel/readme.md) 
 
+**第17讲 循环群**： [教程](./17_Cyclic/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
