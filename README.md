@@ -46,6 +46,8 @@
 
 **第17讲 循环群**： [教程](./17_Cyclic/readme.md) 
 
+**第18讲 群的直积**： [教程](./18_DirectProduct/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
