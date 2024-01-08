@@ -117,7 +117,7 @@ $$
 
 现在我们可以通过群同构和直积更好地理解中国剩余定理：
 
-如果 $m_i$ 两两互质，那么映射 $f: x \mod M \to (x \mod m_1,..., x \mod m_n) $ 定义了一个 $\mathbb{Z}_M$ 到 $\mathbb{Z}_{m_1} \times ... \times \mathbb{Z}_{m_n}$ 的群同构。这个映射也被称为中国剩余映射。
+如果 $m_i$ 两两互质，那么映射 $f: x \mod M \to (x \mod m_1,..., x \mod m_n)$ 定义了一个 $\mathbb{Z}_M$ 到 $\mathbb{Z}_{m_1} \times ... \times \mathbb{Z}_{m_n}$ 的群同构。这个映射也被称为中国剩余映射。
 
 <details><summary>点我展开证明👀</summary>
 
