@@ -117,7 +117,7 @@ $$
 
 现在我们可以通过群同构和直积更好地理解中国剩余定理：
 
-如果 $m_i$ 两两互质，那么映射 $f: x \mod M \to (x \mod m_1,..., x \mod m_n)$ 定义了一个 $\mathbb{Z}_M$ 到 $\mathbb{Z}_{m_1} \times ... \times \mathbb{Z}_{m_n}$ 的群同构。这个映射也被称为中国剩余映射。
+如果 $m_i$ 两两互质，那么映射 $f: x \mod M \to (x \mod m_1,..., x \mod m_n)$ 定义了一个 $Z_M$ 到 $Z_{m_1} \times ... \times Z_{m_n}$ 的群同构。这个映射也被称为中国剩余映射。
 
 <details><summary>点我展开证明👀</summary>
 
@@ -127,11 +127,11 @@ $$
 
 **同构**
 
-$m_i$ 两两互质， $\mathbb{Z}_{m_i}$ 皆为循环群，且 $\mathbb{Z}_{m_i}$ 的阶为 $m_i$。我们很容易将直积的性质3推广至 $n$ 个群的情况，得到结论 $\mathbb{Z}_{m_1} \times ... \times \mathbb{Z}_{m_n}$ 为循环群，它的阶为 $M = m_1 \cdot m_2 \cdot... \cdot m_n$。运用循环群的同构性质，任意 $M$ 阶有限循环群都同构于整数模 $M$ 加法群 $\mathbb{Z}_M$。因此 $\mathbb{Z}_M$ 与 $\mathbb{Z}_{m_1} \times ... \times \mathbb{Z}_{m_n}$ 同构。证毕。
+$m_i$ 两两互质， $Z_{m_i}$ 皆为循环群，且 $Z_{m_i}$ 的阶为 $m_i$。我们很容易将直积的性质3推广至 $n$ 个群的情况，得到结论 $Z_{m_1} \times ... \times Z_{m_n}$ 为循环群，它的阶为 $M = m_1 \cdot m_2 \cdot... \cdot m_n$。运用循环群的同构性质，任意 $M$ 阶有限循环群都同构于整数模 $M$ 加法群 $Z_M$。因此 $Z_M$ 与 $Z_{m_1} \times ... \times Z_{m_n}$ 同构。证毕。
 
 </details>
 
-由于 $\mathbb{Z}_M$ 和 $\mathbb{Z}_{m_1} \times ... \times \mathbb{Z}_{m_n}$ 同构，它们之间的元素一一对应，因此同余方程组存在模M下的唯一解。
+由于 $Z_M$ 和 $Z_{m_1} \times ... \times Z_{m_n}$ 同构，它们之间的元素一一对应，因此同余方程组存在模M下的唯一解。
 
 ## 4. 总结
 
