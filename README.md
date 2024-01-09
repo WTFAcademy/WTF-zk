@@ -48,6 +48,8 @@
 
 **第18讲 群的直积**： [教程](./18_DirectProduct/readme.md) 
 
+**第19讲 离散对数问题**： [教程](./19_DLP/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
