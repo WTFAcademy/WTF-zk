@@ -1,5 +1,5 @@
 ---
-title: Milestone 01. RSA算法
+title: 里程碑 01. RSA算法
 tags:
   - zk
   - basic
@@ -21,13 +21,13 @@ RSA（Rivest–Shamir–Adleman）算法由 Ron Rivest、Adi Shamir 和 Leonard 
 
 - 应用广泛：距离 RSA 发明已经将近 50 年了，它仍然被广泛应用于加密通信、数字证书、身份验证等方面。
 
-![](./img/11-1.png)
+![](./img/MS01-1.png)
 
 ## 2. 算法步骤
 
 RSA 算法分为 3 步：生成一对公钥和私钥，使用公钥加密明文，使用私钥解密并恢复明文。下面我们逐步讲解。
 
-![](./img/11-2.png)
+![](./img/MS01-2.png)
 
 ### 第 1 步 密钥生成
 
