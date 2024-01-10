@@ -28,7 +28,7 @@
 
 **第10讲 欧拉定理**：[Code](./10_Euler/Euler.ipynb) | [教程](./10_Euler/readme.md) 
 
-**里程碑01 RSA算法** [Code](./MS01_RSA/RSA.ipynb) | [教程](./MS01_RSA/readme.md) 
+**里程碑01 RSA算法** [Code](./MS01_RSA/RSA.ipynb) | [教程](./MS01_RSA/readme.md) | [论文](./papers/RSA_paper.pdf)
 
 ### 第2章 抽象代数入门
 
@@ -50,6 +50,7 @@
 
 **第19讲 离散对数问题**： [教程](./19_DLP/readme.md) 
 
+**里程碑02 Diffie-Hellman 密钥交换算法** [Code](./MS02_DH/Difie_Hellman.ipynb) | [教程](./MS02_DH/readme.md) | [论文](./papers/Diffie_Hellman.pdf)
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
