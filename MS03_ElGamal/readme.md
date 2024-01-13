@@ -9,7 +9,7 @@ tags:
 
 # WTF zk 教程 里程碑 03：ElGamal 算法
 
-在这一讲中，我们将介绍 ElGamal 加密和签名算法。ElGamal 是一种基于离散对数问题的公钥密码学算法，由 ElGmal 在1985年提出，将 Diffie-Hellman 密钥交换算法推广到了加密和数字签名领域。
+在这一讲中，我们将介绍 ElGamal 加密和签名算法。ElGamal 是一种基于离散对数问题的公钥密码学算法，由 ElGamal 在1985年提出，将 Diffie-Hellman 密钥交换算法推广到了加密和数字签名领域。
 
 ![](./img/MS03-1.png)
 
