@@ -54,7 +54,7 @@
 
 **里程碑03 ElGamal 加密和签名算法** [Code](./MS03_ElGamal/ElGamal.ipynb) | [教程](./MS03_ElGamal/readme.md) | [论文](./papers/ElGamal.pdf)
 
-### 第2章 抽象代数: 环和域
+### 第3章 抽象代数: 环和域
 
 **第20讲 环**： [教程](./20_Ring/readme.md) 
 
