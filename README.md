@@ -58,6 +58,8 @@
 
 **第20讲 环**： [教程](./20_Ring/readme.md) 
 
+**第21讲 理想和商环**： [教程](./21_Ideal/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
