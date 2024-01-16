@@ -30,7 +30,7 @@
 
 **里程碑01 RSA算法** [Code](./MS01_RSA/RSA.ipynb) | [教程](./MS01_RSA/readme.md) | [论文](./papers/RSA_paper.pdf)
 
-### 第2章 抽象代数入门
+### 第2章 抽象代数: 群论
 
 **第11讲 群**： [教程](./11_Group/readme.md) 
 
@@ -54,6 +54,11 @@
 
 **里程碑03 ElGamal 加密和签名算法** [Code](./MS03_ElGamal/ElGamal.ipynb) | [教程](./MS03_ElGamal/readme.md) | [论文](./papers/ElGamal.pdf)
 
+### 第3章 抽象代数: 环和域
+
+**第20讲 环**： [教程](./20_Ring/readme.md) 
+
+**第21讲 理想和商环**： [教程](./21_Ideal/readme.md) 
 
 ## Reference
 
