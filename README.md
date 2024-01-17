@@ -60,6 +60,8 @@
 
 **第21讲 理想和商环**： [教程](./21_Ideal/readme.md) 
 
+**第22讲 环同态和同构**： [教程](./22_RingHomo/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
