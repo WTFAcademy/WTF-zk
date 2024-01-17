@@ -110,7 +110,7 @@ Alice 利用密钥和消息哈希生成签名：
 Bob 可以利用公开的信息 $(g, p, r, s, M)$ 来验证签名是否真实。
 
 1. **验证参数：** 如果满足 $0<r<p$ 且 $0 < s<p-1$，可以进行下一步。
-2. **验证签名：** 如果 $g^{H(M)} \equiv y^rr^s \pmod{p}$ 成立，则签名有效。
+2. **验证签名：** 如果 $g^{H(M)} \equiv y^rr^s \pmod{p-1}$ 成立，则签名有效。
 
 因为 $y^rr^s = g^{xr}r^{s}=g^{xr}g^{ks} = g^{xr+ks}$，而 $xr+ks = xr +k(k^{-1}(H(M) - xr)) = H(M) \pmod{p-1}$。所以，如果 $g^{H(M)} \equiv y^rr^s \pmod{p}$，也就是 $xr+ks = H(M) \pmod{p-1}$ 成立，那么签名就是有效的。
 
