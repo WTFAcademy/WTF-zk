@@ -88,23 +88,11 @@ tags:
 
 </details>
 
-**性质6. 同态像 $\text{Im}(f)$ 是 $S$ 的子环。** 
+**性质6. 同态像 $\text{Im}(f)$ 是 $S$ 的理想。** 
 
 <details><summary>点我展开证明👀</summary>
 
-**加法子群**
-
-对于任意 $a, b \in R$，有 $a - b \in R$。也就意味着，对于任意 $f(a), f(b) \in \text{Im}(f)$，有 $f(a) - f(b) = f(a - b) \in \text{Im}(f)$。同态像 $\text{Im}(f)$ 是 $S$ 的加法子群。
-
-**乘法单位元保持**
-
-见性质1。
-
-**乘法封闭**
-
-对于任意 $a, b \in R$，有 $ab \in R$。也就意味着，对于任意 $f(a), f(b) \in \text{Im}(f)$，有 $f(a)f(b) = f(ab) \in \text{Im}(f)$。同态像 $\text{Im}(f)$ 在乘法下封闭。
-
-综上所述，$\text{im}(f)$ 是 $S$ 的子环。证毕。
+根据定义 $\text{Im}(f) = f(R)$，又因为环 $R$ 是自身的平凡理想，根据理想的保持，同态像 $\text{Im}(f) = f(R)$ 是环 $S$ 的理想。证毕。
 
 </details>
 
