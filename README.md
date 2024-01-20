@@ -62,6 +62,10 @@
 
 **第22讲 环同态和同构**： [教程](./22_RingHomo/readme.md) 
 
+**第23讲 域**： [教程](./23_Field/readme.md) 
+
+**第23讲 多项式基础**： [教程](./24_Polynomial/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
