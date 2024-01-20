@@ -39,7 +39,7 @@ tags:
 
     > 有的书本中，环不需要有乘法单位元，与咱们的定义不同。咱们把不带乘法单位元的结构叫做[伪环](https://en.wikipedia.org/wiki/Rng_(algebra))。
 
-3. 乘法对于加法满足分配律，即对对于任意 $a, b, c \in R$，有
+3. 乘法对于加法满足分配律，即对于任意 $a, b, c \in R$，有
 
     - $a \cdot (b + c) = a \cdot b + a \cdot c$
     - $(a + b) \cdot c = a \cdot c + b \cdot c$。
