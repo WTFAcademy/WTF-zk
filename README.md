@@ -64,7 +64,7 @@
 
 **第23讲 域**： [教程](./23_Field/readme.md) 
 
-**第23讲 多项式基础**： [教程](./24_Polynomial/readme.md) 
+**第24讲 多项式基础**： [教程](./24_Polynomial/readme.md) 
 
 ## Reference
 
