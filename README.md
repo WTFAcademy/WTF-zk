@@ -66,6 +66,8 @@
 
 **第24讲 多项式基础**： [教程](./24_Polynomial/readme.md) 
 
+**第25讲 多项式环**： [教程](./25_PolyRing/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
