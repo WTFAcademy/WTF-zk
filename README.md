@@ -68,6 +68,10 @@
 
 **第25讲 多项式环**： [教程](./25_PolyRing/readme.md) 
 
+**第26讲 域扩展**： [教程](./25_PolyRing/readme.md) 
+
+**第27讲 有限域**： [教程](./25_PolyRing/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
