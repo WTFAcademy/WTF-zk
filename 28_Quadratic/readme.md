@@ -4,7 +4,7 @@ tags:
   - zk
   - abstract algebra
   - field
-  - finite field
+  - number theory
   - quadratic residue
 ---
 
