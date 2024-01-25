@@ -68,9 +68,11 @@
 
 **第25讲 多项式环**： [教程](./25_PolyRing/readme.md) 
 
-**第26讲 域扩展**： [教程](./25_PolyRing/readme.md) 
+**第26讲 域扩展**： [教程](./26_FieldExtension/readme.md) 
 
-**第27讲 有限域**： [教程](./25_PolyRing/readme.md) 
+**第27讲 有限域**： [教程](./27_GaloisField/readme.md) 
+
+**第28讲 二次剩余**： [教程](./28_Quadratic/readme.md) 
 
 ## Reference
 
