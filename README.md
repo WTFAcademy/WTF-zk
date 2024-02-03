@@ -76,6 +76,8 @@
 
 **里程碑04 Goldwasser-Micali (GM) 算法** [Code](./MS04_ProbEncryption/GM.ipynb) | [教程](./MS04_ProbEncryption/readme.md) | [论文](./papers/Probabilistic_Encryption.pdf)
 
+**里程碑05 初探零知识证明** [教程](./MS05_zkExample/readme.md) | [论文](./papers/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf)
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)

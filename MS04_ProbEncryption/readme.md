@@ -5,6 +5,7 @@ tags:
   - basic
   - cryptography
   - GM
+  - quadratic residual
 ---
 
 # WTF zk 教程 里程碑 04：Goldwasser-Micali (GM) 算法
