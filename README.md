@@ -78,6 +78,11 @@
 
 **里程碑05 初探零知识证明** [教程](./MS05_zkExample/readme.md) | [论文](./papers/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf)
 
+### 第4章 椭圆曲线
+
+**第29讲 椭圆曲线基础**：[Code](./29_EllipticCurve/EllipticCurve.ipynb) | [教程](./29_EllipticCurve/readme.md) 
+
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
