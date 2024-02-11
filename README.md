@@ -82,6 +82,7 @@
 
 **第29讲 椭圆曲线基础**：[Code](./29_EllipticCurve/EllipticCurve.ipynb) | [教程](./29_EllipticCurve/readme.md) 
 
+**第30讲 有限域上的椭圆曲线**：[Code](./30_FiniteEC/FiniteEC.ipynb) | [教程](./30_FiniteEC/readme.md) 
 
 ## Reference
 
