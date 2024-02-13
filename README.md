@@ -84,6 +84,8 @@
 
 **第30讲 有限域上的椭圆曲线**：[Code](./30_FiniteEC/FiniteEC.ipynb) | [教程](./30_FiniteEC/readme.md) 
 
+**第31讲 椭圆曲线离散对数问题**：[Code](./31_ECDLP/ECDLP.ipynb) | [教程](./31_ECDLP/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
