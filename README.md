@@ -86,6 +86,8 @@
 
 **第31讲 椭圆曲线离散对数问题**：[Code](./31_ECDLP/ECDLP.ipynb) | [教程](./31_ECDLP/readme.md) 
 
+**第32讲 椭圆曲线密码学**：[Code](./32_ECC/ECC.ipynb) | [教程](./32_ECC/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
