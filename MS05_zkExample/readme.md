@@ -52,7 +52,7 @@ tags:
 
 **步骤 2：** Bob 随机选择一个比特（布尔值） $b$，要么是 0，要么是 1，然后将 $b$ 发给 Alice。
 
-**步骤 3：** 如果 $b = 1$，Alice 发送 $z = r$ 给 Bob；如果 $b = 0$，则发送 $z = rx = r \sqrt{y} \mod N$。
+**步骤 3：** 如果 $b = 0$，Alice 发送 $z = r$ 给 Bob；如果 $b = 1$，则发送 $z = rx = r \sqrt{y} \mod N$。
 
 **步骤 4：** Bob 接收到 $z$ 后，他验证 $z^2$ 是否等于 $s \cdot y^b \mod N$。如果等式成立，Bob 在这次交互中接受证明。
 
