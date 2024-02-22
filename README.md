@@ -99,3 +99,5 @@
 4. [Number Theory Notes](https://crypto.stanford.edu/pbc/notes/numbertheory/)
 
 5. [密码学的数学基础](https://space.bilibili.com/552018206/channel/collectiondetail?sid=436262)
+
+6. [Cryptography 101 for Blockchain Developers by OpenZeppelin](https://www.youtube.com/watch?v=9TFEBuANioo)
