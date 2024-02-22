@@ -4,9 +4,9 @@ KZG 承诺又叫做 KZG10 承诺,是由 Kate, Zaverucha, and Goldberg 三位作�
 
 ## **1.多项式表示**
 
-多项式 P(x)可以用系数表述,如$p(x)=6x^5+0x^4+0x^3+0x^2+0x^1-55$简单可表示为
+多项式 P(x)可以用系数表述,如 $p(x)=6x^5+0x^4+0x^3+0x^2+0x^1-55$ 简单可表示为
 
-$p(x)=6x^5-55$,所以对于一个多项式 P(x)可以表示为$\sum_{0}^{n}c_ix^i$,其中$c_i$表示对应位置的系数.
+$p(x)=6x^5-55$,所以对于一个多项式 P(x)可以表示为 $$\sum_{0}^{n}c_ix^i$$,其中$c_i$表示对应位置的系数.
 
 ## **2.Commitment Scheme**
 
@@ -69,15 +69,15 @@ SNARK 要求 1.size of proof=O(log(d)) 2.time of Verification =O(log(d)),d 为 d
 
 这里只简单提一下椭圆曲线,更多细节可参考阅读 [basic  elliptic curve cryptography series](https://andrea.corbellini.name/2015/05/17/elliptic-curve-cryptography-a-gentle-introduction/).
 
-假设$\mathbb{G}$是由椭圆曲线点构成的群,g 是$\mathbb{G}$的生成元.
+假设 $\mathbb{G}$ 是由椭圆曲线点构成的群,g 是 $\mathbb{G}$ 的生成元.
 
-用符号[x]表示$g^x$.由于**椭圆曲线的****离散对数****难题**,给定 g 与[x],**但无法逆推出 x.**
+用符号[x]表示 $g^x$.由于**椭圆曲线的****离散对数****难题**,给定 g 与[x],**但无法逆推出 x.**
 
 ### **3.2 Trusted Setup**
 
 对多项式进行承诺,需要一个与多项式系数数量一样长的 structured reference string（SRS）。该字符串必须按照指定的方式生成，并提供给任何希望承诺多项式的参与方。生成过程会产生一个秘密值 s,也称为 trapdoor 或者 toxic waste），必须将 s 其丢弃。换句话说，生成参考字符串的任何一方都知道一个信息片段，该信息可以破坏多项式承诺方案的 binding 性质，从而破坏使用该承诺方案的任何证明系统的正确性。生成这样的 SRS 过程被称为**可信设置（trusted setup).**
 
-设 D 是希望支持承诺的多项式 P(x)的最高次数上界, SRS =$(g, g^s , g^{s^2} , . . . , g^{s^D})$.
+设 D 是希望支持承诺的多项式 P(x)的最高次数上界, SRS = $(g, g^s , g^{s^2} , . . . , g^{s^D})$.
 
 目前主流是通过 **Ceremony** 生成 SRS,关于 **Ceremony** 的详细细节可参考 [https://mirror.xyz/privacy-scaling-explorations.eth/naTdx-u7kyirczTLSAnWwH6ZdedfTQu1yCWQj1m_n-E](https://mirror.xyz/privacy-scaling-explorations.eth/naTdx-u7kyirczTLSAnWwH6ZdedfTQu1yCWQj1m_n-E)
 
@@ -96,7 +96,7 @@ Ceremony 的思想与 MPC 类似，让 N 名参与者生成自己的秘密，并
 
 ## **4.计算 proof**
 
-我们需要 proof $\pi$证明 P(z)=v.构造$\pi$前先引入一些 polynomial math.
+我们需要 proof $\pi$证明 P(z)=v.构造 $\pi$前先引入一些 polynomial math.
 
 > **P(x)的零点为 m，即 P(m)=0.那么 P(x)一定能整除（x-m),即存在一个商多项式 q(x).使得**
 >
@@ -106,11 +106,11 @@ Ceremony 的思想与 MPC 类似，让 N 名参与者生成自己的秘密，并
 
 想要证明的是 **p(z)=v**,结合上述 polynomial math.可做如下变换.
 
-p(X)-v=0 when X=z,则 p(X)-y 能整除(X-z) ,即$q(X)=\frac{P(X)-v}{X-z}$,即$\pi=q(s)=\frac{P(s)-v}{S-z}$.
+p(X)-v=0 when X=z,则 p(X)-y 能整除(X-z) ,即 $q(X)=\frac{P(X)-v}{X-z}$,即 $\pi=q(s)=\frac{P(s)-v}{S-z}$.
 
-也把 q(X)称为**"Witness Polynomial"**
+也把 q(X)称为**Witness Polynomial**
 
-对于$p(s)-v= q(s)(s - z)$,不能直接利用这个等式,因为等式中的**s **两方都不知道
+对于 $p(s)-v= q(s)(s - z)$,不能直接利用这个等式,因为等式中的**s**两方都不知道
 
 **直觉上**,我们希望直接证明等式 [p(s)-v] = [q(s)*(s-z)]成立,从而完成验证.
 
@@ -122,9 +122,9 @@ p(X)-v=0 when X=z,则 p(X)-y 能整除(X-z) ,即$q(X)=\frac{P(X)-v}{X-z}$,即$\p
 
 在验证过程中,验证方会收到证明方发来的[p(s)] ,同时验证方自己可以计算[s-z]=[s]-[z]的值
 
-但是由于椭圆曲线上不满足乘法,即**乘法****同态**:[p(s)]*[q(s)] =[p(s)*q(s)]
+但是由于椭圆曲线上不满足乘法,即 **乘法同态**:[p(s)]*[q(s)] =[p(s)*q(s)]
 
-所以等式**[q(s) * (s-z)]= [q(s)]*[s-z]** 并不成立,需要引入**配对 pairing**。
+所以等式 **[q(s) * (s-z)]= [q(s)]*[s-z]** 并不成立,需要引入 **配对 pairing**。
 
 `因为椭圆曲线上的运算是一个加法群，而不是一个乘法群，乘法没有被定义。`
 
@@ -135,10 +135,10 @@ p(X)-v=0 when X=z,则 p(X)-y 能整除(X-z) ,即$q(X)=\frac{P(X)-v}{X-z}$,即$\p
 
 ## 5.Pairing
 
-Pairing is **a bilinear mapping.**深入学习Pairing可参考**《Pairing for beginners》**这本书,在这里只做简单介绍.
+Pairing is **a bilinear mapping**.深入学习Pairing可参考 《Pairing for beginners》这本书,在这里只做简单介绍.
 
 - **bilinear**
-  - Linearity:对于某些一元函数,如果该函数服从$𝑓(𝑎𝑟_1+𝑏𝑟_2)=𝑎𝑓(𝑟_1)+𝑏𝑓(𝑟_2)$
+  - Linearity:对于某些一元函数,如果该函数服从 $𝑓(𝑎𝑟_1+𝑏𝑟_2)=𝑎𝑓(𝑟_1)+𝑏𝑓(𝑟_2)$
   - Bilinearity:对于二元函数,Linearity 存在于所有维度中,即
 
 $$
@@ -150,7 +150,7 @@ $$
 
 ### 5.1 about pairing
 
-配对是⼀种抽象操作。其定义可能会有所不同。 有 Tate 配对、Weil 配对、Ate 配对等等…… 虽然每⼀个都通过不同的操作来定义配对,**但是Input与output的格式,pairing 的属性都是固定的**.
+配对是⼀种抽象操作。其定义可能会有所不同。 有 Tate 配对、Weil 配对、Ate 配对等等…… 虽然每⼀个都通过不同的操作来定义配对, **但是Input与output的格式,pairing 的属性都是固定的**.
 
 #### **Input**:
 
@@ -195,23 +195,23 @@ $e(G_1,G_1)，e(G_1,G_2)$分别是对称与非对称的 Pairing 形式。**在�
 
 回到KZG部分
 
-$\mathbb{G}_1,\mathbb{G}_2$分别是同一椭圆曲线的两个子群.g 是子群$\mathbb{G}_1$的生成元,h 是子群$\mathbb{G}_2$的生成元
+ $\mathbb{G}_1,\mathbb{G}_2$分别是同一椭圆曲线的两个子群.g是子群 $\mathbb{G}_1$的生成元,h是子群 $\mathbb{G}_2$的生成元
 
-生成元的选择通常在 trusted Setup 阶段选择$[x]_1=g^x,[x]_2=h^x.$
+生成元的选择通常在 trusted Setup 阶段选择 $[x]_1=g^x,[x]_2=h^x.$
 
 define pairing e: $\mathbb{G}_1 \times \mathbb{G}_2 \rightarrow \mathbb{G}_T$,对于秘密 s 也相应有两个分布$[s^i]_1,[s^i]_2$.即SRS
 
-原来要验证的等式：$q(s)·(s-z)=p(s)-v$   **=>**   $π_1·[s-z]_2=C_1-[v]_1$
+原来要验证的等式: $q(s)·(s-z)=p(s)-v$   **=>**   $π_1·[s-z]_2=C_1-[v]_1$
 
-分布集1: $[s_i]_1=g^{s_i}$，对应生成元为g。计算π、C、$[v]_1$
+分布集1: $[s_i]_1=g^{s_i}$，对应生成元为g。计算π、C、 $[v]_1$
 
-分布集2: $[s_i]_2=h^{s_i}$，对应生成元为h。计算$[s-z]_2$               
+分布集2: $[s_i]_2=h^{s_i}$，对应生成元为h。计算 $[s-z]_2$               
 
-验证者验证等式：$e(π，[s-z]_2)\stackrel{?}{=} e(C-[v]_1,h)$
+验证者验证等式： $e(π，[s-z]_2)\stackrel{?}{=} e(C-[v]_1,h)$
 
-简单理解这个等式：$e(π，[s-z]_2）=e(g^{q(s)}，h^{s-z}) =e(g,h)^{q(s)·(s-z)}$
+简单理解这个等式： $e(π，[s-z]_2）=e(g^{q(s)}，h^{s-z}) =e(g,h)^{q(s)·(s-z)}$
 
-$e（C-[v]_1,h)     =e  (g^{C-v},h)        =e(g,h)^{C-v}$
+ $e（C-[v]_1,h)     =e  (g^{C-v},h)        =e(g,h)^{C-v}$
 
 > [x]g 与 g^x 表述形式不同，本质上没有什么区别。
 > a o b =c
@@ -226,19 +226,19 @@ $$
 
 Verifier 如何进行验算：
 
-- _prover 发送_$\pi=[q(s)]$,C,v
-- Verifier 自己选择的 z,根据加法同态,Verifier 可以计算_[s -z]₂=[s]₂ - [z]₂_
-- _g,h_ is public,**pairing function is public.**
+- prover 发送 $\pi=[q(s)]$,C,v
+- Verifier 自己选择的 z,根据加法同态,Verifier 可以计算[s -z]₂=[s]₂ - [z]₂
+- g,h is public, **pairing function is public.**
 
 ### KZG **完整过程：**
 
 1. 通过 Trusted setup, 产生 SRS:**[sⁱ]₁**,  **[sⁱ]₂**.
-2. Prover 使用_[sⁱ]₁_,对多项式 P(x)进行 commit,得到 **C** = _[p(s)]₁_,  发送给 Verifier.
-3. Verifier 选择挑战点_z _∈ {0,...,_p_−1}
+2. Prover 使用[sⁱ]₁,对多项式 P(x)进行 commit,得到 **C** = [p(s)]₁,  发送给 Verifier.
+3. Verifier 选择挑战点z ∈ {0,...,p−1}
 4. Prover 发送 **π 、y** 给 Verifier:
-5. Verifier 检查等式: _e(π, [s -z]₂) = e(C -[v]₁, H)
-   __—_ if the equation holds, the verifier accepts the proof
-   _—_ if the equation does not hold, the verifier rejects the proof
+5. Verifier 检查等式: e(π, [s -z]₂) = e(C -[v]₁, H)
+   —if the equation holds, the verifier accepts the proof
+   —if the equation does not hold, the verifier rejects the proof
 
 ### KZG 分析
 
@@ -250,7 +250,7 @@ $$
 e(π，[s-z]_2)\stackrel{?}{=} e(C-[y]_1,h)
 $$
 
-等式左边:$e(π，[s-z]_2)=e（g^{q(s)}，h^{s-z}） =e(g,h)^{q(s)·(s-z)}$
+等式左边: $e(π，[s-z]_2)=e（g^{q(s)}，h^{s-z}） =e(g,h)^{q(s)·(s-z)}$
 
 等式右边: $e(C-[y]_1,h)    =e  (g^{C-y},h)        =e(g,h)^{C-y}$
 
@@ -276,11 +276,11 @@ $$
 q(s)−v = w(s)·(s −z),q(s)−v'= w'(s)·(s −z)
 $$
 
-即$v' −v = (q(s)−w'(s))(s −z)$
+即 $v' −v = (q(s)−w'(s))(s −z)$
 
-_因为_$v−v'\neq0$,假设 $s\neq z$, 等式两边同时除以$(v−v')·(s−z)$可得:
+因为 $v−v'\neq0$,假设 $s\neq z$, 等式两边同时除以 $(v−v')·(s−z)$可得:
 
-$\frac{1}{(s−z)} = \frac{q(s)−q′(s)}{(v−v′)}$,即$g^{\frac{1}{(s−z)}} = g^{\frac{q(s)−q′(s)}{(v−v′)}}$,这说明有人可高效计算出$g^{\frac{1}{s-z}}$,这**违背了SDH假设**.
+ $\frac{1}{(s−z)} = \frac{q(s)−q′(s)}{(v−v′)}$,即 $g^{\frac{1}{(s−z)}} = g^{\frac{q(s)−q′(s)}{(v−v′)}}$,这说明有人可高效计算出 $g^{\frac{1}{s-z}}$,这**违背了SDH假设**.
 
 ### 总结:
 
@@ -321,12 +321,12 @@ n+1 个坐标对的形式 可以唯一的恢复出一个多项式
 验证过程如下：
 
 - Verifier 通过 k 个 points(z,y)计算 Z(x)和 I(x)
-- Verifier 计算$[Z(s)]_2,［I(s)]_1$
-- Verifier 验证等式$e(\pi,[Z(s)]_2) ＝e(C-[I(s)]_1,H)$是否成
+- Verifier 计算 $[Z(s)]_2,［I(s)]_1$
+- Verifier 验证等式 $e(\pi,[Z(s)]_2) ＝e(C-[I(s)]_1,H)$是否成
 
 ## 8.KZG in ZK-Rollup
 
-在 zk-rollups 的情况下,想证明发生在 L2 上的一些计算是有效的。简单来讲，发生在 L2 上的计算可通过称为“ witness 生成”的过程表示为二维矩阵。然后可以用多项式列表来表示矩阵 - 每列都可以编码为其自己的一维向量。然后，计算的有效性可以表示为这些多项式之间必须保持的一组数学关系。例如，如果前三列分别由多项式 a(x)、b(x) 以及 c(x) 表示，可能需要关系 a(x)⋅b(x)−c(x)=0 保持。多项式（代表计算）是否满足这些“正确性约束”可通过在一些随机点评估多项式来确定。如果“正确性约束”在这些随机点上得到了具体的满足，则一名验证者可以非常高的概率断言计算是正确的。
+在 zk-rollups 的情况下,想证明发生在 L2 上的一些计算是有效的。简单来讲，发生在 L2 上的计算可通过称为“witness 生成”的过程表示为二维矩阵。然后可以用多项式列表来表示矩阵 - 每列都可以编码为其自己的一维向量。然后，计算的有效性可以表示为这些多项式之间必须保持的一组数学关系。例如，如果前三列分别由多项式 a(x)、b(x) 以及 c(x) 表示，可能需要关系 a(x)⋅b(x)−c(x)=0 保持。多项式（代表计算）是否满足这些“正确性约束”可通过在一些随机点评估多项式来确定。如果“正确性约束”在这些随机点上得到了具体的满足，则一名验证者可以非常高的概率断言计算是正确的。
 
 很自然地看到像 KZG 这样的多项式承诺方案，是如何直接插入到这个范式中的：rollup 将 commit to 一组多项式，它们一起代表计算。 然后，验证者可要求对一些随机点进行评估，以检查正确性约束是否成立，从而验证多项式表示的计算是否有效。
 
