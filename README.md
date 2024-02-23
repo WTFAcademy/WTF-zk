@@ -88,7 +88,7 @@
 
 **第32讲 椭圆曲线密码学**：[Code](./32_ECC/ECC.ipynb) | [教程](./32_ECC/readme.md) 
 
-**第33讲 $F_{2^k}$ 上的椭圆曲线**：[教程](./33_ECExtension/readme.md) 
+**第33讲 F_{2^k} 上的椭圆曲线**：[教程](./33_ECExtension/readme.md) 
 
 ## Reference
 
