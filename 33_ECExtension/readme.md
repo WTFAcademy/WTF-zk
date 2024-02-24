@@ -6,9 +6,6 @@ tags:
   - elliptic curve
   - group theory
   - finite field
-  - discrete logarithm
-  - diffie-hellman
-  - elgamal
 ---
 
 # WTF zk 教程第 33 讲：扩域上的椭圆曲线

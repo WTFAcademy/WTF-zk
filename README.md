@@ -90,6 +90,8 @@
 
 **第33讲 扩域上的椭圆曲线**：[教程](./33_ECExtension/readme.md) 
 
+**第34讲 双线性配对基础**：[教程](./34_Pairing/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
