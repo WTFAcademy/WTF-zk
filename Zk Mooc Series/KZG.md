@@ -39,7 +39,9 @@ KZG 承诺又叫做 KZG10 承诺，是由 Kate，Zaverucha and Goldberg 三位�
 
 - Prover 运行 Commit 算法，将函数 $f$ 与随机数 $r$ 作为输入，$com_f$为输出。将 $com_f$ 发送给 Verifier。
 - Verifier 发送一个挑战点：即一个函数域 $X$ 中的元素 $x$。
-- Prover 将 $x$ 对应的 $f(x)=y$，以及 proof $\pi$ 发送给 Verifier。  $\pi$ 表明 1. $f(x)=y$，2. $f$ 属于 $\mathcal{F}$，即 $f$ 的 $degree \leq d$.
+- Prover 将 $x$ 对应的 $f(x)=y$，以及 proof $\pi$ 发送给 Verifier。  $\pi$ 表明 
+  1. $f(x)=y$
+  2. $f$ 属于 $\mathcal{F}$，即 $f$ 的 $degree \leq d$
 
 其中 Prover 需要计算如下内容：
 1. 多项式的承诺 $C=[p(x)]$
@@ -54,7 +56,9 @@ PCS 有多种,比如 [FRI](https://drops.dagstuhl.de/opus/volltexte/2018/9018/pd
 
 其中特性 2 与 3 导致可以将其构造成一个 SNARK 方案。SNARK 的全称是 Succinct Non-interactive Argument of Knowledge：简洁非交互式知识论证。
 
-SNARK 要求 1. $\text{size of proof}=\mathcal{O}(log(d))$ 2. $\text{time of Verification} = \mathcal{O}(log(d))$，$d$ 为 degree of Polynomial。
+SNARK 要求 
+1. $\text{size of proof}=\mathcal{O}(log(d))$ 
+2. $\text{time of Verification} = \mathcal{O}(log(d))$，$d$ 为 degree of Polynomial。
 
 进而可以将 KZG 应用在零知识证明系统如 ZK-SNARK 中。
 
@@ -159,7 +163,8 @@ $e(G_1,G_1)，e(G_1,G_2)$ 分别是对称与非对称的 Pairing 形式。**在�
 - $e(P, Q + R) = e(P,Q) \cdot e(P, R)$
 - $e(P + S, Q) = e(P,Q)\cdot e(S, Q)$
 - $e(aP, bR) = e(P,R)^{ab} = e(P, bR)^a = e(aP, R)^b = e(bP, aR)$(bilinear)
-- e(P, Q) ≠ 1 (non-degeneracy property)
+- $e(P, Q) ≠ 1$ (non-degeneracy property)
+
 
 
 ### 5.2 Pairing examples
