@@ -92,6 +92,8 @@
 
 **第34讲 双线性配对基础**：[教程](./34_Pairing/readme.md) 
 
+**第35讲 挠群和除子**：[教程](./35_TorsionGroup/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
