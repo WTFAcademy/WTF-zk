@@ -166,6 +166,7 @@ $e(G_1,G_1)，e(G_1,G_2)$ 分别是对称与非对称的 Pairing 形式。**在�
 - $e(P, Q) ≠ 1$ (non-degeneracy property)
 
 
+
 ### 5.2 Pairing examples
 
 #### 1. $e(x, y) = 2^{xy}$
