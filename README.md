@@ -94,6 +94,8 @@
 
 **第35讲 挠群和除子**：[教程](./35_TorsionGroup/readme.md) 
 
+**第36讲 Weil 配对**：[教程](./36_WeilPairing/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
@@ -107,3 +109,5 @@
 5. [密码学的数学基础](https://space.bilibili.com/552018206/channel/collectiondetail?sid=436262)
 
 6. [Cryptography 101 for Blockchain Developers by OpenZeppelin](https://www.youtube.com/watch?v=9TFEBuANioo)
+
+7. Vitalik's blogs: [Weil Pairing](https://medium.com/@VitalikButerin/exploring-elliptic-curve-pairings-c73c1864e627)
