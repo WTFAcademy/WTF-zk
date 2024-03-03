@@ -61,7 +61,7 @@ $$
 
 <details><summary>点我展开证明👀</summary>
 
-证明这个命题等同于证明 $a \cdot b$ 和 $\frac{1}{a} \cdot \frac{1}{b}$ 互为逆元。根据乘法交换律，$a b \frac{1}{a}  \frac{1}{b} = a \frac{1}{a} b \frac{1}{b} = 1 \cdot 1 = 1$。因此， $a \cdot b$ 和 $\frac{1}{a} \cdot \frac{1}{b}$ 互为逆元。证毕
+证明这个命题等同于证明 $a \cdot b$ 和 $\frac{1}{a} \cdot \frac{1}{b}$ 互为逆元。根据乘法交换律，有 $a b \frac{1}{a}  \frac{1}{b} = a \frac{1}{a} b \frac{1}{b} = 1 \cdot 1 = 1$。因此， $a \cdot b$ 和 $\frac{1}{a} \cdot \frac{1}{b}$ 互为逆元。证毕
 
 </details>
 
@@ -69,7 +69,7 @@ $$
 
 <details><summary>点我展开证明👀</summary>
 
-证明这个命题等同于证明 $a \cdot b$ 和 $\frac{1}{a} \cdot \frac{1}{b}$ 互为逆元。根据乘法交换律，$a b \frac{1}{a}  \frac{1}{b} = a \frac{1}{a} b \frac{1}{b} = 1 \cdot 1 = 1$。因此， $a \cdot b$ 和 $\frac{1}{a} \cdot \frac{1}{b}$ 互为逆元。证毕
+证明这个命题等同于证明 $a \cdot b$ 和 $\frac{1}{a} \cdot \frac{1}{b}$ 互为逆元。根据乘法交换律，有 $a b \frac{1}{a}  \frac{1}{b} = a \frac{1}{a} b \frac{1}{b} = 1 \cdot 1 = 1$。因此， $a \cdot b$ 和 $\frac{1}{a} \cdot \frac{1}{b}$ 互为逆元。证毕
 
 </details>
 
@@ -77,7 +77,7 @@ $$
 
 <details><summary>点我展开证明👀</summary>
 
-假设 $n$ 为合数，那么存在 $a, b \in F$，使得 $n = ab$ 成立。根据特征的定义，有 $n \cdot 1 = 0$，也就是 $a \cdot b cdot 1 = 0$，得到 $ab = 0$。根据性质3（域中无零因子），得到 $a = 0$ 或 $b = 0$，也就是 $n = ab = 0$，与假设矛盾。因此 $n$ 不是合数。
+假设 $n$ 为合数，那么存在 $a, b \in F$，使得 $n = ab$ 成立。根据特征的定义，有 $n \cdot 1 = 0$，也就是 $a \cdot b \cdot 1 = 0$，得到 $ab = 0$。根据性质3（域中无零因子），得到 $a = 0$ 或 $b = 0$，也就是 $n = ab = 0$，与假设矛盾。因此 $n$ 不是合数。
 
 当 $n$ 为素数 $p$ 时，特征为 $p$，比如 $Z_5$。
 
