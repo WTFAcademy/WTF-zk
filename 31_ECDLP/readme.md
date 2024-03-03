@@ -140,6 +140,7 @@ $$
 比特币主要使用了一条椭圆曲线，称为 `secp256k1`。这条曲线定义在一个有限域上，并由SECG（Standards for Efficient Cryptography Group）标准化。`secp256k1`曲线的选择是基于其特定的数学属性，这些属性使得基于该曲线的加密算法既安全又高效。
 
 `secp256k1` 曲线的方程是：
+
 $$
 y^2 = x^3 + 7 \mod p
 $$
