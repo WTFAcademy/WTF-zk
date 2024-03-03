@@ -49,7 +49,7 @@ $$
 
 <details><summary>点我展开证明👀</summary>
 
-群 $(G, 🐔) = \left \langle \, g \, \right \rangle$ 为循环群， $H$ 是群 $G$ 的子群。设 $d$ 是满足 $g^d \in H$ 的最小正整数，那么任意其他元素 $g^s \in H$ 有 $s > d$，根据欧几里得除法，有 $s = qd + r $ 其中 $0 \leq r < d$。根据封闭性 $g^r \in H$，又因为 $d$ 是 $g^d \in H$ 的最小正整数，因此 $r = 0$。也就是说， $d$ 整除 $s$， $H$ 中任何元素都能由 $g^d$ 生成，即 $g^s = (g^d)^q$。因此，子群 $H$ 是循环群， $g^d$ 是生成元。证毕。
+群 $(G, 🐔) = \left \langle \, g \, \right \rangle$ 为循环群， $H$ 是群 $G$ 的子群。设 $d$ 是满足 $g^d \in H$ 的最小正整数，那么任意其他元素 $g^s \in H$ 有 $s > d$，根据欧几里得除法，有 $s = qd + r$ 其中 $0 \leq r < d$。根据封闭性 $g^r \in H$，又因为 $d$ 是 $g^d \in H$ 的最小正整数，因此 $r = 0$。也就是说， $d$ 整除 $s$， $H$ 中任何元素都能由 $g^d$ 生成，即 $g^s = (g^d)^q$。因此，子群 $H$ 是循环群， $g^d$ 是生成元。证毕。
 
 </details>
 
