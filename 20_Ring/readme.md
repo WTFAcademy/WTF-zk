@@ -164,7 +164,7 @@ $a + c = 0$
 
 <details><summary>点我展开证明👀</summary>
 
-对于零元，有 $0 = 0 + 0$，因此对于任意元素 $a$，有 $ a \cdot 0 = a \cdot (0+0) = a \cdot 0 + a \cdot 0$，两式相减得 $a \cdot 0 = 0$。 
+对于零元，有 $0 = 0 + 0$，因此对于任意元素 $a$，有 $a \cdot 0 = a \cdot (0+0) = a \cdot 0 + a \cdot 0$，两式相减得 $a \cdot 0 = 0$。 
 
 $0 \cdot a = 0$ 可用相同方法证明。证毕
 
