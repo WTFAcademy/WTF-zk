@@ -74,7 +74,7 @@ $$
 
 加法和乘法中，多项式的次数满足以下关系：
 
-- **乘积的次数：** 乘积的次数小于次数的和，即 $\text{deg}(P \cdot Q) = \text{deg}(P) + \text{deg}(Q)$。
+- **乘积的次数：** 乘积的次数等于次数的和，即 $\text{deg}(P \cdot Q) = \text{deg}(P) + \text{deg}(Q)$。
   
 - **和的次数：** 和的次数小于两个多项式之中最大的次数 $\text{deg}(P + Q) \leq \max(\text{deg}(P), \text{deg}(Q))$。
 
