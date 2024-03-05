@@ -96,6 +96,8 @@
 
 **第36讲 Weil 配对**：[教程](./36_WeilPairing/readme.md) 
 
+**第37讲 Miller 算法**：[教程](./37_MillerAlgo/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
