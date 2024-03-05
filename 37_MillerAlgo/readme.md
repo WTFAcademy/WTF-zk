@@ -103,7 +103,7 @@ $$
 
 ## 2. 例子
 
-下面我们举个稍微复杂的 Weil 配对的例子，过程使用 Sage 计算，内置了 Miller 算法。Sage（也称为SageMath）是一个开源的数学软件系统，旨在提供一个强大、全面的环境，用于解决各种数学问题和进行数学研究。它的语法与python类似，你可以使用线上IDE [SageMathCell](https://sagecell.sagemath.org/) 在浏览器中运行 Sage 程序。
+下面我们举个稍微复杂的 Weil 配对的例子，过程使用 Sage 计算，内置了 Miller 算法。Sage（也称为SageMath）是一个开源的数学软件系统，旨在提供一个强大、全面的环境，用于解决各种数学问题和进行数学研究。它的语法与python类似，你可以使用 [SageMathCell](https://sagecell.sagemath.org/) 在浏览器中运行 Sage 程序。
 
 设定义在 $F_{631}$ 上的椭圆曲 $E: y^2 = x^3 + 30x + 34 \pmod{631}$。椭圆曲线上共有 650 个点，可以被分解为 $2 \cdot 5^2 \cdot 13$。它的 $5$-挠群 $E[5]$ 上共有 25 个点，我们在其中取点 $P(36, 60)$ 和 $Q(121, 387)$，它们都是 $E[5]$ 的生成元。然后我们用 Sage 计算它们的 Weil 配对：
 
