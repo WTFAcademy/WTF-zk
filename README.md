@@ -98,6 +98,8 @@
 
 **第37讲 Miller 算法**：[教程](./37_MillerAlgo/readme.md) 
 
+**第38讲 Tate 配对**：[教程](./38_TatePairing/readme.md) 
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)

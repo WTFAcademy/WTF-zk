@@ -77,7 +77,7 @@ $$
 
 ### 1.2 性质
 
-**性质1. 双线性：** 对于 $E[m]$ 上的挠点 $P, Q, R$，$满足 $e_m(P + R, Q) = e_m(P, Q) e_m(R, Q)$ 和 $e_m(P, Q + R) = e_m(P, Q) e_m(P, Q)$。
+**性质1. 双线性：** 对于 $E[m]$ 上的挠点 $P, Q, R$，满足 $e_m(P + R, Q) = e_m(P, Q) e_m(R, Q)$ 和 $e_m(P, Q + R) = e_m(P, Q) e_m(P, Q)$。
 
 <details><summary>点我展开证明👀</summary>
 
