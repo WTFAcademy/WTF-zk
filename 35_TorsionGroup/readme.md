@@ -50,7 +50,7 @@ $$
 
 挠群有个很重要的性质：
 
-对于椭圆曲线 $E(\mathbb{F}_p)$，若 $m$ 与 $p$ 互质，那么存在正整数 $k$，使得
+对于椭圆曲线 $E(\mathbb{F}_p)$，若 $m$ 与 $p$ 互质，那么对于任意 $j$，存在正整数 $k$，使得
 
 $$
 E(\mathbb{F}_{p^{jk}})[m] \cong \mathbb{Z}/m\mathbb{Z} \times \mathbb{Z}/m\mathbb{Z}
