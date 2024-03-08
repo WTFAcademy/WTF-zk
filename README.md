@@ -100,6 +100,16 @@
 
 **第38讲 Tate 配对**：[教程](./38_TatePairing/readme.md) 
 
+## WTF zk贡献者
+<div align="center">
+  <h4 align="center">
+    贡献者是WTF学院的基石
+  </h4>
+  <a href="https://github.com/WTFAcademy/WTF-zk/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=WTFAcademy/WTF-zk" />
+  </a>
+</div>
+
 ## Reference
 
 1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
