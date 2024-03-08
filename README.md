@@ -92,13 +92,13 @@
 
 **第34讲 双线性配对基础**：[教程](./34_Pairing/readme.md) 
 
-**第35讲 挠群和除子**：[教程](./35_TorsionGroup/readme.md) 
+**第35讲 挠群和除子**：[Code](./35_TorsionGroup/TorsionGroup.sage) | [教程](./35_TorsionGroup/readme.md) 
 
 **第36讲 Weil 配对**：[教程](./36_WeilPairing/readme.md) 
 
-**第37讲 Miller 算法**：[教程](./37_MillerAlgo/readme.md) 
+**第37讲 Miller 算法**：[Code](./37_MillerAlgo/WeilPairing.sage) | [教程](./37_MillerAlgo/readme.md) 
 
-**第38讲 Tate 配对**：[教程](./38_TatePairing/readme.md) 
+**第38讲 Tate 配对**：[Code](./38_TatePairing/Ate.ipynb) | [教程](./38_TatePairing/readme.md) 
 
 **第39讲 扩域上的 Weil 配对**：[教程](./39_PairingExtension/readme.md) 
 
