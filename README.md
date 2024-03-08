@@ -100,6 +100,8 @@
 
 **第38讲 Tate 配对**：[教程](./38_TatePairing/readme.md) 
 
+**第39讲 扩域上的 Weil 配对**：[教程](./39_PairingExtension/readme.md) 
+
 ## WTF zk贡献者
 <div align="center">
   <h4 align="center">
