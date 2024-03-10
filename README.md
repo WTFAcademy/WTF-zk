@@ -102,6 +102,8 @@
 
 **第39讲 扩域上的 Weil 配对**：[教程](./39_PairingExtension/readme.md) 
 
+**第40讲 常用椭圆曲线**：[Code](./40_PopularCurves/40_PopularCurves.ipynb) | [教程](./40_PopularCurves/readme.md) 
+
 ## WTF zk贡献者
 <div align="center">
   <h4 align="center">
