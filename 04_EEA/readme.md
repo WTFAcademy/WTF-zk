@@ -196,7 +196,7 @@ $$
 
 当 $b = 0$ 时，显然 $x=1, y=0$ ；
 
-当 $b\neq 0$ 时，有 $gcd(a, b)=gcd(b, a\%b)$ 。对于左边， $gcd(a, b)=ax+by$ ，对于右边， $gcd(b, a\%b)=bx_1+(a\%b)\cdot y_1=bx_1+(a-(a//b)\cdot b)\cdot y_1=ay_1+b(x_1-(a//b)\cdot y_1)$, 左右对应有： $x=y_1, y=(x_1-(a/b)\cdot y_1)$。推毕。
+当 $b\neq 0$ 时，有 $gcd(a, b)=gcd(b, a\% b)$ 。对于左边， $gcd(a, b)=ax+by$ ，对于右边， $gcd(b, a\% b)=bx_1+(a\% b)\cdot y_1=bx_1+(a-(a//b)\cdot b)\cdot y_1=ay_1+b(x_1-(a//b)\cdot y_1)$, 左右对应有： $x=y_1, y=(x_1-(a//b)\cdot y_1)$。推毕。
 
 ### 2.4. 代码实现
 
