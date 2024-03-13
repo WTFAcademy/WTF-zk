@@ -139,10 +139,12 @@ $$
 
 ### 2.5 代码实现
 
-我们可以使用python实现欧几里得算法，只需要4行代码：
+我们可以使用python实现欧几里得算法，只需要6行代码：
 
 ```python
 def euclidean_algorithm(a, b):
+    if a < b:
+        a, b = b, a
     while b:
         a, b = b, a % b
     return a

@@ -117,11 +117,14 @@ $$
 \phi(n)= n (1 - 1/p_1) (1 -1/p_2)...(1-1/p_r) 
 $$
 
+总之：由于任意大于 $1$ 的正整数都可以分解成若干质数的乘积，不妨设 $N=\prod_{i=1}^lp_i^{\alpha_i}$ ，则 $\varphi(N)=\prod_{i=1}^lp_i^{\alpha_i-1}(p_i-1)$ 。特别地，如果 $N=p^\alpha$ ，则 $\varphi(N)=p^{\alpha-1}(p-1)$ 。更为特殊地，如果 $N=p$ ，则 $\varphi(N)=p-1$ 。
+
 ### 2.2 代码实现：
 
 我们可以用python实现欧拉函数。代码包含两个函数，`prime_factors()` 将 $n$ 质数分解，`euler_phi` 利用公式计算 $\phi(n)$：
 
 ```python
+# 针对小整数，大整数目前分解仍是难题
 def prime_factors(n):
     factors = []
     p = 2
