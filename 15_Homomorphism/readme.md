@@ -183,7 +183,7 @@ $\set{e_H}$ 是群 $H$ 的平凡子群，根据同态的子群的保持的逆定
 
 <details><summary>点我展开证明👀</summary>
 
-我们推导了同态核 $\text{Ker}(f)$ 是 $G$ 的正规子群，因此我们能在商群 $G/\text{Ker}(f)$ 定义一个与 $G$ 相融的运算规则。为了证明简介，我们用 $K$ 代替 $\text{Ker}(f)$。
+我们推导了同态核 $\text{Ker}(f)$ 是 $G$ 的正规子群，因此我们能在商群 $G/\text{Ker}(f)$ 定义一个与 $G$ 相融的运算规则。为了证明简洁，我们用 $K$ 代替 $\text{Ker}(f)$。
 
 首先，我们需要证明 $\hat{f}: G \to K$ 是同态。对于任意 $a, b \in G$，有 $\hat{f}(aK) \hat{f}(bK) = f(a)(b) = f(ab) = \hat{f}(abK)$，因此 $\hat{f}$ 是同态。
 
