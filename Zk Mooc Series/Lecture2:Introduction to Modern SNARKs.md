@@ -247,7 +247,7 @@ IOP 交互式预言机证明实际上是一个**信息论对象**,可以在没�
 
 ![](static/UPnRbDbI1ooe5zx8ilNcI56enKd.png)
 
-- setup_($1^λ$)→gp 输出公共参数 _gp_ 。
+- setup($1^λ$)→gp 输出公共参数 _gp_ 。
 - commit(gp,f,r)→ $com_f$  用随机数r∈R 承诺 f∈F
 
   - 构建 SNARK,必须满足 Binding
@@ -293,7 +293,7 @@ Prover 需要对多项式 $f∈F_p^{(≤d)}[X]$ 承诺.Prover 试图说服 Verif
 考虑 **travial** 的 PCS 情况,用系数表示的方式表示多项式 f, $f(x)=\sum_0^da_ix^i$ ,过程如下
 
 -  commit(f,r)= $H((a_0,a_1,…,a_d),r)$
-- eval_ 将按如下方式完成：
+- eval 将按如下方式完成：
 
   - Prover 将 π = $((a_0,a_1,…,a_d),r)$ 发送给 Verifier
   - verifier 从系数重构 _f_ ，并检查是否 _f_(_u_)=_v_ 和 $H((a_0,a_1,…,a_d),r)=com_f $.
