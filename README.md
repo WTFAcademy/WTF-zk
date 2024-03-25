@@ -104,7 +104,9 @@
 
 **第40讲 常用椭圆曲线**：[Code](./40_PopularCurves/40_PopularCurves.ipynb) | [教程](./40_PopularCurves/readme.md) 
 
-**里程碑06 哈希函数** [Code](./MS06_Hash/Hash.ipynb) | [教程](./MS06_Hash/readme.md)
+**里程碑06 哈希函数 Hash** [Code](./MS06_Hash/Hash.ipynb) | [教程](./MS06_Hash/readme.md)
+
+**里程碑07 身份基加密 IBE** [Code](./MS07_IBE/IBE.ipynb) | [教程](./MS07_IBE/readme.md)
 
 ## WTF zk贡献者
 <div align="center">
