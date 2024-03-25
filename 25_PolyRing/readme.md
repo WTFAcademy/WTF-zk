@@ -34,6 +34,7 @@ P(x) + Q(x) = \sum_{j=0}^{n}{a_jx^j} + \sum_{j=0}^{m}{b_jx^j} = \sum_{j=0}^{\max
 $$
 
 **多项式乘法：** 
+
 $$
 P(x) \cdot Q(x)  = (\sum_{j=0}^{n}{a_jx^j}) \cdot (\sum_{j=0}^{m}{b_jx^j}) = \sum_{i=0}^{n+m}\sum_{j=0}^{i}{(a_jb_{i-j})x^i}
 $$

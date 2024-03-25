@@ -41,7 +41,7 @@ tags:
 
 1. **双线性**：对于所有的 $a, b \in \mathbb{Z}$，以及 $P, Q \in G_1$，有 $\text{e}(aP, bQ) = ab \text{e}(P, Q)$。 
   
-> 更严格的，双线性可以写为满足 $e(P, Q + R) = e(P, Q) \cdot e(P, R)$ 和 $e(P + S, Q) = e(P, Q) \cdot e(S, Q)$
+> 更严格的，双线性可以写为满足 $e(P, Q + R) = e(P, Q) \cdot e(P, R)$ 和 $e(P + R, Q) = e(P, Q) \cdot e(R, Q)$
 
 2. **非退化性**：如果 $P$ 和 $Q$ 均不是群 $G_1$ 的无穷远点 $O$，则 $\text{e}(P, Q) \neq O$。
 

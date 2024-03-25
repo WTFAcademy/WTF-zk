@@ -203,7 +203,7 @@ $$
 
 现在我们用陪群的等势性证明费马小定理。由于 $p$ 是质数， $\mathbb{Z}_p^*=\set{1,2,...,p-1}$ 和乘法构成整数模 $p$ 乘法群。
 
-对于任意整数 $a$，有 $a \mod{p} \in \mathbb{Z}_p^*$ 。我们用它与 $\mathbb{Z}_p^*$ 运算生成陪集 $a\mathbb{Z}_p^* = \set{a,2a,...,(p-1)a}$。由于 ${a \mod{p}} \in \mathbb{Z}_p^* $，所以 $a\mathbb{Z}_p^* = \mathbb{Z}_p^* $。
+对于任意整数 $a$，有 $a \mod{p} \in \mathbb{Z}^* _p$ 。我们用它与 $\mathbb{Z}^* _p$ 运算生成陪集 $a\mathbb{Z}^* _p = \set{a,2a,...,(p-1)a}$。由于 ${a \mod{p}} \in \mathbb{Z}^* _p$，所以 $a\mathbb{Z}^* _p = \mathbb{Z}^* _p$。
 
 我们将它们中的所有元素相乘，得到：
 
