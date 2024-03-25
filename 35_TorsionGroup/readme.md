@@ -53,10 +53,10 @@ $$
 对于椭圆曲线 $E(\mathbb{F}_p)$，若 $m$ 与 $p$ 互质，那么存在正整数 $k$，使得
 
 $$
-E(\mathbb{F}_{p^{jk}})[m] \cong \mathbb{Z}/m\mathbb{Z} \times \mathbb{Z}/m\mathbb{Z}
+E(\mathbb{F}_{p^{k}})[m] \cong \mathbb{Z}/m\mathbb{Z} \times \mathbb{Z}/m\mathbb{Z}
 $$
 
-成立。也就是说，存在扩域 $\mathbb{F}_{p^{jk}}$ 上的挠群 $E(\mathbb{F}_{p^{jk}})[m]$ 同构于两个阶为 $m$ 的循环群的直积。这表明在某些扩域中，挠群可以视为一个2维向量空间，为 Weil 配对提供了一个有限的、结构良好的点群。
+成立。也就是说，存在扩域 $\mathbb{F}_{p^{k}}$ 上椭圆曲线的挠群 $E(\mathbb{F}_{p^{k}})[m]$ 同构于两个阶为 $m$ 的循环群的直积。这表明在某些扩域中，挠群可以视为一个2维向量空间，为 Weil 配对提供了一个有限的、结构良好的点群。
 
 ## 2. 有理函数和除子
 

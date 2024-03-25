@@ -98,6 +98,17 @@ else:
 
 通过扩展欧几里得方法，我们得到 $y^{-1}=10$。可以验证 $yy^{-1}=70$，除以 $69$ 余 1，符合逆元的定义。
 
+下面是递归版本的扩展欧几里得算法实现求模逆代码：
+
+```python
+def get_inverse(a, N):
+    if gcd(a, N) == 1:
+        x, y = ext_gcd(a, N)
+        return (x + N) % N
+    print("No inverse!")
+    return 0
+```
+
 下面，请你尝试解下面这道题：
 
 $$

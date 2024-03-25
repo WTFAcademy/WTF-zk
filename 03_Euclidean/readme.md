@@ -31,7 +31,7 @@ $$
 
 3. $a$ 和 $0$ 的最大公约数为 $a$: $\gcd(a,0)=a$
 
-4. 如果 $a$ 能被 $b$ 整除（记为 $a \mid b$），则有 $\gcd(a,b)=b$
+4. 如果 $a$ 能被 $b$ 整除（记为 $b \mid a$），则有 $\gcd(a,b)=b$
 
 大家可以尝试推导一下这些性质。
 
@@ -139,10 +139,12 @@ $$
 
 ### 2.5 代码实现
 
-我们可以使用python实现欧几里得算法，只需要4行代码：
+我们可以使用python实现欧几里得算法，只需要6行代码：
 
 ```python
 def euclidean_algorithm(a, b):
+    if a < b:
+        a, b = b, a
     while b:
         a, b = b, a % b
     return a

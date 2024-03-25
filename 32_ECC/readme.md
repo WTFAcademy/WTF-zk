@@ -9,11 +9,12 @@ tags:
   - discrete logarithm
   - diffie-hellman
   - elgamal
+  - ecdsa
 ---
 
 # WTF zk 教程第 32 讲：椭圆曲线密码学
 
-这一讲，我们将介绍椭圆曲线密码学中的两个经典算法：椭圆曲线 Diffie-Hellman 算法（ECDH）和椭圆曲线 Elgamal 算法（EC Elgamal）。它们都是椭圆曲线和传统公钥加密技术的结合，能够在更短的密钥长度下提供更高的安全性。
+这一讲，我们将介绍椭圆曲线密码学中的两个经典算法：椭圆曲线 Diffie-Hellman 算法（ECDH），椭圆曲线 Elgamal 算法（EC Elgamal），和椭圆曲线数字签名算法（ECDSA）。它们都是椭圆曲线和传统公钥加密技术的结合，能够在更短的密钥长度下提供更高的安全性。
 
 如果你不了解 Diffie-Hellman 算法或 Elgamal 算法，可以阅读 WTF zk [里程碑02](https://github.com/WTFAcademy/WTF-zk/blob/main/MS02_DH/readme.md)和[里程碑03](https://github.com/WTFAcademy/WTF-zk/blob/main/MS03_ElGamal/readme.md)。
 
@@ -43,7 +44,7 @@ ECDH 算法密钥交换过程和传统的 Diffie-Hellman 算法相似，只不�
 
 ### 2.2 代码示例
 
-下面的Python代码，我们使用`secp256k1`曲线进行 ECDH 密钥交换。
+下面的Python代码中，我们使用`secp256k1`曲线进行 ECDH 密钥交换。
 
 ```python
 # 椭圆曲线Diffie-Hellman算法 ECDH
@@ -127,7 +128,7 @@ Bob 收到密文 $(C_1, C_2)$ 后，需要使用私钥 $x$ 进行解密：
 
 ### 3.4 代码示例
 
-下面的Python代码，我们使用`secp256k1`曲线进行 EC Elgamal 加密。
+下面的Python代码中，我们使用`secp256k1`曲线进行 EC Elgamal 加密。
 
 ```python
 from py_ecc.secp256k1 import secp256k1
@@ -173,6 +174,130 @@ print("消息成功解密！")
 # 加密后的消息: ((87298472810248234319752437423707505477343664832890363292431829216099637291919, 39528614830056678009484946030376271359657183017625571564228160252781333158439), (67113196324182438503834247973075313606138491143388276462715763950508942145812, 59499979624168470896804403233074133393632477568643779021536973756576878140912))
 # 解密后的消息: (55066263022277343669578718895168534326250603453777594175500187360389116729240, 32670510020758816978083085130507043184471273380659243275938904335757337482424)
 # 消息成功解密！
+```
+
+## 4. ECDSA
+
+ECDSA（椭圆曲线数字签名算法）是椭圆曲线密码学中的一种常用数字签名算法，它利用 ECDLP 的难解性来确保签名的安全性，常被用于以太坊的智能合约中，见 [WTF Solidity 第37讲](https://github.com/AmazingAng/WTF-Solidity/blob/main/37_Signature/readme.md)。
+
+我们假设 Bob 使用 ECDSA 进行签名，然后 Alic 验证。主要三个步骤：密钥生成、签名、验证签名。
+
+
+### 4.1 密钥生成
+
+首先，Bob 需要生成密钥：
+
+1. **选择椭圆曲线和基点**：选择一个椭圆曲线 $E$ 和其上的基点 $G$，并计算基点的阶 $n$，即 $nG = O$。
+2. **生成私钥和公钥**：选择一个随机数 $x$ 作为私钥，计算公钥 $Y = xG$。
+
+公钥为 $(E, G, Y)$，是公开的；私钥为 $x$，不公开。
+
+### 4.2 签名
+
+接下来，Bob 要使用刚刚生成的私钥 $x$ 进行签名：
+
+1. **消息哈希**：计算消息 $M$ 的哈希值 $H(M)$
+
+2. **选择随机数**：生成一个随机数 $k$，确保 $1 < k < p-1$。
+
+3. **计算 r**：通过随机数 $k$ 计算点 $P = kG$，将点 $P$ 的横坐标记为 $r$。
+
+3. **生成签名**：计算 $s=k^{-1}(H(M)+xr) \mod n$，其中 $n$ 是基点 $G$ 的阶。生成的签名为 $(r, s)$。
+
+生成签名要确保生成随机生成 $k$，不然私钥可能会泄露。另外，如果 $r$ 或 $s$ 为零，则需要重新生成随机数 $k$。
+
+### 4.3 验证签名
+
+这一步，Alice 利用消息原文 $M$ 和公钥 $Y$ 来验证签名的有效性。
+
+1. **计算消息哈希**：计算 $H(M)$。
+
+2. **计算 $u_1$ 和 $u_2$**：计算 $u_1=H(m)s^{-1} \mod n$ 和 $u_2=rs^{-1} \mod n$。
+
+3. **验证签名**：计算点 $P'=u_1G+u_2Y$，如果 $P'$ 的横坐标等于 $r$，则签名有效。
+
+### 4.4 算法正确性
+
+咱们来看下为什么正确签名得到的 $P'$ 横坐标会和 $r$ 相等：
+
+$$
+P'=u_1G+u_2Y = u_1G+u_2xG
+$$
+
+使用标量乘法的分配律，有：
+
+$$
+P'= (u_1+u_2x)G
+$$
+
+展开 $u_1$ 和 $u_2$，有：
+
+$$
+P'=u_1G+u_2Y = (H(m)s^{-1} + rxs^{-1})G = (H(m) + rx)s^{-1}G
+$$
+
+展开 $s$，有
+
+$$
+P'=u_1G+u_2Y = (H(m) + rx)(k^{-1}(H(M)+xr))^{-1}G = kG = P
+$$
+
+因此，正确签名得到的 $P'$ 的横坐标与 $r$ 相等。
+
+### 4.5 代码示例
+
+下面的Python代码中，我们使用`secp256k1`曲线来实现ECDSA的签名和验证过程：
+
+```python
+# ECDSA
+
+from py_ecc.secp256k1 import secp256k1
+import os
+import hashlib
+
+def generate_keys():
+    # 生成私钥
+    private_key = os.urandom(32)
+    private_key_int = int.from_bytes(private_key, 'big') % secp256k1.N
+    # 生成公钥
+    public_key = secp256k1.multiply(secp256k1.G, private_key_int)
+    return private_key_int, public_key
+
+def ecdsa_sign(message, private_key):
+    # 对消息进行哈希处理
+    message_hash = hashlib.sha256(message).digest()
+    message_hash_int = int.from_bytes(message_hash, 'big')
+    
+    k = int.from_bytes(os.urandom(32), 'big') % secp256k1.N
+    R = secp256k1.multiply(secp256k1.G, k)
+    r = R[0] % secp256k1.N
+    s = ((message_hash_int + r * private_key) * secp256k1.inv(k, secp256k1.N)) % secp256k1.N
+    
+    return (r, s)
+
+def ecdsa_verify(message, signature, public_key):
+    r, s = signature
+    message_hash = hashlib.sha256(message).digest()
+    message_hash_int = int.from_bytes(message_hash, 'big')
+    
+    w = secp256k1.inv(s, secp256k1.N)
+    u1 = (message_hash_int * w) % secp256k1.N
+    u2 = (r * w) % secp256k1.N
+    
+    P = secp256k1.add(secp256k1.multiply(secp256k1.G, u1), secp256k1.multiply(public_key, u2))
+    
+    return r == P[0] % secp256k1.N
+
+# 示例
+x, Y = generate_keys()
+M = b"Hello, ECDSA with secp256k1!"
+print("原始消息明文:", M)
+
+signature = ecdsa_sign(M, x)
+print("签名:", signature)
+
+valid = ecdsa_verify(M, signature, Y)
+print("签名验证结果:", valid)
 ```
 
 ## 4. 总结
