@@ -102,7 +102,7 @@ def euclidean_division(a, b):
         # 调整余数确保非负
         remainder += abs(b)
         # 调整商使等式仍然成立
-        quotient += 1
+        quotient -= 1
     return quotient, remainder
 
 quotient, remainder = euclidean_division(a, b)
