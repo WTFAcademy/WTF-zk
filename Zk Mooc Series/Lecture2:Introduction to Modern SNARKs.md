@@ -10,7 +10,7 @@
 
 ## Zk-snark application
 
-- blockchian
+- blockchain
 
   - 外包计算：
     - 扩容(zkRollup)：离线服务处理交易批次，L1 链验证一个简短的证明来证明该批次内的交易都是有效的,而无需分别验证每笔交易
