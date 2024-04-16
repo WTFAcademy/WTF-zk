@@ -31,7 +31,7 @@ tags:
 
 如果双线性配对中 $G_1 = G_2$，我们就叫它对称的双线性配对，否则是非对称的。
 
-举个例子，设 $G_1 = G_2 = G_T = (\mathbb{Z}, +)$，我们可以定义映射 $e: \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$，形式为 $e(x, y) = x \cdot y$。它满足双线性： $\text{e}(ax, by) = axby=abxy = ab\text{e}(ax, by)$，同时满足非退化性和可计算性，因此 $e$ 为双线性映射。
+举个例子，设 $G_1 = G_2 = G_T = (\mathbb{Z}, +)$，我们可以定义映射 $e: \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$，形式为 $e(x, y) = x \cdot y$。它满足双线性： $\text{e}(ax, by) = axby=abxy = ab\text{e}(x, y)$，同时满足非退化性和可计算性，因此 $e$ 为双线性映射。
 
 ## 2. 椭圆曲线的双线性配对
 
