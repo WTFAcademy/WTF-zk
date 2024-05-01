@@ -14,7 +14,7 @@ Euler's theorem is a fundamental theorem in number theory, stating that in modul
 
 The Discrete Logarithm Problem (DLP) is a classic difficult problem in mathematics and cryptography, which essentially means that taking logarithms in modular arithmetic is extremely hard.
 
-Given a prime number $p$, and integer $g, h \in \mathbb{Z}_n^*$, the goal is to find a integer $x$ such that:
+Given a prime number $p$, and integers $g, h \in \mathbb{Z}_n^*$, the goal is to find a integer $x$ such that:
 
 $$
 g^x \equiv h \pmod{p}
