@@ -16,7 +16,7 @@ This equation is known as Bézout's equation, where gcd(a, b) is the greatest co
 
 ### 2.1 Basic Idea
 
-The extended Euclidean algorithm not only calculates the greatest common divisor using the Euclidean algorithm but also finds the integer solutions that satisfy Bézout's equation through reverse deduction. In the Euclidean algorithm, we only care about the remainders ri of each iteration and not the quotients qi. The extended algorithm makes use of qi to reverse compute Bézout's equation, effectively utilizing what would otherwise be discarded.
+The extended Euclidean algorithm not only calculates the greatest common divisor using the Euclidean algorithm but also finds the integer solutions that satisfy Bézout's equation through reverse deduction. In the Euclidean algorithm, we only care about the remainder ri of each iteration and not the quotients qi. The extended algorithm makes use of qi to reverse compute Bézout's equation, effectively utilizing what would otherwise be discarded.
 
 Let's recall the Euclidean algorithm:
 
@@ -32,7 +32,7 @@ rn-2 = rn-1qn + rn
 We continue iterating until rn = 0, at which point rn-1 = gcd(a,b) and we have:
 
 ```
-rn-2 = gcd(a, b) qn 
+rn-2 = gcd(a, b) qn
 rn-3 = rn-2 qn-1 + gcd(a, b)
 ...
 a = bq + r
@@ -146,11 +146,11 @@ a - b = 6
 
 ### 2.3 Recursive Derivation
 
-We want to find x and y such that x * a + y * b = gcd(a, b).
+We want to find x and y such that x _ a + y _ b = gcd(a, b).
 
 When b = 0, obviously x = 1 and y = 0.
 
-When b ≠ 0, we have gcd(a, b) = gcd(b, a % b). For the left-hand side, gcd(a, b) = ax + by; for the right-hand side, gcd(b, a % b) = bx1 + (a % b) * y1 = bx1 + (a - (a // b) * b) * y1 = ay1 + b(x1 - (a // b) * y1). The correspondence between the left-hand side and the right-hand side is x = y1 and y = x1 - (a // b) * y1. This completes the derivation.
+When b ≠ 0, we have gcd(a, b) = gcd(b, a % b). For the left-hand side, gcd(a, b) = ax + by; for the right-hand side, gcd(b, a % b) = bx1 + (a % b) _ y1 = bx1 + (a - (a // b) _ b) _ y1 = ay1 + b(x1 - (a // b) _ y1). The correspondence between the left-hand side and the right-hand side is x = y1 and y = x1 - (a // b) \* y1. This completes the derivation.
 
 ### 2.4 Code Implementation
 
@@ -161,7 +161,7 @@ Let's implement the extended Euclidean algorithm in Python:
 ```python
 def extended_euclidean_algorithm(a, b):
     x1, y1, x2, y2 = 1, 0, 0, 1
-    
+
     while b:
         q = a // b
         a, b = b, a % b
