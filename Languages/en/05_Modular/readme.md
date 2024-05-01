@@ -66,7 +66,7 @@ $$
 a \equiv b \pmod{n}
 $$
 
-For example, under modulus $3$, both 4 and 7 have a remainder of 1, so they are congruent modulo 3 and can be written as $4 \equiv 7 \pmod{3}$. However, under another modulus, such as 5, they are not congruent. Therefore, when confirming congruence relations, the modulus must be specified.
+For example, under modulus $3$, both 4 and 7 have a remainder of 1, so they are congruent modulo 3 and can be written as $4 \equiv 7 \pmod{3}$. However, under another modulus, such as $5$, they are not congruent. Therefore, when confirming congruence relations, the modulus must be specified.
 
 ### 2.1 Property of Congruence
 
@@ -96,7 +96,7 @@ $$
 
 The result of taking the modulo of any integer $a$ by $n$ will fall within $Z_n$. In other words, for any integer $a$, there exists $b \in Z_n$ such that $a \equiv b \pmod{n}$. Using congruence relations, we can map the modulo operation of infinitely many integers to the operation on $n$ integers in $Z_n$.
 
-Taking the 24-hour clock system as an example, any time will fall within $Z_{24}$, such as $32 \mod 24 = 8$ and $56 \mod 24 = 8$.
+Taking the 24-hour clock system as an example, any time will fall within $Z_{24}$, such as $32 \mod 24 = 8$ or $56 \mod 24 = 8$.
 
 We will provide a more systematic introduction to residue classes in our future tutorials. For now, it is important to have a concept of them.
 
