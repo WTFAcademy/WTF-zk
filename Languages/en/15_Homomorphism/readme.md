@@ -60,7 +60,7 @@ To summarize, if two groups have a homomorphism between them, then their identit
 
 ### 1.2 Examples
 
-Let's use an example of an exponential function to help understand the properties of homomorphisms:
+Let's use an example of an exponential function(take $e$ as the base) to help understand the properties of homomorphisms:
 - Preservation of the identity element: In $G = \set{R, +}$, 0 is the identity element, so $f(0) = e^0 = 1$ is the identity element of $H = \set{R_{+}, \times}$.
 - Preservation of the inverse element: In $G$, $-1$ and $1$ are inverse elements, so $f(-1) = 1/e$ and $f(1) = e$ are inverse elements in $H$.
 - Preservation of subgroups and inverse subgroups: The group of integer addition $(\mathbb{Z}, +)$ is a subgroup of $G$, so $f(Z) = \set{,..., e^{-2}, e^{-1}, 1, e, e^{2}, ...}$ is a subgroup of $H$. And vice versa.
