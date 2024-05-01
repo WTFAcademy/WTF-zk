@@ -1,8 +1,4 @@
-Euler's Criterion: Let $p$ be an odd prime number, $a$ be an integer, and $gcd(a, p)=1$. Then $(\frac{a}{p})\equiv a^{\frac{p-1}{2}}\pmod p$. This can be used to quickly determine if $a$ is a quadratic residue of the odd prime number $p$.
-
-## 5. Summary
-
-In this lesson, we introduced the definition of modular arithmetic, congruence, basic modular operations, and quadratic residues. Modular arithmetic may seem unfamiliar, but in fact, it is everywhere in our daily lives, you just haven't noticed. Can you think of any applications of modular arithmetic in daily life?
+---
 title: 05. Modular Arithmetic Basics
 tags:
   - zk
@@ -58,13 +54,13 @@ print(f'{a} mod {b} = {remainder}')
 # 69 mod 23 = 0
 ```
 
-The 24-hour clock system we use is also an application of the modulo operation. For example, if it is currently 12 o'clock, is it 32 o'clock after 20 hours? No, it is actually $32 \mod 24 \equiv 8$ o'clock. Can you calculate what time it will be after 69 hours?
+The 24-hour clock system we use is also an application of the modulo operation. For example, if it is currently 12 o'clock, is it 32 o'clock after 20 hours? No, it is $32 \mod 24 \equiv 8$ o'clock. Can you calculate what time it will be after 69 hours?
 
 ![](./img/5-1.png)
 
 ## 2. Congruence
 
-Congruence is a relation that is widely used in cryptography. In the case of a given modulus $n$, if the results of modulo operation for two integers $a$ and $b$ are equal, we say that they are congruent modulo $n$. It can be written as:
+Congruence is a relation that is widely used in cryptography. In the case of a given modulus $n$, if the results of modulo operation for two integers $a$ and $b$ are equal, we say they are congruent modulo $n$. It can be written as:
 
 $$
 a \equiv b \pmod{n}
@@ -108,33 +104,33 @@ We will provide a more systematic introduction to residue classes in our future 
 
 1. Translation: For any integer $k$, if $a \equiv b \pmod{n}$, then $a+k \equiv b+k \pmod{n}$. When $k < 0$, the effect is subtraction.
 
-    Example: $4 \equiv 7 \pmod{3}$, if we add 4 to both sides, we get $8 \equiv 11 \pmod{3}$, which is still true.
+   Example: $4 \equiv 7 \pmod{3}$, if we add 4 to both sides, we get $8 \equiv 11 \pmod{3}$, which is still true.
 
 2. Scaling: For any integer $k$, if $a \equiv b \pmod{n}$, then $a \cdot k \equiv b \cdot k \pmod{n}$.
 
-    Example: $4 \equiv 7 \pmod{3}$, if we multiply both sides by 4, we get $16 \equiv 28 \pmod{3}$, which is still true.
+   Example: $4 \equiv 7 \pmod{3}$, if we multiply both sides by 4, we get $16 \equiv 28 \pmod{3}$, which is still true.
 
 3. Addition: If $a_1 \equiv a_2 \pmod{n}$ and $b_1 \equiv b_2 \pmod{n}$, then $a_1 + b_1 \equiv a_2 + b_2 \pmod{n}$.
 
-    Example: $4 \equiv 7 \pmod{3}$ and $2 \equiv 5 \pmod{3}$, if we add both sides, we get $6 \equiv 12 \pmod{3}$, which is still true.
+   Example: $4 \equiv 7 \pmod{3}$ and $2 \equiv 5 \pmod{3}$, if we add both sides, we get $6 \equiv 12 \pmod{3}$, which is still true.
 
 4. Multiplication: If $a_1 \equiv a_2 \pmod{n}$ and $b_1 \equiv b_2 \pmod{n}$, then $a_1 b_1 \equiv a_2  b_2 \pmod{n}$.
 
-    Example: $4 \equiv 7 \pmod{3}$ and $2 \equiv 5 \pmod{3}$, if we multiply both sides, we get $8 \equiv 35 \pmod{3}$, which is still true.
+   Example: $4 \equiv 7 \pmod{3}$ and $2 \equiv 5 \pmod{3}$, if we multiply both sides, we get $8 \equiv 35 \pmod{3}$, which is still true.
 
 5. If $d=\gcd(k,n)$ and $k \cdot a \equiv k \cdot b \pmod{n}$, then $a \equiv b \pmod{n/d}$, which means $a$ and $b$ are congruent modulo $n/d$.
 
-    Example: $20 \equiv 2 \pmod{6}$ and $\gcd(2, 6) = 2$, if we divide both sides by 2 and take the modulo operation, we get $10 \equiv 1 \pmod{3}$, which is still true.
-
+   Example: $20 \equiv 2 \pmod{6}$ and $\gcd(2, 6) = 2$, if we divide both sides by 2 and take the modulo operation, we get $10 \equiv 1 \pmod{3}$, which is still true.
 
 6. If integers $k$ and $n$ are coprime, that is, $\gcd(k,n) = 1$, and $k \cdot a \equiv k \cdot b \pmod{n}$, then $a \equiv b \pmod{n}$.
 
-    Example: Given $8 \equiv 14 \pmod{3}$ and $\gcd(2, 3) = 1$, if we divide both sides by 2, we get $4 \equiv 7 \pmod{3}$, which is still true.
+   Example: Given $8 \equiv 14 \pmod{3}$ and $\gcd(2, 3) = 1$, if we divide both sides by 2, we get $4 \equiv 7 \pmod{3}$, which is still true.
 
-## 4. Quadratic Residues 
-In number theory, if an integer $q$ is congruent to a square of some number modulo $n$, which means there exists $x$ such that $x^2\equiv q\pmod{n}$, then $q$ is called a quadratic residue of $n$. Otherwise, it is called a non-quadratic residue. In simple terms, it determines whether $q$ can be the square of a number modulo $n$.
+## 4. Quadratic Residues
 
-So how do we find all quadratic residues of $n$? The answer is to enumerate from 1 to $q-1$, calculate whether their squares modulo $n$ are equal to $q$. Please see the example below:
+In number theory, if an integer $q$ is congruent to a square of some number modulo $n$, which means there exists $x$ such that $x^2\equiv q\pmod{n}$, then $q$ is called a quadratic residue of $n$. Otherwise, it is called a non-quadratic residue. It simply determines whether $q$ can be the square of a number modulo $n$.
+
+So how do we find all quadratic residues of $n$? The answer is to enumerate from 1 to $q-1$ and calculate whether their squares modulo $n$ are equal to $q$. Please see the example below:
 
 ```python
 # Check if the numbers in ints are quadratic residues of p, print the smallest square root modulo p
@@ -146,15 +142,16 @@ print(min(qr))
 
 - About all quadratic residues modulo $n$
 
-    Note that $x^2\mod n\equiv (n-x)^2\mod n$, so all quadratic residues modulo $n$ cannot exceed $n/2-1$ because of symmetry.
+  Note that $x^2\mod n\equiv (n-x)^2\mod n$, so all quadratic residues modulo $n$ cannot exceed $n/2-1$ because of symmetry.
 
 - In the case of $n$ being a prime number, let $n$ be $p$
 
-    If $p=2$, then all integers are quadratic residues of $p$.
+  If $p=2$, then all integers are quadratic residues of $p$.
 
-    If $p$ is an odd prime number, the number of quadratic residues of $p$ is $(p+1)/2$, and the remaining $(p-1)/2$ are non-quadratic residues.
+  If $p$ is an odd prime number, the number of quadratic residues of $p$ is $(p+1)/2$, and the remaining $(p-1)/2$ are non-quadratic residues.
 
 Properties of Quadratic Residues:
+
 > 1. The product of two quadratic residues is still a quadratic residue.
 > 2. The product of a quadratic non-residue and a quadratic non-residue is a quadratic residue.
 > 3. The product of a quadratic residue and a quadratic non-residue is a quadratic non-residue.
@@ -168,3 +165,9 @@ $$
 -1,& \text{if there is no quadratic residue modulo p}
 \end{cases}
 $$
+
+Euler's Criterion: Let $p$ be an odd prime number, $a$ be an integer, and $gcd(a, p)=1$. Then $(\frac{a}{p})\equiv a^{\frac{p-1}{2}}\pmod p$. This can be used to quickly determine if $a$ is a quadratic residue of the odd prime number $p$.
+
+## 5. Summary
+
+In this lesson, we defined modular arithmetic, congruence, basic modular operations, and quadratic residues. Modular arithmetic may seem unfamiliar, but in fact, it is everywhere in our daily lives, you just haven't noticed. Can you think of any applications of modular arithmetic in daily life?
