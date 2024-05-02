@@ -199,7 +199,7 @@ $$
 
 Now, let's use equinumerosity of cosets to prove Fermat's Little Theorem. Since $p$ is a prime, $\mathbb{Z}_p^*=\{1,2,...,p-1\}$ with multiplication forms a group modulo $p$.
 
-For any integer $a$, $a \mod{p} \in \mathbb{Z}^*_p$. We construct cosets by operating it with $\mathbb{Z}^*_p$, obtaining $a\mathbb{Z}^*_p = \{a,2a,...,(p-1)a\}$. Since ${a \mod{p}} \in \mathbb{Z}^*_p$, it follows that $a\mathbb{Z}^*_p = \mathbb{Z}^*_p$.
+For any integer $a$, $a \mod{p} \in \mathbb{Z}^* _p$. We construct cosets by operating it with $\mathbb{Z}^* _p$, obtaining $a\mathbb{Z}^* _p = \{a,2a,...,(p-1)a\}$. Since ${a \mod{p}} \in \mathbb{Z}^* _p$, it follows that $a\mathbb{Z}^* _p = \mathbb{Z}^* _p$.
 
 Multiplying all elements in these cosets, we get:
 
