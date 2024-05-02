@@ -1,5 +1,5 @@
 ---
-title: Lecture 11: Group
+title: Lecture 11. Group
 tags:
   - zk
   - basic
@@ -10,29 +10,29 @@ tags:
 
 # WTF zk Tutorial Lecture 11: Group
 
-Before we continue with advanced number theory, we need to study some abstract algebra concepts, including groups, rings, and fields. In this lecture, we will introduce the basics of group theory, including the definition of a group and its fundamental properties.
+Before we continue with advanced number theory, we need to understand abstract algebra concepts, including groups, rings, and fields. In this lecture, we will introduce the basics of group theory, including the definition of a group and its fundamental properties.
 
 ## 1. Abstract Algebra
 
-The term "abstract algebra" is called "abstract" because it is an independent algebraic theory that is abstracted from specific mathematical structures. In abstract algebra, the focus is not on specific algebraic systems (such as real numbers or complex fields), but on the universal properties and patterns of algebraic structures.
+The term "abstract algebra" is called "abstract" because it is an independent algebraic theory that is abstracted from specific mathematical structures. In abstract algebra, we look at the universal properties and patterns of algebraic structures instead of specific algebraic systems (such as real numbers or complex fields).
 
 Specifically, abstract algebra starts with the general properties of algebraic structures and studies concepts such as sets, operations, and algebraic equations. It abstracts the study of various algebraic structures into a common algebraic theory, such as the concepts of groups, rings, fields, and so on. Through this abstract method, abstract algebra can reveal the commonalities between different algebraic systems, providing a more general perspective that allows us to understand and compare the relationships between different mathematical structures.
 
 ## 2. Group
 
-A group is an abstract algebraic structure that consists of a set and a binary operation. A group is usually represented as $(G, \cdot)$, where $G$ represents the set of the group and <span>$\cdot$</span> represents the binary operation of the group. However, in this tutorial, we embrace the culture of abstract algebra more, and $G$ reminds us of the representative work of Kun Kun "G Ni Tai Mei". Therefore, we use Kun Group to represent the most abstract group and denote it as $(G, 🐔)$, where 🐔 represents the binary operation, read as "g operation".
+A group is an abstract algebraic structure that consists of a set and a binary operation. A group is usually represented as $(G, 🐔)$, where $G$ represents the set of the group and $🐔$ represents the binary operation of the group. In this tutorial, we discuss the concepts of abstract algebra in more depth. To represent abstract group, we denote it as $(G, 🐔)$, where $🐔$ represents the binary operation, read as "g operation".
 
 However, not every combination of a set and a binary operation can be called a group. It must satisfy four fundamental properties:
 
-1. **Closure:** For any elements $A$ and $B$ in the Kun Group, $A🐔B$ still belongs to the Kun Group.
+1. **Closure:** For any elements $A$ and $B$ in the Group, $A 🐔 B$ still belongs to the Group.
 
-2. **Associativity:** The result of the operation of elements in a group does not depend on the order of calculation, that is, $(A🐔B)🐔C = A🐔(B🐔C)$.
+2. **Associativity:** The result of the operation of elements in a group does not depend on the order of calculation, that is, $(A 🐔 B) 🐔 C = A 🐔 (B 🐔 C)$
 
-3. **Existence of an Identity Element:** There exists a special element $E$ in the group, such that it does not change the value when operated with any element of the group, that is, $A🐔E=E🐔A=A$, similar to the $0$ in integer addition.
+3. **Identity Element:** There exists a special element $E$ in the group, such that it does not change the value when operated with any element of the group, that is, $A 🐔 E=E 🐔 A=A$, similar to $0$ in integer addition.
 
-4. **Existence of an Inverse Element:** For every element in the group, there exists another element called its inverse element, and the result of their operation is the identity element $E$, that is, $A🐔A'=A'🐔A=E$. The element $A'$ is called the inverse element of $A$ and is denoted as $A^{-1}$.
+4. **Inverse Element:** For every element in the group, there exists another element called the inverse element, and the result of their operation is the identity element $E$, that is, $A 🐔 A'=A' 🐔 A=E$. The element $A'$ is called the inverse element of $A$ and is denoted as $A^{-1}$.
 
-We can use these four fundamental properties to determine whether a set with a binary operation is a group. Here are a few examples.
+We use these four fundamental properties to determine whether a set with a binary operation is a group. Here are a few examples.
 
 Additional notes:
 > 1. If a set and its binary operation satisfy only closure, it is called a "Magma".
@@ -98,7 +98,7 @@ Therefore, the unit set modulo $n$, denoted as $\mathbb{Z}_n^*$, with the multip
 
 ### 2.5 Trivial Group
 
-A trivial group refers to a group that contains only one element, which is its identity element $E$. The operation is defined as $E🐔E=E$. The trivial group satisfies the four fundamental properties of a group, which you can verify.
+A trivial group refers to a group that contains only one element, which is its identity element $E$. The operation is defined as $E 🐔 E=E$. The trivial group satisfies four fundamental properties of a group, try to verify it.
 
 ## 3. Properties of Groups
 
@@ -106,33 +106,27 @@ From the four fundamental properties of a group, we can derive some important pr
 
 - **Unique Identity Element:** The identity element of a group is unique.
 
-<details><summary>Click to expand proof👀</summary>
+<details><summary>Click here to expand proof 👀</summary>
 
-We use proof by contradiction. First, assume that the group $(G, 🐔)$ has two identity elements $E$ and $E'$. According to the definition of the identity element, the product of the identity element with any element is equal to itself, that is, $E🐔E'=E=E'$ (which can be understood as $E$ right🐔identity element $E'$ equals $E$, or $E'$ left🐔identity element $E$ equals $E'$), which means $E=E'$. This leads to a contradiction. Therefore, the identity element in a group is unique.
-
-Proof complete.
+We proof by contradiction. First, assume that the group $(G, 🐔)$ has two identity elements $E$ and $E'$. According to the definition of the identity element, the product of the identity element with any element is equal to itself, that is, $E 🐔 E'=E=E'$ (which can be understood as $E$ $🐔$ identity element $E'$ equals $E$, or $E'$ $🐔$ identity element $E$ equals $E'$), which means $E=E'$. This leads to a contradiction. Therefore, the identity element in a group is unique.
 
 </details>
 
 - **Unique Inverse Element:** The inverse element of each element in the group is unique.
 
-<details><summary>Click to expand proof👀</summary>
+<details><summary>Click to expand proof 👀</summary>
 
-We use proof by contradiction. Suppose the group $(G, 🐔)$ has an element $A$ with two distinct inverse elements $B$ and $C$, namely $A🐔B=E$ and $A🐔C=E$. By multiplying both sides of $A🐔B=E$ by $C$, we have $C🐔A🐔B=E🐔C$. Since $C🐔A=E$, the equation can be simplified to $E🐔B=E🐔C$. According to the definition of the identity element, any element operated by the identity element is equal to itself. Therefore, we have $B=C$, which contradicts our assumption. Thus, the inverse element of each element in a group is unique.
-
-Proof complete.
+We proof by contradiction. Suppose the group $(G, 🐔)$ has an element $A$ with two distinct inverse elements $B$ and $C$, namely $A 🐔 B=E$ and $A 🐔 C=E$. By multiplying both sides of $A 🐔 B=E$ by $C$, we have $C 🐔 A 🐔 B=E 🐔 C$. Since $C 🐔 A=E$, the equation can be simplified to $E 🐔 B=E 🐔 C$. According to the definition of the identity element, any element operated by the identity element is equal to itself. Therefore, we have $B=C$, which contradicts our assumption. Thus, the inverse element of each element in a group is unique.
 
 </details>
 
 - **Cancellation Law:** For any elements $a, b, c$ in the group, if $ab = ac$ or $ba = ca$, then $b = c$.
 
-<details><summary>Click to expand proof👀</summary>
+<details><summary>Click to expand proof 👀</summary>
 
 We can multiply both sides of $ab = ac$ by the inverse element of $a$ on the left to obtain $b=c$.
 
 Similarly, in the case of $ba = ca$, we can multiply both sides by the inverse element of $a$ on the right to obtain $b=c$.
-
-Proof complete.
  
 </details>
 
