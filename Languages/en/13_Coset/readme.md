@@ -16,11 +16,11 @@ In group theory, cosets are an important concept for describing translations or 
 
 In group theory, a subset of a group together with the operation on its elements forms a set called a coset. Cosets are not groups themselves, but they allow us to decompose a group into disjoint sets of equal size, serving as a fundamental tool for studying groups and forming the basis of Lagrange's Theorem.
 
-**Definition of Cosets:** Given a group $(G, \cdot)$ and one of its subgroups $(H, \cdot)$, for an element $a$ in $G$, we define the operation of cosets of $H$ with respect to $a$ as $a \circ H = \{a \cdot h \mid h \in H\}$. This represents the set obtained by performing the operation $\cdot$ between $a$ and each element of $H$, and the resulting set $a \circ H$ is called coset. For simplicity, we omit the $\circ$ symbol and denote cosets as $aH$.
+**Definition of Cosets:** Given a group $(G, 🐔)$ and one of its subgroups $(H, 🐔)$, for an element $a$ in $G$, we define the operation of cosets of $H$ with respect to $a$ as 🦆 operation i.e. $a 🦆 H = \{a 🐔 h \mid h \in H\}$. This represents the set obtained by performing the operation $🐔$ between $a$ and each element of $H$, and the resulting set $a 🦆 H$ is called coset. For simplicity, we omit the $🦆$ symbol and denote cosets as $aH$.
 
-> **Note:** The operation $\cdot$ is an operation between **elements** of the group, and the result is an element, while the operation $\circ$ is an operation between an **element and a subgroup** of the group. Its effect is to perform the operation $\cdot$ between the element and each element of the subgroup, and the result is a set. You can see the operation $\circ$ as an operation between elements and sets.
+> **Note:** The operation $🐔$ is an operation between **elements** of the group, and the result is an element, while the operation $🦆$ is an operation between an **element and a subgroup** of the group. Its effect is to perform the operation $🐔$ between the element and each element of the subgroup, and the result is a set. You can see the operation $🦆$ as 🐔 operation between elements and sets.
 
-Similarly, we can define another coset $Ha = \{h \cdot a \mid h \in H\}$.
+Similarly, we can define another coset $Ha = \{h 🐔 a \mid h \in H\}$.
 
 Since groups do not necessarily satisfy the commutative law, the above two cosets may not be equal. However, since most groups used in cryptography satisfy the commutative law, we do not distinguish between the above two cosets in this tutorial and simply refer to them as cosets.
 

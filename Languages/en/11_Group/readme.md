@@ -20,17 +20,17 @@ Specifically, abstract algebra starts with the general properties of algebraic s
 
 ## 2. Group
 
-A group is an abstract algebraic structure that consists of a set and a binary operation. A group is usually represented as $(G, \cdot)$, where $G$ represents the set of the group and $\cdot$ represents the binary operation of the group. In this tutorial, we discuss the concepts of abstract algebra in more depth. To represent abstract group, we denote it as $(G, \cdot)$, where $\cdot$ represents the binary operation, read as "dot operation".
+A group is an abstract algebraic structure that consists of a set and a binary operation. A group is usually represented as $(G, 🐔)$, where $G$ represents the set of the group and $🐔$ represents the binary operation of the group. In this tutorial, we discuss the concepts of abstract algebra in more depth. To represent abstract group, we denote it as $(G, 🐔)$, where $🐔$ represents the binary operation, read as "g operation".
 
 However, not every combination of a set and a binary operation can be called a group. It must satisfy four fundamental properties:
 
-1. **Closure:** For any elements $A$ and $B$ in the Group, $A \cdot B$ still belongs to the Group.
+1. **Closure:** For any elements $A$ and $B$ in the Group, $A 🐔 B$ still belongs to the Group.
 
-2. **Associativity:** The result of the operation of elements in a group does not depend on the order of calculation, that is, $(A \cdot B) \cdot C = A \cdot (B \cdot C)$
+2. **Associativity:** The result of the operation of elements in a group does not depend on the order of calculation, that is, $(A 🐔 B) 🐔 C = A 🐔 (B 🐔 C)$
 
-3. **Identity Element:** There exists a special element $E$ in the group, such that it does not change the value when operated with any element of the group, that is, $A \cdot E=E \cdot A=A$, similar to $0$ in integer addition.
+3. **Identity Element:** There exists a special element $E$ in the group, such that it does not change the value when operated with any element of the group, that is, $A 🐔 E=E 🐔 A=A$, similar to $0$ in integer addition.
 
-4. **Inverse Element:** For every element in the group, there exists another element called the inverse element, and the result of their operation is the identity element $E$, that is, $A \cdot A'=A' \cdot A=E$. The element $A'$ is called the inverse element of $A$ and is denoted as $A^{-1}$.
+4. **Inverse Element:** For every element in the group, there exists another element called the inverse element, and the result of their operation is the identity element $E$, that is, $A 🐔 A'=A' 🐔 A=E$. The element $A'$ is called the inverse element of $A$ and is denoted as $A^{-1}$.
 
 We use these four fundamental properties to determine whether a set with a binary operation is a group. Here are a few examples.
 
@@ -98,7 +98,7 @@ Therefore, the unit set modulo $n$, denoted as $\mathbb{Z}_n^*$, with the multip
 
 ### 2.5 Trivial Group
 
-A trivial group refers to a group that contains only one element, which is its identity element $E$. The operation is defined as $E \cdot E=E$. The trivial group satisfies four fundamental properties of a group, try to verify it.
+A trivial group refers to a group that contains only one element, which is its identity element $E$. The operation is defined as $E 🐔 E=E$. The trivial group satisfies four fundamental properties of a group, try to verify it.
 
 ## 3. Properties of Groups
 
@@ -108,7 +108,7 @@ From the four fundamental properties of a group, we can derive some important pr
 
 <details><summary>Click here to expand proof 👀</summary>
 
-We proof by contradiction. First, assume that the group $(G, \cdot)$ has two identity elements $E$ and $E'$. According to the definition of the identity element, the product of the identity element with any element is equal to itself, that is, $E \cdot E'=E=E'$ (which can be understood as $E$ $\cdot$ identity element $E'$ equals $E$, or $E'$ $\cdot$ identity element $E$ equals $E'$), which means $E=E'$. This leads to a contradiction. Therefore, the identity element in a group is unique.
+We proof by contradiction. First, assume that the group $(G, 🐔)$ has two identity elements $E$ and $E'$. According to the definition of the identity element, the product of the identity element with any element is equal to itself, that is, $E 🐔 E'=E=E'$ (which can be understood as $E$ $🐔$ identity element $E'$ equals $E$, or $E'$ $🐔$ identity element $E$ equals $E'$), which means $E=E'$. This leads to a contradiction. Therefore, the identity element in a group is unique.
 
 </details>
 
@@ -116,7 +116,7 @@ We proof by contradiction. First, assume that the group $(G, \cdot)$ has two ide
 
 <details><summary>Click to expand proof👀</summary>
 
-We proof by contradiction. Suppose the group $(G, \cdot)$ has an element $A$ with two distinct inverse elements $B$ and $C$, namely $A \cdot B=E$ and $A \cdot C=E$. By multiplying both sides of $A \cdot B=E$ by $C$, we have $C \cdot A \cdot B=E \cdot C$. Since $C \cdot A=E$, the equation can be simplified to $E \cdot B=E \cdot C$. According to the definition of the identity element, any element operated by the identity element is equal to itself. Therefore, we have $B=C$, which contradicts our assumption. Thus, the inverse element of each element in a group is unique.
+We proof by contradiction. Suppose the group $(G, 🐔)$ has an element $A$ with two distinct inverse elements $B$ and $C$, namely $A 🐔 B=E$ and $A 🐔 C=E$. By multiplying both sides of $A 🐔 B=E$ by $C$, we have $C 🐔 A 🐔 B=E 🐔 C$. Since $C 🐔 A=E$, the equation can be simplified to $E 🐔 B=E 🐔 C$. According to the definition of the identity element, any element operated by the identity element is equal to itself. Therefore, we have $B=C$, which contradicts our assumption. Thus, the inverse element of each element in a group is unique.
 
 </details>
 

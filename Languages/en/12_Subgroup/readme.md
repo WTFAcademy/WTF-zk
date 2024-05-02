@@ -13,7 +13,7 @@ In this lecture, we introduce the concept of a subgroup. A subgroup can be seen 
 
 ## 1. Definition of Subgroup
 
-Let $(G, \cdot)$ be a group, and let $H$ be a non-empty subset of $G$. If $H$ also forms a group with respect to the group operation $\cdot$, then $(H, \cdot)$ is called a subgroup of $(G, \cdot)$, denoted $(H, \cdot) \leq (G, \cdot)$. Sometimes for convenience, the operation symbol may be omitted when the context is clear, using set notation to represent a group, such as $H \leq G$.
+Let $(G, 🐔)$ be a group, and let $H$ be a non-empty subset of $G$. If $H$ also forms a group with respect to the group operation $🐔$, then $(H, 🐔)$ is called a subgroup of $(G, 🐔)$, denoted $(H, 🐔) \leq (G, 🐔)$. Sometimes for convenience, the operation symbol may be omitted when the context is clear, using set notation to represent a group, such as $H \leq G$.
 
 To become a subgroup, the elements of $H$ need to belong to $G$, and additionally, $H$ must satisfy the four fundamental properties of a group: closure, associativity, existence of identity element, and existence of inverses.
 
@@ -108,11 +108,11 @@ With the definition of subgroups, we can derive some important properties:
 
 Let $H$ be a subgroup of group $G$, $e_G$ be the identity element of $G$, and $e_H$ be the identity element of $H$. For any element $h$ in $H$, by the definition of a group:
 
-$h \cdot e_H = h$
+$h 🐔 e_H = h$
 
-Since $H \leq G$, $e_H$ is also an element of $G$. Thus, $h \cdot e_H$ is also an operation in $G$. Considering the identity element $e_G$ of $G$, we have:
+Since $H \leq G$, $e_H$ is also an element of $G$. Thus, $h 🐔 e_H$ is also an operation in $G$. Considering the identity element $e_G$ of $G$, we have:
 
-$h \cdot e_H = h = h \cdot e_G$
+$h 🐔 e_H = h = h 🐔 e_G$
 
 Canceling $h$ from both sides of the equation, we get $e_H=e_G$, so the identity element of the original group is also the identity element of the subgroup. 
 
@@ -124,11 +124,11 @@ Canceling $h$ from both sides of the equation, we get $e_H=e_G$, so the identity
 
 Let $H$ be a subgroup of group $G$, $a$ be an element in $H$, $a_G'$ be the inverse of $a$ in $G$, and $a_H'$ be the inverse of $a$ in $H$. We have:
 
-$a \cdot a_H' = e$
+$a 🐔 a_H' = e$
 
-$a \cdot a_G' = e$
+$a 🐔 a_G' = e$
 
-So, $a \cdot a_H' = a \cdot a_G'$, and we can cancel $a$ from both sides of the equation to get $a_H' = a_G'$. 
+So, $a 🐔 a_H' = a 🐔 a_G'$, and we can cancel $a$ from both sides of the equation to get $a_H' = a_G'$. 
 
 </details>
 
@@ -156,7 +156,7 @@ From the properties of closure, associativity, identity element, and inverse ele
 
 In the first section, we used the group axioms to test for subgroups: first, check if it's a subset, then check for closure, associativity, identity element, and inverses. If all are satisfied, it's a subgroup. This method can be cumbersome, so in this section, we introduce a more convenient method for testing subgroups.
 
-Given a group $(G, \cdot)$, let $H$ be a subset of $G$. Then, $H$ is a subgroup of $G$ if and only if for any $a, b \in H$, we have $a \cdot b^{-1} \in H$.
+Given a group $(G, 🐔)$, let $H$ be a subset of $G$. Then, $H$ is a subgroup of $G$ if and only if for any $a, b \in H$, we have $a 🐔 b^{-1} \in H$.
 
 <details><summary>Click to expand the proof 👀</summary>
 
@@ -164,24 +164,24 @@ Here we prove both sufficiency and necessity.
 
 **Sufficiency ( $\Rightarrow$):**
 
-Assume $H$ is a subgroup of $G$. We need to prove that for any $a, b \in H$, we have $a \cdot b^{-1} \in H$.
+Assume $H$ is a subgroup of $G$. We need to prove that for any $a, b \in H$, we have $a 🐔 b^{-1} \in H$.
 
 Since $H$ is a subgroup of $G$, it satisfies:
 
-1. **Closure:** For any $a, b \in H$, we have $a \cdot b \in H$
+1. **Closure:** For any $a, b \in H$, we have $a 🐔 b \in H$
 2. **Existence of inverses:** For any $a \in H$, we have $a^{-1} \in H$
 
-Let $c = b^{-1}$, then $c \in H$. Therefore, by closure, $a \cdot c \in H$, which means $a \cdot b^{-1} \in H$.
+Let $c = b^{-1}$, then $c \in H$. Therefore, by closure, $a 🐔 c \in H$, which means $a 🐔 b^{-1} \in H$.
 
 
 **Necessity ($\Leftarrow$):**
 
-Conversely, assuming $H \subseteq G$, for any $a, b \in H$, we have $a \cdot b^{-1} \in H$. We need to prove that $H$ is a subgroup of $G$.
+Conversely, assuming $H \subseteq G$, for any $a, b \in H$, we have $a 🐔 b^{-1} \in H$. We need to prove that $H$ is a subgroup of $G$.
 
-1. **Closure:** For any $a, b \in H$, we have $b^{-1} \in H$. According to the assumption, we have $a \cdot (b^{-1})^{-1} \in H$, and $(b^{-1})^{-1} = b$, so we have $a \cdot b \in H$. Closure is proven.
-2. **Associativity:** For any $a, b, c \in H$, we have $a, b, c \in G$, therefore $(a \cdot b) \cdot c =a \cdot (b \cdot c)$.
-3. **Identity Element:** Let $b = a$, then we have $a \cdot a^{-1} \in H$, and $a \cdot a^{-1} = e$ is the identity element, so the identity element exists.
-4. **Inverse Element:** Let $a = e$, for any $b \in H$, we have $e \cdot b^{-1} \in H$, which means $b^{-1} \in H$, so the inverse element exists.
+1. **Closure:** For any $a, b \in H$, we have $b^{-1} \in H$. According to the assumption, we have $a 🐔 (b^{-1})^{-1} \in H$, and $(b^{-1})^{-1} = b$, so we have $a 🐔 b \in H$. Closure is proven.
+2. **Associativity:** For any $a, b, c \in H$, we have $a, b, c \in G$, therefore $(a 🐔 b) 🐔 c =a 🐔 (b 🐔 c)$.
+3. **Identity Element:** Let $b = a$, then we have $a 🐔 a^{-1} \in H$, and $a 🐔 a^{-1} = e$ is the identity element, so the identity element exists.
+4. **Inverse Element:** Let $a = e$, for any $b \in H$, we have $e 🐔 b^{-1} \in H$, which means $b^{-1} \in H$, so the inverse element exists.
 
 In conclusion, $H$ satisfies the 4 properties of group axioms and $H \subseteq G$, therefore $H$ is a subgroup of $G$.
 
