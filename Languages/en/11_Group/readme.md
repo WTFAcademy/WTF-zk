@@ -1,5 +1,5 @@
 ---
-title: Lecture 11: Group
+title: Lecture 11. Group
 tags:
   - zk
   - basic

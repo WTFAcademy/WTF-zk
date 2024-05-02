@@ -8,11 +8,11 @@ tags:
   - coset
 ---
 
-## WTF zk Tutorial Part 13: Cosets and Lagrange's Theorem
+# WTF zk Tutorial Part 13: Cosets and Lagrange's Theorem
 
 In group theory, cosets are an important concept for describing translations or transformations within a group. Understanding cosets helps us study the symmetry and structure of groups. This tutorial will introduce the definition and properties of cosets, as well as Lagrange's Theorem.
 
-### 1. Cosets
+## 1. Cosets
 
 In group theory, a subset of a group together with the operation on its elements forms a set called a coset. Cosets are not groups themselves, but they allow us to decompose a group into disjoint sets of equal size, serving as a fundamental tool for studying groups and forming the basis of Lagrange's Theorem.
 
