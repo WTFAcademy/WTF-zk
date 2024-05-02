@@ -114,7 +114,7 @@ We proof by contradiction. First, assume that the group $(G, 🐔)$ has two iden
 
 - **Unique Inverse Element:** The inverse element of each element in the group is unique.
 
-<details><summary>Click to expand proof👀</summary>
+<details><summary>Click to expand proof 👀</summary>
 
 We proof by contradiction. Suppose the group $(G, 🐔)$ has an element $A$ with two distinct inverse elements $B$ and $C$, namely $A 🐔 B=E$ and $A 🐔 C=E$. By multiplying both sides of $A 🐔 B=E$ by $C$, we have $C 🐔 A 🐔 B=E 🐔 C$. Since $C 🐔 A=E$, the equation can be simplified to $E 🐔 B=E 🐔 C$. According to the definition of the identity element, any element operated by the identity element is equal to itself. Therefore, we have $B=C$, which contradicts our assumption. Thus, the inverse element of each element in a group is unique.
 
@@ -122,7 +122,7 @@ We proof by contradiction. Suppose the group $(G, 🐔)$ has an element $A$ with
 
 - **Cancellation Law:** For any elements $a, b, c$ in the group, if $ab = ac$ or $ba = ca$, then $b = c$.
 
-<details><summary>Click to expand proof👀</summary>
+<details><summary>Click to expand proof 👀</summary>
 
 We can multiply both sides of $ab = ac$ by the inverse element of $a$ on the left to obtain $b=c$.
 
