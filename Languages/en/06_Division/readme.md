@@ -14,7 +14,7 @@ There is a significant difference between division in modular arithmetic and ord
 
 ## 1. Division
 
-In the previous tutorial, we introduced addition and multiplication in modular arithmetic, which are similar to ordinary addition and multiplication. However, division in modular arithmetic is very different from ordinary division. If we apply integer division to modular arithmetic, we will get strange results. For example, we know that $6 \equiv 12 \pmod{3}$, but if we divide both sides by 3, we get $2 \equiv 4 \pmod{3}$, which is obviously not true. Therefore, ordinary division does not work, and we must define division in modular arithmetic differently.
+In the previous tutorial, we introduced addition and multiplication in modular arithmetic, which are similar to ordinary addition and multiplication. However, division in modular arithmetic is very different from ordinary division. If we apply integer division to modular arithmetic, we will get strange results. For example, we know that $6 \equiv 12 \pmod{3}$, but if we divide both sides by $3$, we get $2 \equiv 4 \pmod{3}$, which is obviously not true. Therefore, ordinary division does not work, and we must define division in modular arithmetic differently.
 
 In general, division is the inverse operation of multiplication and can reverse the effect of multiplication. For example, in modulo $n$, if we have $xy \equiv z$, then the result of $z/y$ should be $x$. In other words, in modular arithmetic, computing the division of $z$ by $y$ is finding an integer $x$ that satisfies $xy \equiv z$.
 
@@ -36,7 +36,7 @@ So, how do we calculate the inverse of $y$ modulo $n$? In this tutorial, we intr
 
 #### 2.1.1 Exhaustive Search
 
-In modular arithmetic, $Z_n$ contains only a finite number of elements, so we can exhaustively search these elements to find $w \in Z_n$ such that $wy \equiv 1 \pmod{n}$ holds, and $w$ will be the inverse $y^{-1}$ we are looking for. For example, to find the inverse of $2$ modulo $5$, we can calculate the product of all elements in $Z_5$ with 2 and then calculate the remainder when divided by 5. We can find the value where the remainder is 1. As shown below, we find that $2^{-1} \equiv 3 \pmod{5}$.
+In modular arithmetic, $Z_n$ contains only a finite number of elements, so we can exhaustively search these elements to find $w \in Z_n$ such that $wy \equiv 1 \pmod{n}$ holds, and $w$ will be the inverse $y^{-1}$ we are looking for. For example, to find the inverse of $2$ modulo $5$, we can calculate the product of all elements in $Z_5$ with 2 and then calculate the remainder when divided by $5$. We can find the value where the remainder is $1$. As shown below, we find that $2^{-1} \equiv 3 \pmod{5}$.
 
 | $Z_5$ Element | Multiplication with 2 | Remainder |
 | ------------- | --------------------- | --------- |
@@ -96,7 +96,7 @@ else:
 # The greatest common divisor of 69 and 7 is 1, the inverse exists, which is 10
 ```
 
-By using the extended Euclidean algorithm, we obtain $y^{-1} = 10$. It can be verified that $yy^{-1} = 70$, and when divided by $69$, the remainder is 1, which satisfies the definition of the inverse.
+By using the extended Euclidean algorithm, we obtain $y^{-1} = 10$. It can be verified that $yy^{-1} = 70$, and when divided by $69$, the remainder is $1$, which satisfies the definition of the inverse.
 
 Here is the recursive version of the extended Euclidean algorithm implemented in code to calculate the modular inverse:
 
