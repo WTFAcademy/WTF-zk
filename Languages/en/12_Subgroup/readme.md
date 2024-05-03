@@ -9,6 +9,7 @@ tags:
 ---
 
 # WTF zk Tutorial Lecture 12: Subgroup
+
 In this lecture, we introduce the concept of a subgroup. A subgroup can be seen as the "child" of a group, consisting of a subset of elements from the group while still satisfying the group's definition. It helps us understand the internal structure of the group.
 
 ## 1. Definition of Subgroup
@@ -26,11 +27,11 @@ Consider the integer additive group $(\mathbb{Z}, +)$. We can find some of its s
 - **The Even Integer Group:** It consists of all even integers and forms a group under addition.
 
   - Closure: The sum of any two even integers is still even.
-  
+
   - Associativity: Clearly satisfied.
-  
+
   - Identity element: $0$ is the identity element for integer addition, and it is also the identity element for the even integer group.
-  
+
   - Inverses: The inverse of each even integer is its additive inverse, which is also an even integer.
 
 The subgroup of even integers satisfies the requirements of closure, associativity, identity element, and inverses, thus it is a subgroup of the integer additive group.
@@ -42,11 +43,11 @@ Consider the multiplicative group of positive integers modulo 5, denoted $(\math
 - **Unit Element Subgroup $\langle 1 \rangle$:** It consists of the unit element $1$. A subgroup containing only the unit element is also called a trivial subgroup.
 
   - Closure: $1 \times 1 = 1$, which still belongs to the unit element subgroup.
-  
+
   - Associativity: Clearly satisfied.
-  
+
   - Identity element: $1$ is the identity element for integer multiplication, and it is also the identity element for the unit element subgroup.
-  
+
   - Inverses: The inverse of $1$ is $1$, which is also in the unit element subgroup.
 
 - **Subgroup formed by the set $\{1, 4\}$:**
@@ -59,12 +60,12 @@ Consider the multiplicative group of positive integers modulo 5, denoted $(\math
     | 4   | 4   | 1   |
 
   - Associativity: Clearly satisfied.
-  
+
   - Identity element: $1$ is the identity element of the group.
-  
+
   - Inverses: Modulo 5, the inverse of $1$ is $1$, and the inverse of $4$ is $4$.
 
-- **Subgroup formed by the set $\{1, 2, 3, 4\}$: This subgroup is actually equal to the multiplicative group of positive integers modulo 5 itself.**
+- **Subgroup formed by the set $\{1, 2, 3, 4\}$: This subgroup is equal to the multiplicative group of positive integers modulo 5 itself.**
 
 These three subgroups satisfy the requirements of closure, associativity, identity element, and inverses, so they are all subgroups of the multiplicative group of positive integers modulo 5. Now, can the set $\{1,2,3\}$ form a subgroup? Please try to prove it.
 
@@ -77,24 +78,24 @@ Consider the integer modulo 6 additive group $(\mathbb{Z}_6,+)$, where $\mathbb{
 - **Subgroup formed by the set $\{0, 3\}$:**
 
   - Closure: When any two elements in the set $\{0, 3\}$ are added, the result still belongs to $\{0, 3\}$.
-  
+
   - Associativity: Clearly satisfied.
-  
+
   - Identity element: $0$ is the identity element of the group.
-  
+
   - Inverses: Modulo 6, the additive inverse of $0$ is $0$, and the additive inverse of $3$ is $3$.
 
 - **Subgroup formed by the set $\{0, 2 ,4\}$:**
 
   - Closure: When any two elements in the set $\{0, 2 ,4\}$ are added, the result still belongs to $\{0, 2 ,4\}$.
-  
+
   - Associativity: Clearly satisfied.
-  
+
   - Identity element: $0$ is the identity element of the group.
-  
+
   - Inverses: Modulo 6, the additive inverse of $0$ is $0$, and $2$ and $4$ are each other's additive inverses.
 
-- **Subgroup formed by the set $\mathbb{Z}_6=\{0,1,2,3,4,5\}$: This subgroup is actually equal to the original group itself.**
+- **Subgroup formed by the set $\mathbb{Z}_6=\{0,1,2,3,4,5\}$: This subgroup is equal to the original group itself.**
 
 These four subgroups satisfy the requirements of closure, associativity, identity element, and inverses, so they are all subgroups of the integer modulo 6 additive group. Now, can the set $\{0,1,3,5\}$ form a subgroup? Please try to prove it.
 
@@ -114,7 +115,7 @@ Since $H \leq G$, $e_H$ is also an element of $G$. Thus, $h 🐔 e_H$ is also an
 
 $h 🐔 e_H = h = h 🐔 e_G$
 
-Canceling $h$ from both sides of the equation, we get $e_H=e_G$, so the identity element of the original group is also the identity element of the subgroup. 
+Canceling $h$ from both sides of the equation, we get $e_H=e_G$, so the identity element of the original group is also the identity element of the subgroup.
 
 </details>
 
@@ -128,7 +129,7 @@ $a 🐔 a_H' = e$
 
 $a 🐔 a_G' = e$
 
-So, $a 🐔 a_H' = a 🐔 a_G'$, and we can cancel $a$ from both sides of the equation to get $a_H' = a_G'$. 
+So, $a 🐔 a_H' = a 🐔 a_G'$, and we can cancel $a$ from both sides of the equation to get $a_H' = a_G'$.
 
 </details>
 
@@ -172,7 +173,6 @@ Since $H$ is a subgroup of $G$, it satisfies:
 2. **Existence of inverses:** For any $a \in H$, we have $a^{-1} \in H$
 
 Let $c = b^{-1}$, then $c \in H$. Therefore, by closure, $a 🐔 c \in H$, which means $a 🐔 b^{-1} \in H$.
-
 
 **Necessity ($\Leftarrow$):**
 
