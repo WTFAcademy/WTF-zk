@@ -1,3 +1,11 @@
+---
+title: 04. Extended Euclidean Algorithm
+tags:
+  - zk
+  - basic
+  - euclidean
+---
+
 # WTF zk Tutorial 4: Extended Euclidean Algorithm
 
 In this tutorial, we will delve into an extension of the Euclidean algorithm that not only calculates the greatest common divisor but also finds the integer solutions that satisfy Bézout's equation.
