@@ -14,13 +14,13 @@ Before we continue with advanced number theory, we need to understand abstract a
 
 ## 1. Abstract Algebra
 
-The term "abstract algebra" is called "abstract" because it is an independent algebraic theory that is abstracted from specific mathematical structures. In abstract algebra, we look at the universal properties and patterns of algebraic structures instead of specific algebraic systems (such as real numbers or complex fields).
+The term "abstract algebra" is called "abstract" because it is an independent algebraic theory abstracted from specific mathematical structures. In abstract algebra, we look at the universal properties and patterns of algebraic structures instead of specific algebraic systems (such as real numbers or complex fields).
 
 Specifically, abstract algebra starts with the general properties of algebraic structures and studies concepts such as sets, operations, and algebraic equations. It abstracts the study of various algebraic structures into a common algebraic theory, such as the concepts of groups, rings, fields, and so on. Through this abstract method, abstract algebra can reveal the commonalities between different algebraic systems, providing a more general perspective that allows us to understand and compare the relationships between different mathematical structures.
 
 ## 2. Group
 
-A group is an abstract algebraic structure that consists of a set and a binary operation. A group is usually represented as $(G, 🐔)$, where $G$ represents the set of the group and $🐔$ represents the binary operation of the group. In this tutorial, we discuss the concepts of abstract algebra in more depth. To represent abstract group, we denote it as $(G, 🐔)$, where $🐔$ represents the binary operation, read as "g operation".
+A group is an abstract algebraic structure that consists of a set and a binary operation. A group is usually represented as $(G, 🐔)$, where $G$ represents the set of the group and $🐔$ represents the group's binary operation. In this tutorial, we discuss the concepts of abstract algebra in more depth. To represent the abstract group, we denote it as $(G, 🐔)$, where $🐔$ represents the binary operation, read as "g operation".
 
 However, not every combination of a set and a binary operation can be called a group. It must satisfy four fundamental properties:
 
@@ -35,6 +35,7 @@ However, not every combination of a set and a binary operation can be called a g
 We use these four fundamental properties to determine whether a set with a binary operation is a group. Here are a few examples.
 
 Additional notes:
+
 > 1. If a set and its binary operation satisfy only closure, it is called a "Magma".
 > 2. If a "Magma" also satisfies associativity, it is called a "Semigroup".
 > 3. If a "Semigroup" also has an identity element, it is called a "Monoid".
@@ -108,7 +109,7 @@ From the four fundamental properties of a group, we can derive some important pr
 
 <details><summary>Click here to expand proof 👀</summary>
 
-We proof by contradiction. First, assume that the group $(G, 🐔)$ has two identity elements $E$ and $E'$. According to the definition of the identity element, the product of the identity element with any element is equal to itself, that is, $E 🐔 E'=E=E'$ (which can be understood as $E$ $🐔$ identity element $E'$ equals $E$, or $E'$ $🐔$ identity element $E$ equals $E'$), which means $E=E'$. This leads to a contradiction. Therefore, the identity element in a group is unique.
+We prove by contradiction. First, assume that the group $(G, 🐔)$ has two identity elements $E$ and $E'$. According to the definition of the identity element, the product of the identity element with any element is equal to itself, that is, $E 🐔 E'=E=E'$ (which can be understood as $E$ $🐔$ identity element $E'$ equals $E$, or $E'$ $🐔$ identity element $E$ equals $E'$), which means $E=E'$. This leads to a contradiction. Therefore, the identity element in a group is unique.
 
 </details>
 
@@ -116,7 +117,7 @@ We proof by contradiction. First, assume that the group $(G, 🐔)$ has two iden
 
 <details><summary>Click to expand proof 👀</summary>
 
-We proof by contradiction. Suppose the group $(G, 🐔)$ has an element $A$ with two distinct inverse elements $B$ and $C$, namely $A 🐔 B=E$ and $A 🐔 C=E$. By multiplying both sides of $A 🐔 B=E$ by $C$, we have $C 🐔 A 🐔 B=E 🐔 C$. Since $C 🐔 A=E$, the equation can be simplified to $E 🐔 B=E 🐔 C$. According to the definition of the identity element, any element operated by the identity element is equal to itself. Therefore, we have $B=C$, which contradicts our assumption. Thus, the inverse element of each element in a group is unique.
+We prove by contradiction. Suppose the group $(G, 🐔)$ has an element $A$ with two distinct inverse elements $B$ and $C$, namely $A 🐔 B=E$ and $A 🐔 C=E$. By multiplying both sides of $A 🐔 B=E$ by $C$, we have $C 🐔 A 🐔 B=E 🐔 C$. Since $C 🐔 A=E$, the equation can be simplified to $E 🐔 B=E 🐔 C$. According to the definition of the identity element, any element operated by the identity element is equal to itself. Therefore, we have $B=C$, which contradicts our assumption. Thus, the inverse element of each element in a group is unique.
 
 </details>
 
@@ -127,7 +128,7 @@ We proof by contradiction. Suppose the group $(G, 🐔)$ has an element $A$ with
 We can multiply both sides of $ab = ac$ by the inverse element of $a$ on the left to obtain $b=c$.
 
 Similarly, in the case of $ba = ca$, we can multiply both sides by the inverse element of $a$ on the right to obtain $b=c$.
- 
+
 </details>
 
 ## 4. Finite Groups and Infinite Groups
@@ -138,4 +139,4 @@ An infinite group refers to a group in which the number of elements is infinite,
 
 ## 5. Summary
 
-In this lecture, we introduced abstract algebra, the basic definition, and properties of groups. Many zero-knowledge proof algorithms are based on group theory, so it is important to grasp this concept.
+In this lecture, we introduced abstract algebra, the basic definition, and the properties of groups. Many zero-knowledge proof algorithms are based on group theory, so it is important to grasp this concept.
