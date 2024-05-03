@@ -16,9 +16,9 @@ In group theory, cosets are an important concept for describing translations or 
 
 In group theory, a subset of a group together with the operation on its elements forms a set called a coset. Cosets are not groups themselves, but they allow us to decompose a group into disjoint sets of equal size, serving as a fundamental tool for studying groups and forming the basis of Lagrange's Theorem.
 
-**Definition of Cosets:** Given a group $(G, 🐔)$ and one of its subgroups $(H, 🐔)$, for an element $a$ in $G$, we define the operation of cosets of $H$ with respect to $a$ as 🦆 operation i.e. $a 🦆 H = \{a 🐔 h \mid h \in H\}$. This represents the set obtained by performing the operation $🐔$ between $a$ and each element of $H$, and the resulting set $a 🦆 H$ is called coset. For simplicity, we omit the $🦆$ symbol and denote cosets as $aH$.
+**Definition of Cosets:** Given a group $(G, 🐔)$ and one of its subgroups $(H, 🐔)$, for an element $a$ in $G$, we define the operation of cosets of $H$ with respect to $a$ as 🦆 operation i.e. $a 🦆 H = \{a 🐔 h \mid h \in H\}$. This represents the set obtained by operating $🐔$ between $a$ and each element of $H$, and the resulting set $a 🦆 H$ is called coset. For simplicity, we omit the $🦆$ symbol and denote cosets as $aH$.
 
-> **Note:** The operation $🐔$ is an operation between **elements** of the group, and the result is an element, while the operation $🦆$ is an operation between an **element and a subgroup** of the group. Its effect is to perform the operation $🐔$ between the element and each element of the subgroup, and the result is a set. You can see the operation $🦆$ as 🐔 operation between elements and sets.
+> **Note:** The operation $🐔$ is an operation between **elements** of the group, and the result is an element, while the operation $🦆$ is an operation between an **element and a subgroup** of the group. Its effect is to operate $🐔$ between the element and each element of the subgroup, and the result is a set. You can see the operation $🦆$ as 🐔 operation between elements and sets.
 
 Similarly, we can define another coset $Ha = \{h 🐔 a \mid h \in H\}$.
 
@@ -30,7 +30,7 @@ Another example is in the additive group $Z_6$. The subgroup $Z_6 = \{0,1,2,3,4,
 
 ## 2. Properties of Cosets
 
-**1. Cosets Partition the Entire Group, and Each Element Belongs to Some Coset:** If $H$ is a subgroup of $G$ and $a \in G$, then $a \in aH$. The proof is straightforward, as the subgroup $H$ must contains the identity element $e$. Thus, $aH$ must contain $ae = a$, indicating that $a$ belongs to this coset.
+**1. Cosets Partition the Entire Group, and Each Element Belongs to Some Coset:** If $H$ is a subgroup of $G$ and $a \in G$, then $a \in aH$. The proof is straightforward, as the subgroup $H$ must contain the identity element $e$. Thus, $aH$ must contain $ae = a$, indicating that $a$ belongs to this coset.
 
 **2. Cosets Produced by Subgroup and Subgroup Elements Operation Equal the Subgroup Itself:** If $H$ is a subgroup of $G$ and $a \in G$, then $aH = H$ if and only if $a \in H$. This also means that the subgroup $H$ itself is a coset.
 
@@ -46,9 +46,9 @@ Another example is in the additive group $Z_6$. The subgroup $Z_6 = \{0,1,2,3,4,
 
 <details><summary>Click to expand the proof</summary>
 
-**Sufficiency:** Since $aH = bH$, and $b \in bH$, there exists $h \in H$ such that $ah = b$. Since $a, b \in G$, the inverse element of $a$ exists. Multiplying both sides by $a^{-1}$, we get $h = a^{-1}b$, so $a^{-1}b \in H$. 
+**Sufficiency:** Since $aH = bH$, and $b \in bH$, there exists $h \in H$ such that $ah = b$. Since $a, b \in G$, the inverse element of $a$ exists. Multiplying both sides by $a^{-1}$, we get $h = a^{-1}b$, so $a^{-1}b \in H$.
 
-**Necessity:** Given $a^{-1}b \in H$, there exists $h \in H$ such that $a^{-1}b = h$. Multiplying both sides by $a$, we obtain $b = ah$. Multiplying both sides by $H$, we have $bH = ahH$. Since $h \in H$, we have $hH = H$, so $bH = aH$. 
+**Necessity:** Given $a^{-1}b \in H$, there exists $h \in H$ such that $a^{-1}b = h$. Multiplying both sides by $a$, we obtain $b = ah$. Multiplying both sides by $H$, we have $bH = ahH$. Since $h \in H$, we have $hH = H$, so $bH = aH$.
 
 </details>
 
@@ -56,11 +56,11 @@ Another example is in the additive group $Z_6$. The subgroup $Z_6 = \{0,1,2,3,4,
 
 <details><summary>Click to expand the proof</summary>
 
-We proof by contradiction. Suppose $aH \neq bH$, but $aH$ and $bH$ have a common element $h$. Then there exist $h_1, h_2 \in H$ such that $h = ah_1 = bh_2$, implying $ah_1 = bh_2$. Multiplying both sides by $a^{-1}$, we get $h_1 = a^{-1}b$, so $a^{-1}b \in H$. Contradiction arises as we initially assumed $aH \neq bH$, yet $aH$ and $bH$ have a common element. Thus, if $aH \neq bH$, then $aH$ and $bH$ have no common elements i.e. $aH \cap bH = \varnothing$. 
+We prove by contradiction. Suppose $aH \neq bH$, but $aH$ and $bH$ have a common element $h$. Then there exist $h_1, h_2 \in H$ such that $h = ah_1 = bh_2$, implying $ah_1 = bh_2$. Multiplying both sides by $a^{-1}$, we get $h_1 = a^{-1}b$, so $a^{-1}b \in H$. A contradiction arises as we initially assumed $aH \neq bH$, yet $aH$ and $bH$ have a common element. Thus, if $aH \neq bH$, then $aH$ and $bH$ have no common elements i.e. $aH \cap bH = \varnothing$.
 
 </details>
 
-**5. One-to-One Correspondence Between Subgroup Elements and Cosets, with Equal Number of Elements (Equinumerosity):** $|H|=|aH|$.
+**5. One-to-One Correspondence Between Subgroup Elements and Cosets, with an Equal Number of Elements (Equinumerosity):** $|H|=|aH|$.
 
 <details><summary>Click to expand the proof</summary>
 
@@ -70,11 +70,11 @@ Consider the mapping $f: H \to bH$, where $f(h) = ah$ defined on $H$. We need to
 
 **1. Injectivity:** For any $x_1, x_2 \in H$, if $f(x_1) = f(x_2)$, then $x_1 = x_2$.
 
-   Suppose $f(x_1) = f(x_2)$, which implies $ax_1 = ax_2$. Since $a$ is a group element with an inverse, multiplying both sides by the inverse yields $x_1 = x_2$. Thus, proved.
+Suppose $f(x_1) = f(x_2)$, which implies $ax_1 = ax_2$. Since $a$ is a group element with an inverse, multiplying both sides by the inverse yields $x_1 = x_2$. Thus, proved.
 
 **2. Surjectivity:** For any $y \in aH$, there exists $x \in H$ such that $f(x) = y$.
 
-   Since $y \in aH$, there exists $h \in H$ such that $y = ah$. Let $x = a^{-1} y$, then $f(x) = a a^{-1} y = y$. Therefore, $f$ is surjective.
+Since $y \in aH$, there exists $h \in H$ such that $y = ah$. Let $x = a^{-1} y$, then $f(x) = a a^{-1} y = y$. Therefore, $f$ is surjective.
 
 From injectivity and surjectivity, $f$ is a bijection. Hence, $H$ and $aH$ are equinumerous, meaning their elements correspond one-to-one, and they have the same number of elements.
 
