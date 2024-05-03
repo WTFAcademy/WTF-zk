@@ -16,7 +16,7 @@ This equation is known as Bézout's equation, where $\gcd(a, b)$ is the greatest
 
 ### 2.1 Basic Idea
 
-The extended Euclidean algorithm not only calculates the greatest common divisor using the Euclidean algorithm but also finds the integer solutions that satisfy Bézout's equation through reverse deduction. In the Euclidean algorithm, we only care about the remainder $r_i$ of each iteration and not the quotients $q_i$. The extended algorithm makes use of $q_i$ to reverse compute Bézout's equation, effectively utilizing what would otherwise be discarded.
+The extended Euclidean algorithm not only calculates the greatest common divisor using the Euclidean algorithm but also finds the integer solutions that satisfy Bézout's equation through reverse deduction. In the Euclidean algorithm, we only care about the remainder $r_i$ of each iteration and not the quotients $q_i$. The extended algorithm uses $q_i$ to calculate the Bézout's equation backwards, effectively utilizing what would otherwise be discarded.
 
 Let's recall the Euclidean algorithm:
 
@@ -44,7 +44,7 @@ $$
 r_{n-2} = r_{n-1}q_{n} + r_n
 $$
 
-We continue iterating until rn = 0, at which point $r_{n-1}= \gcd(a,b)$ and we have:
+We continue iterating until $r_n$ = 0, at which point $r_{n-1}= \gcd(a,b)$ and we have:
 
 $$
 r_{n-2} = \gcd(a,b) q_{n}
@@ -62,7 +62,7 @@ $$
 a = bq + r
 $$
 
-Where all the $q_i$ are known. Therefore, we can continuously expand and express $r, ..., r_{n-2}$ as linear combinations of a and b, ultimately expressing $\gcd(a,b)$ as a linear combination of $a$ and $b$, which yields Bézout's equation.
+Where all the $q_i$ are known. Therefore, we can continuously expand and express $r, ..., r_{n-2}$ as linear combinations of $a$ and $b$, ultimately expressing $\gcd(a,b)$ as a linear combination of $a$ and $b$, which yields Bézout's equation.
 
 We will now derive the extended Euclidean algorithm using both iterative and recursive methods.
 
@@ -70,7 +70,7 @@ We will now derive the extended Euclidean algorithm using both iterative and rec
 
 #### 2.2.1 Iterative Formula
 
-First, let's express the remainder ri obtained from each iteration as a linear combination of $a$ and $b$. For the $i$th iteration with remainder $r_i$, let there exist integers $x_i$ and $y_i$ that satisfy the following equation:
+First, let's express the remainder $r_i$ obtained from each iteration as a linear combination of $a$ and $b$. For the $i$-th iteration with remainder $r_i$, let there exist integers $x_i$ and $y_i$ that satisfy the following equation:
 
 $$
 x_i a + y_i b=r_i
@@ -166,7 +166,7 @@ $$
 
 At this point, we have $x_i a + y_i b=r_i$ equal to $30-24$, which equals $6$, and the equation holds.
 
-3. Step 3: Since the remainder $r$ is non-zero $r=6$, replace $a$ with $b$ and $b$ with $r$, and continue with the Euclidean division:
+3. Step 3: Since the remainder $r$($r=6$) is non-zero, replace $a$ with $b$ and $b$ with $r$, and continue with the Euclidean division:
 
 $$
 24 = 4 \cdot 6 + 0
