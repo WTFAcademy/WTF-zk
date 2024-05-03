@@ -13,7 +13,7 @@ In this lesson, we will explore Modular Arithmetic, which is frequently used in 
 
 ## 1. Modulo Operation
 
-The modulo operation is an integer operation that calculates the remainder of a division operation and limits the result to a fixed range.
+The modulo operation is an integer operation that obtains the remainder by performing Euclidean division on an integer, limiting the result to a fixed range.
 
 We usually use the symbol $\text{mod}$ to represent the modulo operation. For example, $a \mod n$ represents the modulo operation of integer $a$ divided by $n$, which is the remainder of $a$ divided by $n$. Here, $n$ is called the modulus.
 
