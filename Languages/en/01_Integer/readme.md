@@ -8,7 +8,7 @@ tags:
 
 # WTF zk Tutorial Lesson 1: Integer Arithmetic Basics
 
-As a beginner-friendly tutorial on zero-knowledge proofs, we will start by learning the basics of integer arithmetic. Most of you have probably learned this in secondary school, so it should be quite easy. We will also reproduce integer arithmetic using Python, so even beginners can quickly get started.
+As a beginner-friendly tutorial on zero-knowledge proofs, we will start by learning the basics of integer arithmetic. Most of you have probably learned this in secondary school, so it should be quite easy. We will also implement integer arithmetic using Python, making it easy for beginners to get started.
 
 For those who haven't used Python before, it is recommended to install [Anaconda](https://www.anaconda.com/download) to install and manage the Python environment.
 
@@ -86,7 +86,7 @@ Integers have some important properties:
 
 ## 4. Euclidean Division
 
-The division we commonly use is real number division, where the result of dividing two integers may not be an integer, e.g., $7 \div 5 = 1.4$ is not an integer. Therefore, we introduce integer division, also known as Euclidean Division. It has two components: quotient and remainder. The definition of Euclidean Division is as follows:
+The division we commonly use is real number division, where the result of dividing two integers may not be an integer, e.g., $7 \div 5 = 1.4$ is not an integer. Therefore, we introduce integer division, also known as Euclidean Division. Its result consists of two parts: the quotient and the remainder. The definition of Euclidean Division is as follows:
 
 For integers $a$ and $b$ (where $b \neq 0$), there exists a unique pair of integers $(q, r)$ such that $a = bq + r$, where $q$ is the quotient, $r$ is the remainder, and $0 \leq r \lt |b|$.
 
