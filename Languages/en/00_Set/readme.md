@@ -6,7 +6,7 @@ tags:
   - set
 ---
 
-# WTF Zero-Knowledge Proof Tutorial 00: Set
+# WTF zk Tutorial Lesson 0: Set
 
 Abstract algebra, also known as modern algebra, is one of the important foundations of modern mathematics. It studies the algebraic structures of groups, rings, and fields. The concepts of abstract algebra are widely used in zero-knowledge proof (zk) theory, so learners should be familiar with the basic knowledge of abstract algebra.
 

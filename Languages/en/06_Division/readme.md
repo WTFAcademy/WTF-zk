@@ -8,7 +8,7 @@ tags:
   - modular division
 ---
 
-# WTF Zero-Knowledge Proof Tutorial 06: Modular Division
+# WTF zk Tutorial Lesson 6: Modular Division
 
 There is a significant difference between division in modular arithmetic and ordinary integer division, and it is crucial to understand it. In this tutorial, we will introduce modular division, modular inverse, and methods for calculating the inverse.
 

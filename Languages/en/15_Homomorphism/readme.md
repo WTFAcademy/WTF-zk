@@ -1,4 +1,4 @@
-# WTF zk Tutorial 15: Homomorphism and Isomorphism
+# WTF zk Tutorial Lesson 15: Homomorphism and Isomorphism
 
 Up until now, we have been focusing on the internal relations of groups: groups, subgroups, cosets, and quotient groups. In this tutorial, we will study the relationship between two groups and introduce the concepts of homomorphism and isomorphism.
 

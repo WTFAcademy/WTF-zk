@@ -8,7 +8,7 @@ tags:
   - group
 ---
 
-# WTF zk Tutorial Lecture 11: Group
+# WTF zk Tutorial Lesson 11: Group
 
 Before we continue with advanced number theory, we need to understand abstract algebra concepts, including groups, rings, and fields. In this lecture, we will introduce the basics of group theory, including the definition of a group and its fundamental properties.
 

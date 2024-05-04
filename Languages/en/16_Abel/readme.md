@@ -7,7 +7,7 @@ tags:
   - abelian group
 ---
 
-# WTF zk Lecture 16: Abel Group
+# WTF zk Tutorial Lesson 16: Abel Group
 
 In this lecture, we will introduce a type of group commonly used in cryptography: the Abel Group, which is characterized by the commutative property.
 

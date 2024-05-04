@@ -7,7 +7,7 @@ tags:
   - direct product
 ---
 
-# WTF zk Tutorial 18: Direct Product of Groups
+# WTF zk Tutorial Lesson 18: Direct Product of Groups
 
 In this tutorial, we introduce the direct product of groups, which can generate complex groups from simple groups. Furthermore, we will revisit the Chinese Remainder Theorem and prove the Chinese Remainder Mapping using it.
 

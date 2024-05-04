@@ -6,7 +6,7 @@ tags:
   - euclidean
 ---
 
-# WTF zk Tutorial 3: Euclidean Algorithm
+# WTF zk Tutorial Lesson 3: Euclidean Algorithm
 
 In this tutorial, we will learn about the greatest common divisor (GCD) and its calculation using the Euclidean Algorithm, which has wide applications in cryptography.
 

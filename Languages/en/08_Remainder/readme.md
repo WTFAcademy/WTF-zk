@@ -73,7 +73,7 @@ In this way, we can break down the "big problem" into "small problems", which is
 ## 5. Summary
 
 In this lesson, we learned about residue classes, systems of congruences, and the Chinese Remainder Theorem. The Chinese Remainder Theorem not only solves systems of congruences but also allows for reverse use, decomposing a big problem into smaller problems, which is crucial in zero-knowledge proofs.
-# WTF zk Tutorial 8: Chinese Remainder Theorem
+# WTF zk Tutorial Lesson 8: Chinese Remainder Theorem
 
 In this tutorial, we will introduce the concept of residue classes and the famous Chinese Remainder Theorem, which can be used to solve systems of congruences.
 

@@ -7,7 +7,7 @@ tags:
   - congruence
 ---
 
-# WTF Zero-Knowledge Proof Tutorial 05: Modular Arithmetic Basics
+# WTF zk Tutorial Lesson 5: Modular Arithmetic Basics
 
 In this lesson, we will explore Modular Arithmetic, which is frequently used in the field of cryptography.
 
