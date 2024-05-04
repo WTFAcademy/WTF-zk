@@ -7,8 +7,7 @@ tags:
 ---
 
 # WTF zk Tutorial Lesson 2: Prime Number Basics
-
-Welcome to the second tutorial of the WTF zk series! In this tutorial, we will explore the basics of prime numbers. Prime numbers play a crucial role in cryptography, making it essential to understand them for learning zero-knowledge proofs.
+Welcome to the second lesson of the WTF zk tutorial series! In this tutorial, we will explore the basics of prime numbers. Prime numbers play a crucial role in cryptography, making it essential to understand them for learning zero-knowledge proofs.
 
 ## 1. Definition of Prime Numbers
 
@@ -30,7 +29,7 @@ $$
 
 Here, 2, 3, and 7 are prime numbers, and this factorization is unique.
 
-Prime number theorem: The number of prime numbers less than or equal to N is approximately $N/\ln{N}$, and there are infinitely many prime numbers.
+Prime Number Theorem: The number of prime numbers less than or equal to N is approximately $N/\ln{N}$, and there are infinitely many prime numbers.
 
 Proof:
 
