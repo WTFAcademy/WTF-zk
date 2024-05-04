@@ -62,7 +62,7 @@ However, prime factorization of large numbers can be very difficult. The Euclide
 
 ## 2. Euclidean Algorithm
 
-The Euclidean Algorithm (also known as division algorithm) is a commonly used algorithm for calculating the GCD of two integers.
+The Euclidean Algorithm (also known as the division algorithm) is a commonly used algorithm for calculating the GCD of two integers.
 
 ### 2.1 Basic Idea
 
@@ -130,8 +130,7 @@ Let's calculate the GCD of $a = 30$ and $b = 24$:
 3. Step 3: The remainder in the previous step, $r = 0$, is zero. Stop the iteration. The GCD is $\gcd(30, 24) = 6$.
 
 ### 2.4 Intuitive Understanding
-
-Suppose we have a rectangular room with length $a$ and width $b$. The room wants to be tiled with square tiles, and each side of the square tiles should be as long as possible. This maximum side length is actually the GCD $\gcd(a, b)$, and the Euclidean method allows us to find it:
+Suppose we have a rectangular room with length $a$ and width $b$. We want to tile the room with square tiles, and each side of the square tiles should be as long as possible. The maximum side length is actually the GCD $\gcd(a, b)$, and the Euclidean method allows us to find it:
 
 First, we try to tile the rectangle with $b \times b$ square tiles. However, this leaves a leftover rectangle with dimensions $r \times b$, where $r < b$. Then, we try to tile the remaining rectangle with $r \times r$ square tiles, which leaves another residual rectangle with dimensions $r_1 \times r$. We continue this process by attempting to tile each leftover rectangle with $r_i \times r_i$ square tiles. When there is no residual rectangle left, i.e., when the square tiles completely cover the previous leftover rectangle, the sequence ends. The side length of the smallest square tile is the GCD $\gcd(a, b)$.
 
