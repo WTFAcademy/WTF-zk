@@ -1,14 +1,4 @@
-First, we prove that $f$ is a group homomorphism. For any $a, b \in \mathbb{Z}_M$, we have $f(a+b) = a+b \mod M =  (a+b \mod m_1,..., a+b \mod m_n) = (a \mod m_1,..., a \mod m_n) + (b \mod m_1,..., b \mod m_n) = f(a) + f(b)$. Therefore, $f$ is a group homomorphism. Proof completed.
-
-**Isomorphism**
-
-The $m_i$'s are pairwise coprime, and $Z_{m_i}$ is a cyclic group with order $m_i$. We can easily generalize property 3 of direct product to the case of $n$ groups, and get the result that $Z_{m_1} \times ... \times Z_{m_n}$ is a cyclic group with order $M = m_1 \cdot m_2 \cdot... \cdot m_n$. Using the isomorphism property of cyclic groups, any finite cyclic group of order $M$ is isomorphic to the additive group $Z_M$ of integers modulo $M$. Therefore, $Z_M$ is isomorphic to $Z_{m_1} \times ... \times Z_{m_n}$. Proof completed.
-
-Due to the isomorphism between $Z_M$ and $Z_{m_1} \times ... \times Z_{m_n}$, their elements correspond one-to-one. Therefore, the system of congruences has a unique solution modulo M.
-
-## 4. Summary
-
-In this lesson, we introduced the direct product of groups, which is a way to generate a complex group using several simple groups. By using the properties of group direct product, we revisited the Chinese Remainder Theorem and understood why a system of congruences with coprime moduli has a unique solution from the perspective of group theory.
+---
 title: 18. Direct Product of Groups
 tags:
   - zk
@@ -128,3 +118,17 @@ If $m_i$ are pairwise coprime, then the mapping $f: x \mod M \to (x \mod m_1, ..
 <details><summary>Click to expand the proof👀</summary>
 
 **Homomorphism**
+
+First, we prove that $f$ is a group homomorphism. For any $a, b \in \mathbb{Z}_M$, we have $f(a+b) = a+b \mod M =  (a+b \mod m_1,..., a+b \mod m_n) = (a \mod m_1,..., a \mod m_n) + (b \mod m_1,..., b \mod m_n) = f(a) + f(b)$. Therefore, $f$ is a group homomorphism. Proof completed.
+
+**Isomorphism**
+
+The $m_i$'s are pairwise coprime, and $Z_{m_i}$ is a cyclic group with order $m_i$. We can easily generalize property 3 of direct product to the case of $n$ groups, and get the result that $Z_{m_1} \times ... \times Z_{m_n}$ is a cyclic group with order $M = m_1 \cdot m_2 \cdot... \cdot m_n$. Using the isomorphism property of cyclic groups, any finite cyclic group of order $M$ is isomorphic to the additive group $Z_M$ of integers modulo $M$. Therefore, $Z_M$ is isomorphic to $Z_{m_1} \times ... \times Z_{m_n}$. Proof completed.
+
+Due to the isomorphism between $Z_M$ and $Z_{m_1} \times ... \times Z_{m_n}$, their elements correspond one-to-one. Therefore, the system of congruences has a unique solution modulo M.
+
+</details>
+
+## 4. Summary
+
+In this lesson, we introduced the direct product of groups, which is a way to generate a complex group using several simple groups. By using the properties of group direct product, we revisited the Chinese Remainder Theorem and understood why a system of congruences with coprime moduli has a unique solution from the perspective of group theory.
