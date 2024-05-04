@@ -87,7 +87,7 @@ Fermat's Little Theorem is an important theorem in number theory, providing a po
 
 ### 2.1 Definition
 
-Fermat's Little Theorem states that if p is a prime number, then for any integer a:
+Fermat's Little Theorem states that if p is a prime numbers, then for any integer a:
 
 $$
 a^{p} \equiv a \pmod{p}
