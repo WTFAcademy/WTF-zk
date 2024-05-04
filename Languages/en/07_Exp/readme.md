@@ -10,7 +10,7 @@ $$
 b = a^c \mod{n}
 $$
 
-where $0 \leq b < n$.
+when $0 \leq b < n$.
 
 For example, given $(a, c, n) = (7, 5, 13)$, we can calculate $7^5=16807$, which leaves a remainder of 11 when divided by 13, so $b = 11$.
 
