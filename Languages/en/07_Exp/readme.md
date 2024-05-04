@@ -1,4 +1,4 @@
-# WTF Tutorial 07: Fermat's Little Theorem
+# WTF zk Tutorial 07: Fermat's Little Theorem
 
 Previously we introduced addition, subtraction, multiplication, and division in modular arithmetic. In this tutorial, we will introduce modular exponentiation and Fermat's Little Theorem.
 
