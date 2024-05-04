@@ -1,10 +1,17 @@
-## Chapter 20: Rings
+---
+title: 20. Rings
+tags:
+  - zk
+  - abstract algebra
+  - ring theory
+  - ring
+---
 
-### Introduction to Rings
+# WTF zk Tutorial Lesson 20: Rings
 
 In abstract algebra, a ring is an algebraic structure more complex than a group. A ring comprises two binary operations, usually denoted as addition and multiplication. In this tutorial, we will introduce the definition, classification, and properties of rings.
 
-#### 1. Definition of a Ring
+## 1. Definition of a Ring
 
 A group possesses one operation on a set, whereas a ring possesses two binary operations on a set. It satisfies properties similar to those of integer addition and multiplication. Elements of a ring can be numeric, such as integers or complex numbers, but they can also be non-numeric objects like polynomials, functions, and power series.
 
@@ -41,11 +48,11 @@ Below are commonly used symbols in rings:
 | $ab$                   | $a \cdot b$                                   |
 | $\frac{a}{b}$ or $a/b$ | $a \cdot b^{-1}$                              |
 
-#### 2. Examples of Rings
+## 2. Examples of Rings
 
 Let's familiarize ourselves with rings using the examples of the ring of integers and the ring of integers modulo $n$.
 
-##### 2.1 Ring of Integers $\mathbb{Z}$
+### 2.1 Ring of Integers $\mathbb{Z}$
 
 The most familiar ring is the ring of integers, which consists of the set of all integers $\mathbb{Z}$ along with integer addition and multiplication.
 
@@ -61,7 +68,7 @@ We verify if it satisfies the basic properties of a ring:
 
 Therefore, the ring of integers $(\mathbb{Z}, +, \cdot)$ satisfies the basic properties of a ring.
 
-##### 2.2 Ring of Integers Modulo $n$ $\mathbb{Z}_n$
+### 2.2 Ring of Integers Modulo $n$ $\mathbb{Z}_n$
 
 The ring of integers modulo $n$ is also commonly used in cryptography. It consists of residue classes modulo $n$ along with modulo addition and multiplication.
 
@@ -77,33 +84,33 @@ We verify if it satisfies the basic properties of a ring:
 
 Therefore, the ring of integers modulo $n$ $(\mathbb{Z}_n, +, \cdot)$ satisfies the basic properties of a ring.
 
-#### 3. Classification of Rings
+## 3. Classification of Rings
 
-##### 3.1 Zero Ring
+### 3.1 Zero Ring
 
 If a ring $(R, +, \cdot)$ contains only one element, according to the basic properties of a ring, this element is the additive identity $0$. Such a ring is denoted as $(0, +, \cdot)$, and we call it the **zero ring**.
 
 The zero ring is also referred to as the trivial ring, while rings other than the zero ring are called non-trivial rings.
 
-##### 3.2 Commutative Ring
+### 3.2 Commutative Ring
 
 If the multiplication in a ring $(R, +, \cdot)$ also satisfies the commutative property, i.e., for any $a, b \in R$, $ab = ba$, then the ring is called a **commutative ring**.
 
 In cryptography, the rings commonly used are almost always commutative rings, such as the ring of integers $(\mathbb{Z}, +, \cdot)$ and the ring of integers modulo $n$ $(\mathbb{Z}_n, +, \cdot)$. Therefore, in this tutorial, unless otherwise specified, "ring" refers to a commutative ring.
 
-##### 3.3 Integral Domain
+### 3.3 Integral Domain
 
 First, let's introduce zero divisors. For a ring $R$, if there exist non-zero elements $a, b \in R$ such that $ab = 0$, then $a$ and $b$ are called zero divisors. For example, in the ring of integers modulo $6$, we have $2 \cdot 3 \equiv 0 \pmod{6}$, so $2$ and $3$ are zero divisors in $\mathbb{Z}_6$.
 
 If a commutative ring $R$ does not have zero divisors, then we call $R$ an integral domain. For example, $\mathbb{Z}_5$ is an integral domain, as the product of any two non-zero elements is not equal to zero.
 
-##### 3.4 Field
+### 3.4 Field
 
-A field is a special type of ring. If the multiplicative group of a commutative ring $(R, +, \cdot)$ after removing the zero element $(R-\{0\}, \cdot)$ forms an Abelian group, then we call $R$ a field. For example, when we remove the zero element from $\mathbb{Z}_5$, we get $\mathbb{Z}_5^*$, and $(\mathbb{Z}_5^*, \cdot)$ satisfies the properties of an Abelian group, so $\mathbb{Z}_5$ is a field.
+A field is a special type of ring. If the multiplicative group of a commutative ring $(R, +, \cdot)$ after removing the zero element $(R-\{0\}, \cdot)$ forms an Abelian group, then we call $R$ a field. For example, when we remove the zero element from $\mathbb{Z}_5$, we get $\mathbb{Z}_5^* $, and $(\mathbb{Z}_5^*, \cdot)$ satisfies the properties of an Abelian group, so $\mathbb{Z}_5$ is a field.
 
 Fields are very important in cryptography and zero-knowledge proofs, and we will have a lecture dedicated to them later.
 
-### 4. Basic Properties of Rings
+## 4. Basic Properties of Rings
 
 Now, let's introduce some basic properties of rings.
 
@@ -183,7 +190,7 @@ Therefore, $(-a)b = -(ab) = a(-b) = - (-a)(-b)$. Proof complete.
 
 You can understand these properties using the examples of the ring of integers and the ring of integers modulo $n$.
 
-### 5. Subrings
+## 5. Subrings
 
 For a ring $(R, +, \cdot)$, if $S$ is a non-empty subset of $R$ and $S, +, \cdot$ also form a ring, then we call $S$ a **subring** of $R$.
 
@@ -201,6 +208,6 @@ Or equivalently:
 2. **Closure under multiplication:** For any $a, b \in S$, $ab \in S$.
 3. **(Existence of) Multiplicative identity:** $S$ has a multiplicative identity.
 
-### 6. Conclusion
+## 6. Conclusion
 
 In this tutorial, we introduced the basic definition and properties of rings, as well as some examples. Rings are an important concept in abstract algebra, providing a foundation for further study.
