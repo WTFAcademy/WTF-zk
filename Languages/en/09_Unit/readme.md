@@ -4,7 +4,7 @@ print(f"Euler's function phi({n}): {euler_phi(n)}")
 ## Summary
 
 In this lesson, we introduced the concept of unit set and Euler's function, which can be used to calculate the number of positive integers less than or equal to $n$ that are coprime to $n$. In the next lesson, we will discuss Euler's theorem, which utilizes Euler's function.
-# Tutorial 09: Euler's Totient Function
+# WTF zk Tutorial Lesson 9: Euler's Totient Function
 
 Given an integer $n$, how many positive integers less than or equal to $n$ are relatively prime to $n$? In this tutorial, we will study this problem, including the concepts of unit set and Euler's totient function.
 

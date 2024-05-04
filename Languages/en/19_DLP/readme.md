@@ -1,4 +1,4 @@
-# WTF zk Tutorial 19: Discrete Logarithm Problem
+# WTF zk Tutorial Lesson 19: Discrete Logarithm Problem
 
 In this tutorial, we will explore primitive roots and the discrete logarithm problem. The discrete logarithm problem serves as the foundation for many encryption algorithms.
 

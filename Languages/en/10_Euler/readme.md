@@ -6,7 +6,7 @@ tags:
   - euler's theorem
 ---
 
-# WTF zk tutorial #10: Euler's Theorem
+# WTF zk Tutorial Lesson 10: Euler's Theorem
 
 Euler's theorem is a fundamental theorem in number theory, stating that in modular arithmetic, for any integer coprime to the modulus, raising the integer to the power of Euler's totient function is congruent to 1 modulo the modulus. It provides the mathematical foundation for encryption algorithms such as RSA. In this lecture, we will introduce the discrete logarithm problem, the order of a unit, and Euler's theorem.
 
