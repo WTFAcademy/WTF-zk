@@ -1,79 +1,4 @@
-First, we calculate $M = 3 \times 5 \times 7 = 105$.
-
-Next, we calculate $a_i, b_i, b_i'$.
-
-$a_1 = 2, b_1 = 35, b_1' \equiv 35^{-1} = 2\pmod{3}$
-
-$a_2 = 3, b_2 = 21, b_2' \equiv 21^{-1} = 1\pmod{5}$
-
-$a_3 = 2, b_3 = 15, b_3' \equiv 15^{-1} = 1\pmod{7}$
-
-Therefore, the solution of the system of equations is $x \equiv 2 \times 35 \times 2 + 3 \times 21 \times 1 + 2 \times 15 \times 1 \equiv 233 \equiv 23 \pmod{105}$.
-
-Let's try substituting the solution into the equations. 23 is congruent to 2 modulo 3, 3 modulo 5, and 2 modulo 7, which satisfies the conditions.
-
-### 4.4 Code Implementation
-
-We can implement the Chinese Remainder Theorem in Python:
-
-```python
-def extended_gcd(a, b):
-    if b == 0:
-        return a, 1, 0
-    else:
-        d, x, y = extended_gcd(b, a % b)
-        return d, y, x - (a // b) * y
-
-def chinese_remainder_theorem(congruences):
-    """
-    Function to solve the Chinese Remainder Theorem
-
-    :param congruences: The system of linear congruences, in the format [(a1, m1), (a2, m2), ..., (an, mn)], representing the equations as x ≡ ai (mod mi)
-    :return: The solution x of the system of equations
-    """
-    # Calculate the product of moduli M
-    M = 1
-    for _, mi in congruences:
-        M *= mi
-
-    # Calculate Mi and the modular inverse of Mi
-    M_values = [M // mi for _, mi in congruences]
-    Mi_values = [extended_gcd(Mi, mi)[1] for Mi, (_, mi) in zip(M_values, congruences)]
-
-    # Calculate the solution x
-    x = sum(ai * Mi * mi for (ai, _), Mi, mi in zip(congruences, Mi_values, M_values)) % M
-
-    return x
-
-# Example: Solve x ≡ 2 (mod 3), x ≡ 3 (mod 5), x ≡ 2 (mod 7)
-congruences = [(2, 3), (3, 5), (2, 7)]
-solution = chinese_remainder_theorem(congruences)
-print(f"The solution to the system of congruences is x ≡ {solution} (mod {congruences[0][1] * congruences[1][1] * congruences[2][1]})")
-# The solution to the system of congruences is x ≡ 23 (mod 105)
-```
-
-### 4.5 Reverse Use
-
-The Chinese Remainder Theorem can be used in reverse, decomposing the solution $X$ of an equation into multiple congruence equations. For example, in the problem of unknown numbers, if we obtain the solution $x \equiv 23 \pmod{105}$, we can decompose it into 3 equations:
-
-$$
-x \equiv 2 \pmod{3}
-$$
-
-$$
-x \equiv 3 \pmod{5}
-$$
-
-$$
-x \equiv 2 \pmod{7}
-$$
-
-In this way, we can break down the "big problem" into "small problems", which is very important in zero-knowledge proofs.
-
-## 5. Summary
-
-In this lesson, we learned about residue classes, systems of congruences, and the Chinese Remainder Theorem. The Chinese Remainder Theorem not only solves systems of congruences but also allows for reverse use, decomposing a big problem into smaller problems, which is crucial in zero-knowledge proofs.
-# WTF zk Tutorial Lesson 8: Chinese Remainder Theorem
+# WTF zk Tutorial 8: Chinese Remainder Theorem
 
 In this tutorial, we will introduce the concept of residue classes and the famous Chinese Remainder Theorem, which can be used to solve systems of congruences.
 
@@ -329,3 +254,79 @@ $$
 $$
 x \equiv 2 \pmod{7}
 $$
+
+First, we calculate $M = 3 \times 5 \times 7 = 105$.
+
+Next, we calculate $a_i, b_i, b_i'$.
+
+$a_1 = 2, b_1 = 35, b_1' \equiv 35^{-1} = 2\pmod{3}$
+
+$a_2 = 3, b_2 = 21, b_2' \equiv 21^{-1} = 1\pmod{5}$
+
+$a_3 = 2, b_3 = 15, b_3' \equiv 15^{-1} = 1\pmod{7}$
+
+Therefore, the solution of the system of equations is $x \equiv 2 \times 35 \times 2 + 3 \times 21 \times 1 + 2 \times 15 \times 1 \equiv 233 \equiv 23 \pmod{105}$.
+
+Let's try substituting the solution into the equations. 23 is congruent to 2 modulo 3, 3 modulo 5, and 2 modulo 7, which satisfies the conditions.
+
+### 4.4 Code Implementation
+
+We can implement the Chinese Remainder Theorem in Python:
+
+```python
+def extended_gcd(a, b):
+    if b == 0:
+        return a, 1, 0
+    else:
+        d, x, y = extended_gcd(b, a % b)
+        return d, y, x - (a // b) * y
+
+def chinese_remainder_theorem(congruences):
+    """
+    Function to solve the Chinese Remainder Theorem
+
+    :param congruences: The system of linear congruences, in the format [(a1, m1), (a2, m2), ..., (an, mn)], representing the equations as x ≡ ai (mod mi)
+    :return: The solution x of the system of equations
+    """
+    # Calculate the product of moduli M
+    M = 1
+    for _, mi in congruences:
+        M *= mi
+
+    # Calculate Mi and the modular inverse of Mi
+    M_values = [M // mi for _, mi in congruences]
+    Mi_values = [extended_gcd(Mi, mi)[1] for Mi, (_, mi) in zip(M_values, congruences)]
+
+    # Calculate the solution x
+    x = sum(ai * Mi * mi for (ai, _), Mi, mi in zip(congruences, Mi_values, M_values)) % M
+
+    return x
+
+# Example: Solve x ≡ 2 (mod 3), x ≡ 3 (mod 5), x ≡ 2 (mod 7)
+congruences = [(2, 3), (3, 5), (2, 7)]
+solution = chinese_remainder_theorem(congruences)
+print(f"The solution to the system of congruences is x ≡ {solution} (mod {congruences[0][1] * congruences[1][1] * congruences[2][1]})")
+# The solution to the system of congruences is x ≡ 23 (mod 105)
+```
+
+### 4.5 Reverse Use
+
+The Chinese Remainder Theorem can be used in reverse, decomposing the solution $X$ of an equation into multiple congruence equations. For example, in the problem of unknown numbers, if we obtain the solution $x \equiv 23 \pmod{105}$, we can decompose it into 3 equations:
+
+$$
+x \equiv 2 \pmod{3}
+$$
+
+$$
+x \equiv 3 \pmod{5}
+$$
+
+$$
+x \equiv 2 \pmod{7}
+$$
+
+In this way, we can break down the "big problem" into "small problems", which is very important in zero-knowledge proofs.
+
+## 5. Summary
+
+In this lesson, we learned about residue classes, systems of congruences, and the Chinese Remainder Theorem. The Chinese Remainder Theorem not only solves systems of congruences but also allows for reverse use, decomposing a big problem into smaller problems, which is crucial in zero-knowledge proofs.

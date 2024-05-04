@@ -170,4 +170,4 @@ Euler's Criterion: Let $p$ be an odd prime number, $a$ be an integer, and $gcd(a
 
 ## 5. Summary
 
-In this lesson, we defined modular arithmetic, congruence, basic modular operations, and quadratic residues. Modular arithmetic may seem unfamiliar, but in fact, it is everywhere in our daily lives, you just haven't noticed. Can you think of any applications of modular arithmetic in daily life?
+In this lesson, we introduced the definition of modular arithmetic, congruence, basic modular operations, and quadratic residues. Modular arithmetic may seem unfamiliar, but in fact, it is everywhere in our daily lives, you just haven't noticed. Can you think of any applications of modular arithmetic in daily life?
