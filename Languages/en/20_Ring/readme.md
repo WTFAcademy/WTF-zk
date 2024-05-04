@@ -200,13 +200,13 @@ We can determine if $S$ is a subring of $R$ using the following conditions:
 2. **Preservation of zero:** The zero element of $R$ is also in $S$, i.e., $0_R = 0_S$.
 3. **Existence of additive inverses:** For any $a \in S$, $-a \in S$.
 4. **Closure under multiplication:** For any $a,b \in S$, $ab \in S$.
-5. **(Existence of) Multiplicative identity:** $S$ has a multiplicative identity.
+5. **Existence of (Multiplicative) identity:** $S$ has a multiplicative identity.
 
 Or equivalently:
 
 1. **Closure under subtraction (Condition for being a subgroup):** For any $a, b \in S$, $a+b \in S$.
 2. **Closure under multiplication:** For any $a, b \in S$, $ab \in S$.
-3. **(Existence of) Multiplicative identity:** $S$ has a multiplicative identity.
+3. **Existence of (Multiplicative) identity:** $S$ has a multiplicative identity.
 
 ## 6. Conclusion
 
