@@ -1,3 +1,10 @@
+---
+title: 02. Prime Number Basics
+tags:
+  - zk
+  - basic
+  - prime number
+---
 # WTF zk Tutorial Lesson 2: Prime Number Basics
 
 Welcome to the second lesson of the WTF zk tutorial series! In this tutorial, we will explore the basics of prime numbers. Prime numbers play a crucial role in cryptography, making it essential to understand them for learning zero-knowledge proofs.
