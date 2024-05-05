@@ -6,7 +6,7 @@ tags:
   - euclidean
 ---
 
-# Zero-Knowledge Tutorial 03: Greatest Common Divisor and Euclidean Algorithm
+# WTF zk Tutorial Lesson 03: Greatest Common Divisor and Euclidean Algorithm
 
 In this tutorial, we will learn about the concept of the greatest common divisor (GCD) and how to calculate it using the Euclidean Algorithm. Understanding these concepts is essential in cryptography.
 

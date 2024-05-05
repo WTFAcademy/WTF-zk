@@ -6,7 +6,7 @@ tags:
   - integer
 ---
 
-# Zero-Knowledge Proof Tutorial Lesson 1: Basic Integer Operations
+# WTF zk Tutorial Lesson 1: Basic Integer Operations
 
 As a beginner-friendly tutorial on zero-knowledge proofs, we will start by learning the basics of integer arithmetic. Most of you have probably learned this in secondary school, so it should be quite easy. We will also implement integer arithmetic using Python, making it easy for beginners to get started.
 
