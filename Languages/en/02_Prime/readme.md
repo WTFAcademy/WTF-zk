@@ -1,6 +1,14 @@
-# WTF zk Series: Tutorial 02 - Basics of Prime Numbers
+---
+title: 02. Prime Number Basics
+tags:
+  - zk
+  - basic
+  - prime number
+---
+# WTF zk Tutorial Lesson 2: Prime Number Basics
 
-Welcome to the second tutorial of the WTF zk series! In this tutorial, we will explore the basics of prime numbers. Prime numbers, also known as "素数" (su shu) in Chinese, are fundamental in cryptography, and understanding them is essential for learning zero-knowledge proofs.
+Welcome to the second lesson of the WTF zk tutorial series! In this tutorial, we will explore the basics of prime numbers. Prime numbers play a crucial role in cryptography, making it essential to understand them for learning zero-knowledge proofs.
+
 
 ## 1. Definition of Prime Numbers
 

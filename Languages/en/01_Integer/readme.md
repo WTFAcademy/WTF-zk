@@ -6,9 +6,10 @@ tags:
   - integer
 ---
 
-# Zero-Knowledge Proof Tutorial Lesson 1: Basic Integer Operations
+# WTF zk Tutorial Lesson 1: Basic Integer Operations
 
-Welcome to the Zero-Knowledge Proof (ZKP) tutorial! In this beginner-friendly lesson, we will start by learning the basics of integer operations. These concepts are commonly taught in middle school, so they should be quite straightforward. We will also provide Python examples to help you get started quickly.
+As a beginner-friendly tutorial on zero-knowledge proofs, we will start by learning the basics of integer arithmetic. Most of you have probably learned this in secondary school, so it should be quite easy. We will also implement integer arithmetic using Python, making it easy for beginners to get started.
+
 
 If you are new to Python, we recommend installing [Anaconda](https://www.anaconda.com/download) to easily set up and manage your Python environment.
 
@@ -86,7 +87,7 @@ Integers have some important properties:
 
 ## 4. Euclidean Division
 
-The division we commonly use involves real numbers, which may not always result in an integer. For example, $7 \div 5 = 1.4$ is not an integer. To address this, we introduce integer division, also known as Euclidean Division. It provides both a quotient and a remainder as the result.
+The division we commonly use is real number division, where the result of dividing two integers may not be an integer, e.g., $7 \div 5 = 1.4$ is not an integer. Therefore, we introduce integer division, also known as Euclidean Division. Its result consists of two parts: the quotient and the remainder. The definition of Euclidean Division is as follows:
 
 For integers $a$ and $b$ (where $b \neq 0$), there exists a unique pair of integers $(q, r)$ such that $a = bq + r$. Here, $q$ represents the quotient, $r$ represents the remainder, and $0 \leq r \lt |b|$.
 

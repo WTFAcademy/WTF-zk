@@ -6,7 +6,7 @@ tags:
   - euclidean
 ---
 
-# Zero-Knowledge Tutorial 03: Greatest Common Divisor and Euclidean Algorithm
+# WTF zk Tutorial Lesson 03: Greatest Common Divisor and Euclidean Algorithm
 
 In this tutorial, we will learn about the concept of the greatest common divisor (GCD) and how to calculate it using the Euclidean Algorithm. Understanding these concepts is essential in cryptography.
 
@@ -128,7 +128,8 @@ Let's calculate the GCD of a = 30 and b = 24:
 
 ### 2.4 Intuitive Understanding
 
-Imagine we have a rectangular room with length a and width b. We want to cover this room with square tiles, and we want the tiles to be as large as possible. The side length of the largest square tile is actually the GCD $\gcd(a, b)$, and the Euclidean Algorithm helps us find it:
+Suppose we have a rectangular room with length $a$ and width $b$. We want to tile the room with square tiles, and each side of the square tiles should be as long as possible. The maximum side length is actually the GCD $\gcd(a, b)$, and the Euclidean method allows us to find it:
+
 
 First, we try to cover the rectangle with b × b square tiles. However, this leaves a remaining rectangle with dimensions r × b, where r < b. Then, we try to cover the remaining rectangle with r × r square tiles, leaving another remaining rectangle with dimensions r1 × r. We continue this process, trying to cover the remaining rectangles with smaller and smaller square tiles. When there is no remaining rectangle, i.e., when the square tiles completely cover the previous remaining rectangle, the sequence ends. The side length of the smallest square tile is the GCD.
 
