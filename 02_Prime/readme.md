@@ -3,7 +3,7 @@ title: 02. 质数基础
 tags:
   - zk
   - basic
-  - integer
+  - prime numbers
 ---
 
 # WTF zk教程第2讲：质数基础
