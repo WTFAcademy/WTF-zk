@@ -1,4 +1,4 @@
-# WTF Tutorial 07: Fermat's Little Theorem
+# WTF zk Tutorial 07: Fermat's Little Theorem
 
 Previously we introduced addition, subtraction, multiplication, and division in modular arithmetic. In this tutorial, we will introduce modular exponentiation and Fermat's Little Theorem.
 
@@ -10,7 +10,7 @@ $$
 b = a^c \mod{n}
 $$
 
-where $0 \leq b < n$.
+when $0 \leq b < n$.
 
 For example, given $(a, c, n) = (7, 5, 13)$, we can calculate $7^5=16807$, which leaves a remainder of 11 when divided by 13, so $b = 11$.
 
@@ -87,7 +87,7 @@ Fermat's Little Theorem is an important theorem in number theory, providing a po
 
 ### 2.1 Definition
 
-Fermat's Little Theorem states that if p is a prime number, then for any integer a:
+Fermat's Little Theorem states that if p is a prime numbers, then for any integer a:
 
 $$
 a^{p} \equiv a \pmod{p}
