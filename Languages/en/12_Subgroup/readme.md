@@ -1,5 +1,5 @@
 ---
-title: Lecture 12. Subgroup
+title: 12. Subgroup
 tags:
   - zk
   - basic
@@ -8,7 +8,7 @@ tags:
   - subgroup
 ---
 
-# WTF zk Tutorial Lesson 12: Subgroup
+# WTF zk Tutorial Lecture 12: Subgroup
 
 In this lecture, we introduce the concept of a subgroup. A subgroup can be seen as the "child" of a group, consisting of a subset of elements from the group while still satisfying the group's definition. It helps us understand the internal structure of the group.
 
