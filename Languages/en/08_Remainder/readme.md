@@ -8,17 +8,17 @@ tags:
 
 # WTF zk Tutorial 8: Chinese Remainder Theorem
 
-In this tutorial, we will introduce residue classes and the famous Chinese Remainder Theorem, which can be used to solve systems of congruences.
+In this tutorial, we will introduce residue classes and the famous Chinese Remainder Theorem, which can be used to solve system of congruence equations.
 
 ## 1. The Unknown Number Problem
 
 The book "Sunzi Suanjing" from the Northern and Southern Dynasties period (420 AD - 589 AD) records a problem known as the "Unknown Number" problem, and the warrior who solves this problem can receive the Bitcoin (BTC) held by Sunzi (balance: 0).
 
-> There is an unknown number, which leaves a remainder of 2 when divided by 3, a remainder of 3 when divided by 5, and a remainder of 2 when divided by 7. What is the number?
+> There is an unknown number, which leaves a remainder of 2 when counted by 3, a remainder of 3 when counted by 5, and a remainder of 2 when counted by 7. What is the number?
 
-Translated into English: There is an unknown number $x$, which leaves a remainder of 2 when divided by 3, a remainder of 3 when divided by 5, and a remainder of 2 when divided by 7. Find the value of $x$.
+Translated into Modern Language: There is an unknown number $x$, which leaves a remainder of 2 when divided by 3, a remainder of 3 when divided by 5, and a remainder of 2 when divided by 7. Find the value of $x$.
 
-In fact, this is a problem of solving a system of linear congruences, that is, finding $x$ that satisfies the following system of equations:
+In fact, this is a problem of solving a system of linear congruence equations, that is, finding $x$ that satisfies the following system of equations:
 
 $$
 x \equiv 2 \pmod{3}
@@ -36,7 +36,7 @@ The Chinese Remainder Theorem, which we will introduce next, is used to solve th
 
 ## 2. Residue Classes
 
-In Tutorial 5, we briefly introduced the concept of residue classes, and now we need to give a more systematic introduction.
+In Tutorial 5, we briefly introduced the concept of residue classes, and now let's do a more systemetic explanation.
 
 A residue class is an equivalence relation used to partition integers into congruence sets, defined as follows:
 
@@ -76,11 +76,11 @@ Residue classes are not unique. For example, $[5]_5, [6]_5, [7]_5, [8]_5, [9]_5$
 
 Residue classes form a partition of the set of integers, and they satisfy the three properties of an equivalence relation:
 
-- **Reflexivity:** Any integer $a$ is congruent to itself, $a \equiv a \pmod{m}$, so $[a]_m$ is not empty.
+- **Reflexive:** Any integer $a$ is congruent to itself, $a \equiv a \pmod{m}$, so $[a]_m$ is not empty.
 
-- **Symmetry:** If $a \equiv b \pmod{m}$, then $b \equiv a \pmod{m}$, which can also be written as $[a]_m = [b]_m$.
+- **Symmetric:** If $a \equiv b \pmod{m}$, then $b \equiv a \pmod{m}$, which can also be written as $[a]_m = [b]_m$.
 
-- **Transitivity:** If $a \equiv b \pmod{m}$ and $b \equiv c \pmod{m}$, then $a \equiv c \pmod{m}$, which can also be written as $[a]_m = [b]_m = [c]_m$.
+- **Transitive:** If $a \equiv b \pmod{m}$ and $b \equiv c \pmod{m}$, then $a \equiv c \pmod{m}$, which can also be written as $[a]_m = [b]_m = [c]_m$.
 
 ### 2.2 Operations on Residue Classes
 
@@ -96,7 +96,7 @@ $$
 [a]_m \cdot [b]_m = [a \cdot b]_m
 $$
 
-## 3. Systems of Congruences
+## 3. System of Congruence Equations
 
 ### 3.1 Congruences
 
@@ -146,7 +146,7 @@ where $k \in \mathbb{Z}$.
 
 ## 4. Chinese Remainder Theorem
 
-The Chinese Remainder Theorem provides the conditions for the existence and solution of a system of linear congruences.
+The Chinese Remainder Theorem provides the conditions for the existence and solution of a system of linear congruences of one variable.
 
 ### 4.1 Simple Form
 
@@ -172,9 +172,9 @@ where $p_1 = p^{-1} \pmod{q}$ and $q_1 = q^{-1} \pmod{p}$.
 
 <details><summary>Click to expand proof👀</summary>
 
-Taking the equation modulo $p$, we have $x \equiv aqq_1 \pmod{p}$, because $bpp_1$ is divisible by $p$. Since $qq_1\pmod{p} = 1$, we have $x \equiv a \pmod{p}$, which satisfies the condition.
+Taking the equation and mod it by $p$, we have $x \equiv aqq_1 \pmod{p}$, because $bpp_1$ is divisible by $p$. Since $qq_1\pmod{p} = 1$, we have $x \equiv a \pmod{p}$, which satisfies the condition.
 
-Similarly, taking the equation modulo $q$, we have $x \equiv b \pmod{q}$, which satisfies the condition.
+Similarly, taking the equation and mod it by $q$, we have $x \equiv b \pmod{q}$, which satisfies the condition.
 
 Therefore, $x \equiv aqq_1+bpp_1 \pmod{pq}$ is a solution to the system of equations.
 
@@ -202,8 +202,7 @@ $$
 x \equiv 3 \pmod{5}
 $$
 
-We have $pq = 15$, $p_1 = 3^{-1} = 2 \pmod{5}$, and $q_1 = 5^{-1} = 2\pmod{3}$. Therefore:
-
+We have  $pq = 15$, where $3^{-1} = p_1 \pmod{5}$, therefore $p_1 = 2$, also $5^{-1}  = q_1 \pmod{3}$, therefore $q_1 = 2$. At last, we have:
 $$
 x \equiv 2 \times 5 \times 2 + 3 \times 3 \times 2 \equiv 38 \equiv 8 \pmod{15}
 $$
@@ -216,7 +215,6 @@ Next, we will introduce the general solution form of the Chinese Remainder Theor
 
 Integers $m_1, m_2,...,m_n$ are pairwise coprime (for $i 
 e j$, $\gcd(m_i,m_j) = 1$), and the system of equations contains $n$ equations:
-
 $$
 x \equiv a_1 \pmod{m_1}
 $$
@@ -268,11 +266,11 @@ First, we calculate the modulus $M = 3 \times 5 \times 7 = 105$.
 
 Next, we calculate $a_i, b_i, b_i'$ for each equation.
 
-$a_1 = 2, b_1 = 35, b_1' \equiv 35^{-1} = 2\pmod{3}$
+$a_1 = 2, b_1 = 35, b_1' \equiv 35^{-1} \equiv 2\pmod{3}$
 
-$a_2 = 3, b_2 = 21, b_2' \equiv 21^{-1} = 1\pmod{5}$
+$a_2 = 3, b_2 = 21, b_2' \equiv 21^{-1} \equiv 1\pmod{5}$
 
-$a_3 = 2, b_3 = 15, b_3' \equiv 15^{-1} = 1\pmod{7}$
+$a_3 = 2, b_3 = 15, b_3' \equiv 15^{-1} \equiv 1\pmod{7}$
 
 Therefore, the solution to the system of equations is $x \equiv 2 \times 35 \times 2 + 3 \times 21 \times 1 + 2 \times 15 \times 1 \equiv 233 \equiv 23 \pmod{105}$.
 
@@ -294,7 +292,7 @@ def chinese_remainder_theorem(congruences):
     """
     Function to solve the Chinese Remainder Theorem
 
-    :param congruences: A list of congruence equations in the format [(a1, m1), (a2, m2), ..., (an, mn)], representing the equation x ≡ ai (mod mi)
+    :param congruences: A list of linear congruence equations in the format [(a1, m1), (a2, m2), ..., (an, mn)], representing the equation x ≡ ai (mod mi)
     :return: The solution x to the system of congruence equations
     """
     # Calculate the product of the modulus numbers M
