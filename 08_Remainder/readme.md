@@ -202,7 +202,7 @@ $$
 x \equiv 3 \pmod{5}
 $$
 
-有 $pq = 15$， $p_1= 3^{-1} = 2 \pmod{5}$， $q_1 = 5^{-1}  = 2\pmod{3}$。所以：
+有 $pq = 15$， $3^{-1} = p_1 \pmod{5}$，所以$p_1 = 2$， $5^{-1}  = q_1 \pmod{3}$，所以$q_1 = 2$。所以：
 
 $$
 x \equiv 2 \times 5 \times 2 + 3 \times 3 \times 2 \equiv 38 \equiv 8 \pmod{15}
@@ -267,11 +267,11 @@ $$
 
 接下来，分别计算 $a_i, b_i, b_i'$。
 
-$a_1 = 2, b_1 = 35, b_1' \equiv 35^{-1} = 2\pmod{3}$
+$a_1 = 2, b_1 = 35, b_1' \equiv 35^{-1} \equiv 2\pmod{3}$
 
-$a_2 = 3, b_2 = 21, b_2' \equiv 21^{-1} = 1\pmod{5}$
+$a_2 = 3, b_2 = 21, b_2' \equiv 21^{-1} \equiv 1\pmod{5}$
 
-$a_3 = 2, b_3 = 15, b_3' \equiv 15^{-1} = 1\pmod{7}$
+$a_3 = 2, b_3 = 15, b_3' \equiv 15^{-1} \equiv 1\pmod{7}$
 
 因此，方程组的解为 $x \equiv 2 \times 35 \times 2 + 3 \times 21 \times 1 + 2 \times 15 \times 1 \equiv 233 \equiv 23 \pmod{105}$。
 

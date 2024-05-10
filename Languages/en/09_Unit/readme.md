@@ -38,7 +38,7 @@ Here are a few examples: $\phi(2) = 1$, $\phi(3) = 2$, $\phi(5) = 4$, $\phi(8) =
 
 ### 2.1 Properties of Euler's Totient Function
 
-The Euler's totient function has some interesting properties that facilitate the calculation of the number of elements in $\mathbb{Z}_n^*$. The first two properties are applicable to prime numbers $p$, and the third property concerns the multiplicativity of the Euler's totient function, enabling the calculation for composite numbers as a product of the Euler's totient functions of their prime factors.
+The Euler's totient function has some interesting properties that facilitate the calculation of the number of elements in $\mathbb{Z}_n^*$. The first two properties are applicable when $n$ is a prime number, and the third property is about the multiplicativity of the Euler's totient function, when $n$ is a composite number, then it can be represented as a product of the Euler's totient functions of their prime factors.
 
 #### 1. For prime numbers $p$, we have $\phi(p) = p-1$
 
@@ -64,7 +64,7 @@ $$
 
 <details><summary>Proof</summary>
 
-There are a total of $p^k$ elements in the range $[1, ..., p^k]$. Since $p$ is a prime number, only the multiples of $p$ in the range $[p, 2p, 3p, ..., p^k -p, p^k]$ can be divided by $p$ and are not coprime with $p$. Therefore, among every $p$ numbers, only one is not coprime with $p$. There are a total of $p^k / p = p^{k-1}$ such sets of $p$ numbers. Therefore, there are $p^k - p ^{k-1}$ numbers that are coprime with $p$, and $\phi(p^k) = p^k - p ^{k-1}$.
+There are a total of $p^k$ elements in the range $[1, ..., p^k]$. Since $p$ is a prime number, only the multiples of $p$ in the range $[p, 2p, 3p, ..., p^k -p, p^k]$ can be divided by $p$ and are not coprime with $p$. Therefore, among every $p$ numbers, only one is not coprime with $p$. There are a total of $p^k / p = p^{k-1}$ such numbers. Therefore, there are $p^k - p ^{k-1}$ numbers that are coprime with $p$, and $\phi(p^k) = p^k - p ^{k-1}$.
 
 </details>
 
@@ -98,7 +98,7 @@ there exists a unique solution $x$. Therefore, for any element in $\mathbb{Z}_m^
 
 $(x_1 \mod m, x_1 \mod n) = (x_2 \mod m, x_2 \mod n)$
 
-This implies that $x_1 \equiv x_2 \pmod{m}$ and $x_1 \equiv x_2 \pmod{n}$. Therefore, we have $x_1 \equiv x_2 \pmod{mn}$. Thus, $x_1$ and $x_2$ are equal modulo $mn$, proving that $f$ is injective.
+This implies that $x_1 \equiv x_2 \pmod{m}$ and $x_1 \equiv x_2 \pmod{n}$. Therefore, we have $x_1 \equiv x_2 \pmod{mn}$. Thus, $x_1$ and $x_2$ are equal when its mod by $mn$, proving that $f$ is injective.
 
 Since $f$ is both surjective and injective, it is bijective. Therefore, ${\mathbb{Z}_{mn}^*}$ and $\mathbb{Z}_m^* \times \mathbb{Z}_n^*$ have a bijective relationship, and their elements correspond one-to-one, so $\phi(mn) = \phi(m)\phi(n)$.
 
@@ -114,7 +114,7 @@ $$
 Alternatively, we can write it as:
 
 $$
-\phi(n)= n (1 - 1/p_1) (1 -1/p_2)...(1-1/p_r) 
+\phi(n)= n (1 - 1/p_1) (1 -1/p_2)...(1-1/p_r)
 $$
 
 To summarize: since any positive integer greater than $1$ can be factored into the product of prime numbers, let's assume $N=\prod_{i=1}^lp_i^{\alpha_i}$, then $\phi(N)=\prod_{i=1}^lp_i^{\alpha_i-1}(p_i-1)$. In particular, if $N=p^\alpha$, then $\phi(N)=p^{\alpha-1}(p-1)$. Even more specifically, if $N=p$, then $\phi(N)=p-1$.
