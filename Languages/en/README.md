@@ -2,6 +2,8 @@
 
 [中文版本](https://github.com/WTFAcademy/WTF-zk/blob/main/README.md)
 
+WTF zk is intro-level Zero-Knowledge Proofs (ZKP) tutorial: The goal is to make ZKP accessible to individuals with only a high school math background. We will replicate some algorithms using Python, so you will need to learn Python as well.
+
 ### Chapter 1: Introduction to Number Theory
 
 - **Lecture 1: Basics of Integer Operations**  [Code](./01_Integer/Integer.ipynb) | [Tutorial](./01_Integer/readme.md)
