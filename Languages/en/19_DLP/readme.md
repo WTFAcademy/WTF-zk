@@ -47,7 +47,13 @@ For example, consider the multiplicative group $Z_7^* = \{1, 2, 3, 4, 5, 6\}$. W
 
 In this example, the powers of $3$ generate all elements in the group $Z_7^*$.
 
-Let's consider another example: the multiplicative group $Z_8^* = \{1, 3, 5, 7\}$. If we calculate the powers of the elements, we can see that no power of any element can generate the entire group. Therefore, $Z_8^*$ does not have a primitive root and is not a cyclic group.
+Let's consider another example: the multiplicative group $Z_8^* = \{1, 3, 5, 7\}$. If we calculate the powers of the elements：
+
+- $1^1 \equiv 1 \mod 8$
+- $3^1 \equiv 3 \mod 8$，$3^2 \equiv 1 \mod 8$
+- $5^1 \equiv 5 \mod 8$，$5^2 \equiv 1 \mod 8$
+- $7^1 \equiv 7 \mod 8$，$7^2 \equiv 1 \mod 8$
+ we can see that no power of any element can generate the entire group. Therefore, $Z_8^*$ does not have a primitive root and is not a cyclic group.
 
 ### 2.1 Properties of Primitive Roots
 
@@ -61,7 +67,7 @@ Here are a few examples: $Z_5^*$ has a primitive root, such as $2$; $Z_7^*$ also
 
 <details><summary>Click to expand the proof👀</summary>
 
-Assume that $g$ is a primitive root of $Z_n^*$. Its order is equal to the order of the group $Z_n^*$, which is $\phi(n)$. According to Property 5 of the order of a cyclic group, the number of generators is $\phi(\phi(n))$. Proof completed.
+Assume that $g$ is a primitive root of $Z_n^*$ and its order is equal to the order of the group $Z_n^*$, which is $\phi(n)$. According to Property 5 of the order of a cyclic group, the number of generators is $\phi(\phi(n))$. Proof completed.
 
 </details>
 
@@ -105,7 +111,7 @@ If $x \equiv r \pmod{\phi(n)}$, i.e., $x = r + k\phi(n)$, we have $g^x \equiv g^
 
 </details>
 
-For example, in $Z^*_5$, with the primitive root $2$, we have $4 \equiv 2^2 \pmod{5}$. Therefore, $4 \equiv 2^6 \pmod{5}$ and $4 \equiv 2^{10} \pmod{5}$ also hold. You can add or subtract multiples of $\phi(n)$ to the exponent, and the congruence relationship still holds modulo $n$.
+For example, in $Z^*_5$, with the primitive root $2$,Euler's totient function is $\phi(5) = 4$, we have $4 \equiv 2^2 \pmod{5}$. Therefore, $4 \equiv 2^6 \pmod{5}$ and $4 \equiv 2^{10} \pmod{5}$ also hold. You can add or subtract multiples of $\phi(n)$ to the exponent, and the congruence relationship still holds modulo $n$.
 
 This property can be used to simplify the calculation of modular exponentiation. For $Z^*_7$, with the primitive root $3$, we have $\phi(7) = 6$. Therefore, $3^{100} \equiv 3^{100 \pmod{6}} \equiv 3^{4 \pmod{6}} \equiv 81 \equiv 4 \pmod{7}$.
 
