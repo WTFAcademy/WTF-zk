@@ -102,3 +102,34 @@
   [Code](./30_FiniteEC/FiniteEC.ipynb) | [Tutorial](./30_FiniteEC/readme.md)
 
 -->
+
+
+## WTF zk contributors
+<div align="center">
+  <h4 align="center">
+    Contributors are the Basis of WTF Academy
+  </h4>
+  <a href="https://github.com/WTFAcademy/WTF-zk/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=WTFAcademy/WTF-zk" />
+  </a>
+</div>
+
+## WTF zk Sponsor
+
+![](./img/full_logo_zksync-black.png)
+
+## Reference
+
+1. [Moonmath Manual by LeastAuthority](https://github.com/LeastAuthority/moonmath-manual)
+
+2. [zk-learning MOOC](https://zk-learning.org/)
+
+3. [The RareSkills Book of Zero Knowledge](https://www.rareskills.io/zk-book)
+
+4. [Number Theory Notes](https://crypto.stanford.edu/pbc/notes/numbertheory/)
+
+5. [密码学的数学基础](https://space.bilibili.com/552018206/channel/collectiondetail?sid=436262)
+
+6. [Cryptography 101 for Blockchain Developers by OpenZeppelin](https://www.youtube.com/watch?v=9TFEBuANioo)
+
+7. Vitalik's blogs: [Weil Pairing](https://medium.com/@VitalikButerin/exploring-elliptic-curve-pairings-c73c1864e627)
