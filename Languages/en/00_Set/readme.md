@@ -16,7 +16,7 @@ In this tutorial, we will primarily focus on the foundation of abstract algebra:
 
 A set is a mathematical model that represents a collection of different objects, called elements, which together form a whole. Concepts such as integers, rational numbers, real numbers, complex numbers, matrices, polynomials, polygons, and many others can all be essentially represented as sets.
 
-> Common set abbreviations: $\mathbb{N}$ represents the set of natural numbers, $\mathbb{Z}$ represents the set of integers, $\mathbb{Q}$ represents the set of rational numbers, $\mathbb{R}$ represents the set of real numbers, $\mathbb{C}$ represents the set of complex numbers.
+> Common set abbreviations: $\mathbb{N}$ represents the set of natural numbers, $\mathbb{Z}$ ("Zahl" is Integer in German) represents the set of integers, $\mathbb{Q}$ represents the set of rational numbers, $\mathbb{R}$ represents the set of real numbers, $\mathbb{C}$ represents the set of complex numbers.
 
 The number of elements in a set is called its cardinality. If the cardinality is finite, the set is called a finite set; otherwise, it is called an infinite set. There is a special type of set that does not contain any elements, called the empty set $\emptyset$. The characteristics of the empty set are:
 
@@ -26,7 +26,7 @@ The number of elements in a set is called its cardinality. If the cardinality is
 ## 2. Characteristics of Sets
 
 Determinacy: For a set $S$ and an element $a$, the element either belongs to the set ($a\in S$) or does not belong to the set ($a
-otin S$). There is no ambiguity.
+ \notin S$). There is no ambiguity.
 
 Distinctness: In a set, every two elements are considered distinct, meaning that each element can only appear once. Sometimes, it is necessary to describe situations where the same element appears multiple times. This can be achieved using a multiset, where elements are allowed to appear multiple times.
 
