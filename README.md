@@ -139,3 +139,5 @@
 6. [Cryptography 101 for Blockchain Developers by OpenZeppelin](https://www.youtube.com/watch?v=9TFEBuANioo)
 
 7. Vitalik's blogs: [Weil Pairing](https://medium.com/@VitalikButerin/exploring-elliptic-curve-pairings-c73c1864e627)
+
+8. [探索零知识证明系列 by 郭宇 SecBit](https://github.com/sec-bit/learning-zkp/tree/master)
