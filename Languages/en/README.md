@@ -118,7 +118,7 @@ WTF zk is intro-level Zero-Knowledge Proofs (ZKP) tutorial: The goal is to make 
 
 ## WTF zk Sponsor
 
-![](./img/full_logo_zksync-black.png)
+![](../../img/full_logo_zksync-black.png)
 
 ## Reference
 
