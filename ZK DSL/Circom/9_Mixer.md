@@ -1,8 +1,8 @@
-# 混币器
+# Mixer
 
-## 什么是混币器
+## 什么是Mixer
 
-混币技术通过混淆交易发送方与交易接收方之间的关系，来提高数字货币的不可追踪性。它可以让用户快速高效地与其他用户的资金进行混合，在现有的用户账户和混币后的新账户之间创建随机的映射关系，从而实现完全匿名。
+混币技术通过混淆交易发送方与交易接收方之间的关系，来提高数字货币的不可追踪性。它可以让用户快速高效地与其他用户的资金进行混合，在现有的用户账户和混币后的新账户之间创建随机的映射关系，从而实现完全匿名，是一种保障交易隐私的技术。
 
 ![往寺庙“功德箱”里放钱，真有功德吗？|寺庙|功德|功德箱_新浪新闻](https://n.sinaimg.cn/sinakd20200627ac/159/w636h323/20200627/be70-ivmqpck3556426.jpg)
 
@@ -106,7 +106,7 @@ template Multiplier2() {
 - 所有游客向功德箱中放入都是一元硬币
 - 证明加密货币所有权的问题同时不暴露相关信息
 
-<img src="/Users/bytedance/Library/Application Support/typora-user-images/image-20230330184349865.png" alt="image-20230330184349865" style="zoom:67%;" />
+<img src="./Asset/image-20230131205316779.png" alt="image-20230131205316779" style="zoom:67%;" />
 
 `Private input`为：
 
@@ -230,7 +230,7 @@ template Withdraw(k){
 }
 ```
 
-<img src="/Users/bytedance/Library/Application Support/typora-user-images/image-20230330190322395.png" alt="image-20230330190322395" style="zoom:67%;" />
+<img src="./Asset/image-20230201174016430.png" alt="image-20230330190322395" style="zoom:67%;" />
 
 ### 电路处理
 
@@ -626,8 +626,6 @@ https://github.com/tornadocash/tornado-core
 此消息一出，USDC稳定币发行方Circle也冻结了价值超过75,000 USDC 的资金，这些资金与OFAC批准的列入SDN名单中的44个Tornado Cash地址有关。
 
 随着加密市场监管制度的逐渐完善，隐私交易越来越受到重视。此前几年里，Tornado已经成为区块链用户（合法和非法用户）的默认平台，用以保护交易中的隐私。区块链交易对隐私的需求尤其迫切，因为所有交易都是公众可见的。没有Tornado来混合资金，区块链要实现隐私将变得更加复杂。
-
-**混币有风险，开发需谨慎！**
 
 ## Reference
 
