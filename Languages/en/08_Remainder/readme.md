@@ -36,7 +36,7 @@ The Chinese Remainder Theorem, which we will introduce next, is used to solve th
 
 ## 2. Residue Classes
 
-In Tutorial 5, we briefly introduced the concept of residue classes, and now let's do a more systemetic explanation.
+In Tutorial 5, we briefly introduced the concept of residue classes, and now let's do a more systematic explanation.
 
 A residue class is an equivalence relation used to partition integers into congruence sets, defined as follows:
 

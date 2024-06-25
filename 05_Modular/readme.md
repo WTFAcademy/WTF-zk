@@ -155,7 +155,7 @@ print(min(qr))
 > 2. 二次非剩余乘以二次非剩余的结果是二次剩余。
 > 3. 二次剩余乘以二次非剩余的结果是二次非剩余
 
-勒让德符号（Legandra symbol）:
+勒让德符号（Legendre symbol）:
 
 $$
 (\frac{a}{n})=\begin{cases}

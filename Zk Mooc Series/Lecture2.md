@@ -118,7 +118,7 @@ Verifier 通过 PP,x 作为输入,对该 proof 进行验证.
 
 ![](static/SpK9bW8E9oM4RnxeFa4cJGvcn3c.png)
 
-Verifier 接受 w,表示 Prover know w.st C(x,w)=0 成立.如何理解 konw 呢,这就是第一节提到的提取器的概念
+Verifier 接受 w,表示 Prover know w.st C(x,w)=0 成立.如何理解 know 呢,这就是第一节提到的提取器的概念
 
 非正式来说,w 能够以某种方式从 Prover 中提取到 w,则表示 Prover know w.
 
@@ -178,7 +178,7 @@ ZK-SNARK 就是零知识的 SNARK
 
 ![](static/M6aJbALrkojP2CxvZxDc5lAinLM.png)
 
-像 NARK 一样,考虑一个 trival SNARK 的情况,如上图所示,发现 a trival SNARK 并不满足一个 SNARK 定义.
+像 NARK 一样,考虑一个 trivial SNARK 的情况,如上图所示,发现 a trivial SNARK 并不满足一个 SNARK 定义.
 
 ### Preprocessing Setup
 
