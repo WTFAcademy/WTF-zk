@@ -26,10 +26,10 @@ WTF zk is intro-level Zero-Knowledge Proofs (ZKP) tutorial: The goal is to make 
 
 - **Lecture 10: Euler's Theorem**  [Code](./10_Euler/Euler.ipynb) | [Tutorial](./10_Euler/readme.md)
 
-<!---
+
 - **Milestone 01: RSA Algorithm**  
   [Code](./MS01_RSA/RSA.ipynb) | [Tutorial](./MS01_RSA/readme.md) | [Paper](./papers/RSA_paper.pdf)
--->
+
 
 ### Chapter 2: Abstract Algebra: Group Theory
 
@@ -51,13 +51,13 @@ WTF zk is intro-level Zero-Knowledge Proofs (ZKP) tutorial: The goal is to make 
 
 - **Lecture 19: Discrete Logarithm Problem**  [Tutorial](./19_DLP/readme.md)
 
-<!---
+
 - **Milestone 02: Diffie-Hellman Key Exchange Algorithm**  
   [Code](./MS02_DH/Difie_Hellman.ipynb) | [Tutorial](./MS02_DH/readme.md) | [Paper](./papers/Diffie_Hellman.pdf)
 
 - **Milestone 03: ElGamal Encryption and Signature Algorithm**  
   [Code](./MS03_ElGamal/ElGamal.ipynb) | [Tutorial](./MS03_ElGamal/readme.md) | [Paper](./papers/ElGamal.pdf)
--->
+
 ### Chapter 3: Abstract Algebra: Rings and Fields
 
 - **Lecture 20: Rings**  [Tutorial](./20_Ring/readme.md)
