@@ -49,7 +49,7 @@ To better understand the Diffie-Hellman algorithm, let's walk through a simple e
 
 1. **Parameter Selection:** Choose the prime number `p = 13` and its primitive root `g = 6`.
 2. **Private Key Generation:** Alice chooses private key `a = 5`, and Bob chooses private key `b = 4`.
-3. **Compute Public Key:** Alice computes `A = 6^5 = 2 mod 13`, and Bob computes `B = 6^4 = 9 mod 13`.
+3. **Compute Public Key:** Alice computes `A = 6^5 mod 13 = 2`, and Bob computes `B = 6^4 mod 13 = 9`.
 4. **Exchange Public Keys:** Alice sends `A = 2` to Bob, and Bob sends `B = 9` to Alice.
 5. **Compute Session Key:** Alice computes `K = 9^5 mod 13 = 3`, and Bob computes `K = 2^4 mod 13 = 3`.
 6. **Generate Shared Key:** Alice and Bob now have the same shared key `K = 3`, which can be used for further encrypted communication.
