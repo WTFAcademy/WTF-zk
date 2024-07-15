@@ -12,7 +12,7 @@ tags:
 
 ## 1. 单元集
 
-如果 $x \in \mathbb{Z}_n$ 是可逆的（即存在乘法逆元），那么我们称 $x$ 为 $\mathbb{Z}_n$ 的单元。 $\mathbb{Z}_n$ 所有单元的组成的集合被称为单元集（Unit set），记为 $\mathbb{Z}_n^*$。
+如果 $x \in \mathbb{Z}_n$ 是可逆的（即存在乘法逆元），那么我们称 $x$ 为 $\mathbb{Z}_n$ 的单元（unit）。 $\mathbb{Z}_n$ 所有单元的组成的集合被称为单元集（Set of units），记为 $\mathbb{Z}_n^*$。
 
 通过之前的学习，我们知道 $x \in \mathbb{Z}_n$ 可逆的充要条件是 $x$ 与 $n$ 互质。因此 $\mathbb{Z}_n^*$ 中的元素就是 $[1, ..., n-1]$ 中与 $n$ 互质的正整数。在同余理论中，这个集合也被称为模 $N$ 的互质同余类。
 

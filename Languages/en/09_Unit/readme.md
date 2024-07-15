@@ -8,11 +8,11 @@ tags:
 
 # Tutorial 9: Euler's Totient Function
 
-Given an integer $n$, how many positive integers less than or equal to $n$ are coprime with $n$? In this tutorial, we will explore this problem and introduce the concepts of unit set and Euler's totient function.
+Given an integer $n$, how many positive integers less than or equal to $n$ are coprime with $n$? In this tutorial, we will explore this problem and introduce the concepts of set of units and Euler's totient function.
 
-## 1. Unit Set
+## 1. Set of units
 
-If an integer $x \in \mathbb{Z}_n$ is invertible (i.e., it has a multiplicative inverse), we call it a unit of $\mathbb{Z}_n$. The set of all units of $\mathbb{Z}_n$ is called the unit set, denoted as $\mathbb{Z}_n^*$.
+If an integer $x \in \mathbb{Z}_n$ is invertible (i.e., it has a multiplicative inverse), we call it a unit of $\mathbb{Z}_n$. The set of all units of $\mathbb{Z}_n$ is called the set of units, denoted as $\mathbb{Z}_n^*$.
 
 From our previous study, we know that $x \in \mathbb{Z}_n$ is invertible if and only if $x$ is coprime with $n$. Therefore, the elements in $\mathbb{Z}_n^*$ are the positive integers in the range $[1, ..., n-1]$ that are coprime with $n$. In congruence theory, this set is also known as the coprime congruence class modulo $n$.
 
@@ -32,7 +32,7 @@ $\mathbb{Z}^*_{15} = \{1, 2, 4, 7, 8, 11, 13, 14\}$
 
 ## 2. Euler's Totient Function
 
-The Euler's totient function is denoted as $\phi(n) = |\mathbb{Z}_n^*|$, which represents the number of elements in the unit set $\mathbb{Z}_n^*$. In other words, it is the number of positive integers in the range $[1, ..., n-1]$ that are coprime with $n$. Additionally, we define $\phi(1) = 1$.
+The Euler's totient function is denoted as $\phi(n) = |\mathbb{Z}_n^*|$, which represents the number of elements in the set of units $\mathbb{Z}_n^*$. In other words, it is the number of positive integers in the range $[1, ..., n-1]$ that are coprime with $n$. Additionally, we define $\phi(1) = 1$.
 
 Here are a few examples: $\phi(2) = 1$, $\phi(3) = 2$, $\phi(5) = 4$, $\phi(8) = 4$, $\phi(9) = 6$, $\phi(15) = 8$.
 
@@ -154,4 +154,4 @@ print(f"Euler's totient function phi({n}): {euler_phi(n)}")
 
 ## Summary
 
-In this tutorial, we introduced the concepts of unit set and Euler's totient function, which can be used to calculate the number of positive integers less than or equal to $n$ that are coprime with $n$. In the next tutorial, we will explore Euler's theorem, which utilizes the Euler's totient function.
+In this tutorial, we introduced the concepts of set of units and Euler's totient function, which can be used to calculate the number of positive integers less than or equal to $n$ that are coprime with $n$. In the next tutorial, we will explore Euler's theorem, which utilizes the Euler's totient function.

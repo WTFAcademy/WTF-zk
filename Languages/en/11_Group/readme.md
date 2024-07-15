@@ -85,17 +85,17 @@ Therefore, the set of real numbers $\mathbb{R}$ with the multiplication operatio
 
 ### 2.4 $(\mathbb{Z}_n^*, \times)$
 
-Consider the unit set modulo $n$ denoted as $\mathbb{Z}_n^*$ and the multiplication operation:
+Consider the set of units modulo $n$ denoted as $\mathbb{Z}_n^*$ and the multiplication operation:
 
-1. The multiplication in the unit set modulo $n$ is closed.
+1. The multiplication in the set of units modulo $n$ is closed.
 
 2. Multiplication in modular arithmetic satisfies associativity.
 
 3. The identity element is $1$, and multiplying any unit by $1$ leaves it unchanged.
 
-4. Every element in the unit set modulo $n$ has an inverse element, and their product is $1$.
+4. Every element in the set of units modulo $n$ has an inverse element, and their product is $1$.
 
-Therefore, the unit set modulo $n$, denoted as $\mathbb{Z}_n^*$, with the multiplication operation satisfies the properties of a group. It is often called the group of integer modulo $n$ multiplication.
+Therefore, the set of units modulo $n$, denoted as $\mathbb{Z}_n^*$, with the multiplication operation satisfies the properties of a group. It is often called the group of integer modulo $n$ multiplication.
 
 ### 2.5 Trivial Group
 
