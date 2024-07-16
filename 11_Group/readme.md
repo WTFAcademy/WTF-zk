@@ -84,7 +84,7 @@ tags:
 
 ### 2.4 $(\mathbb{Z}_n^*, \times)$
 
-考虑模 $n$ 的单元集（Unit set） $\mathbb{Z}_n^*$ 和乘法运算：
+考虑模 $n$ 的单元集（Set of units） $\mathbb{Z}_n^*$ 和乘法运算：
 
 1. 模 $n$ 的单元集 $\mathbb{Z}_n^*$ 的乘法封闭。
 
