@@ -110,6 +110,11 @@
 
 **里程碑07 身份基加密 IBE** [Code](./MS07_IBE/IBE.ipynb) | [教程](./MS07_IBE/readme.md)
 
+### 第5章 计算复杂性理论
+
+**第41讲 计算理论入门**：[Code](./41_Computation/41_Computation.ipynb) | [教程](./41_Computation/readme.md) 
+
+
 ## WTF zk贡献者
 <div align="center">
   <h4 align="center">
