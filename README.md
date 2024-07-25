@@ -114,6 +114,8 @@
 
 **第41讲 计算理论入门**：[Code](./41_Computation/41_Computation.ipynb) | [教程](./41_Computation/readme.md) 
 
+**第42讲 图灵机**：[教程](./42_TuringMachine/readme.md) 
+
 
 ## WTF zk贡献者
 <div align="center">
