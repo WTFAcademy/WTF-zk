@@ -116,6 +116,7 @@
 
 **第42讲 图灵机**：[教程](./42_TuringMachine/readme.md) 
 
+**第43讲 时间复杂度**：[Code](./43_Complexity/43_Complexity.ipynb) | [教程](./43_Complexity/readme.md) 
 
 ## WTF zk贡献者
 <div align="center">
