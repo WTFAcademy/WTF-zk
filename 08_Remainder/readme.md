@@ -283,6 +283,12 @@ $a_3 = 2, b_3 = 15, b_3' \equiv 15^{-1} = 1\pmod{7}$
 
 ```python
 def extended_gcd(a, b):
+    """
+    扩展欧几里得算法，用于求解 ax + by = gcd(a, b) 的整数解
+    :param a: 整数
+    :param b: 整数
+    :return: (gcd(a, b), x, y)
+    """
     if b == 0:
         return a, 1, 0
     else:
@@ -292,7 +298,6 @@ def extended_gcd(a, b):
 def chinese_remainder_theorem(congruences):
     """
     中国剩余定理求解函数
-
     :param congruences: 模线性同余方程组，格式为 [(a1, m1), (a2, m2), ..., (an, mn)]，表示方程组为 x ≡ ai (mod mi)
     :return: 方程组的解 x
     """
@@ -303,18 +308,22 @@ def chinese_remainder_theorem(congruences):
 
     # 计算 Mi 和 Mi 的模逆元素
     M_values = [M // mi for _, mi in congruences]
-    Mi_values = [extended_gcd(Mi, mi)[1] for Mi, (_, mi) in zip(M_values, congruences)]
+    inverse_values = [extended_gcd(Mi, mi)[1] % mi for Mi, (_, mi) in zip(M_values, congruences)]
 
     # 计算解 x
-    x = sum(ai * Mi * mi for (ai, _), Mi, mi in zip(congruences, Mi_values, M_values)) % M
+    x = sum(ai * Mi * inverse for (ai, mi), Mi, inverse in zip(congruences, M_values, inverse_values)) % M
 
     return x
 
 # 示例：解 x ≡ 2 (mod 3), x ≡ 3 (mod 5), x ≡ 2 (mod 7)
 congruences = [(2, 3), (3, 5), (2, 7)]
 solution = chinese_remainder_theorem(congruences)
-print(f"同余方程组的解为 x ≡ {solution} (mod {congruences[0][1] * congruences[1][1] * congruences[2][1]})")
-# 同余方程组的解为 x ≡ 23 (mod 105)
+M_product = 1
+for _, mi in congruences:
+    M_product *= mi
+
+print(f"同余方程组的解为 x ≡ {solution} (mod {M_product})")
+# 输出: 同余方程组的解为 x ≡ 23 (mod 105)
 ```
 
 ### 4.5 逆向使用
