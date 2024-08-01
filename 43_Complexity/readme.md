@@ -4,7 +4,6 @@ tags:
   - zk
   - complexity theory
   - time complexity
-  - space complexity
   - big O notation
 ---
 

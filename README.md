@@ -118,6 +118,8 @@
 
 **第43讲 时间复杂度**：[Code](./43_Complexity/43_Complexity.ipynb) | [教程](./43_Complexity/readme.md) 
 
+**第44讲 P和NP**：[Code](./44_PandNP/PandNP.ipynb) | [教程](./44_PandNP/readme.md) 
+
 ## WTF zk贡献者
 <div align="center">
   <h4 align="center">
