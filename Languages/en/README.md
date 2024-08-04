@@ -89,11 +89,9 @@ WTF zk is intro-level Zero-Knowledge Proofs (ZKP) tutorial: The goal is to make 
 
 ### Chapter 4: Elliptic Curves
 
-- **Lecture 29: Introduction to Elliptic Curves**  
-  [Code](./29_EllipticCurve/EllipticCurve.ipynb) | [Tutorial](./29_EllipticCurve/readme.md)
+- **Lecture 29: Introduction to Elliptic Curves**  [Code](./29_EllipticCurve/EllipticCurve.ipynb) | [Tutorial](./29_EllipticCurve/readme.md)
 
-- **Lecture 30: Elliptic Curves over Finite Fields**  
-  [Code](./30_FiniteEC/FiniteEC.ipynb) | [Tutorial](./30_FiniteEC/readme.md)
+- **Lecture 30: Elliptic Curves over Finite Fields**  [Code](./30_FiniteEC/FiniteEC.ipynb) | [Tutorial](./30_FiniteEC/readme.md)
 
 - **Lecture 31: Elliptic Curve Discrete Logarithm Problem**: [Code](./31_ECDLP/ECDLP.ipynb) | [Tutorial](./31_ECDLP/readme.md) 
 
