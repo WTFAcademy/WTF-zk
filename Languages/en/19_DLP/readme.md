@@ -152,7 +152,7 @@ The discrete logarithm problem has widespread applications in cryptography, part
 
 4. **Elliptic curve cryptography:** Elliptic curve cryptography utilizes points on an elliptic curve for encryption and digital signatures. The elliptic curve discrete logarithm problem (ECDLP) is the challenging problem of finding points on an elliptic curve. Elliptic curve cryptography provides more efficient encryption algorithms compared to traditional RSA, while maintaining the same or higher level of security.
 
-## 5. Conclusion
+## 5. Summary
 
 In this lecture, we introduced the concept of primitive roots and the discrete logarithm problem. Primitive roots play a significant role in number theory, while the discrete logarithm problem is a challenging problem in cryptography that guarantees the security of many encryption algorithms.
 

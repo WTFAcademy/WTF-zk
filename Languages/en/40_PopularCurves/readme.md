@@ -1,0 +1,350 @@
+---
+title: Common Elliptic Curves
+tags:
+  - zk
+  - abstract algebra
+  - elliptic curve
+  - group theory
+  - finite field
+  - pairing
+---
+
+# WTF zk Tutorial Lesson 40: Common Elliptic Curves
+
+In this lesson, we will introduce three commonly used elliptic curves on Ethereum: `secp256k1`, `bn128`, and `bls12_381`. `secp256k1` is also adopted by Bitcoin.
+
+## 1. secp256k1
+
+When we introduced the Elliptic Curve Discrete Logarithm Problem (ECDLP), we mentioned the `secp256k1` curve. Let's take a look at it again. `secp256k1` is standardized by the SECG (Standards for Efficient Cryptography Group), which is also the origin of its name.
+
+The elliptic curve equation of `secp256k1` is:
+
+$$
+y^2 = x^3 + 7 \mod p
+$$
+
+It is defined over a specific finite field $\mathbb{F}_p$, where $p$ is a very large prime number: $p = 2^{256} - 2^{32} - 977$.
+
+The point group on the `secp256k1` elliptic curve forms a cyclic group with an order of `115792089237316195423570985008687907852837564279074904382605163141518161494337`. It contains a large number of points, ensuring the security of the algorithm. The base point/generator of `secp256k1` is denoted as $G(G_x, G_y)$ and can generate all points. The coordinates of $G$ are:
+
+```
+Gx = 55066263022277343669578718895168534326250603453777594175500187360389116729240
+Gy = 32670510020758816978083085130507043184471273380659243275938904335757337482424
+```
+
+`secp256k1` is used for public key generation and digital signatures in Bitcoin and Ethereum. Below is an example code using the `py_ecc` library.
+
+### 1.1 Public Key Generation
+
+Generating a public key using `secp256k1` is very simple. We randomly generate a private key $x$ and then calculate the public key $y = xG$, where point $G$ is the base point/generator of the elliptic curve:
+
+```python
+# secp256k1 elliptic curve example
+# Generate public key from private key using scalar multiplication
+from py_ecc.secp256k1 import secp256k1
+import os
+
+def generate_public_key(private_key):
+    """
+    Generate a public key using the secp256k1 elliptic curve and a given private key.
+    
+    Parameters:
+    private_key (int): A large integer representing the private key.
+    
+    Returns:
+    (int, int): The public key, a point on the elliptic curve.
+    """
+    # Base point of secp256k1
+    G = secp256k1.G
+    
+    # Calculate the public key
+    public_key = secp256k1.multiply(G, private_key)
+    
+    return public_key
+
+# Example: Use a random private key
+private_key = int(os.urandom(32).hex(), 16)
+
+# Generate the public key
+public_key = generate_public_key(private_key)
+
+# Print the result
+print(f"Private Key: {private_key}")
+print(f"Public Key: {public_key}")
+
+# Example output
+# Private Key: 40871478222817722377012551921323657605236631423958081783403470740144884256441
+# Public Key: (18814187692496112820586797121940816605467606938301853840004393937958984136992, 72833048843328294920821861725991661253504985018641366317346599320677055943891)
+```
+
+### 1.2 Digital Signature
+
+We can use the `ecdsa_raw_sign` and `ecdsa_raw_recover` functions in `py_ecc.secp256k1` to implement the Elliptic Curve Digital Signature Algorithm (ECDSA). We will discuss the ECDSA algorithm in more detail later.
+
+```python
+# secp256k1 digital signature
+from py_ecc.secp256k1 import secp256k1
+import os
+import hashlib
+
+def sign_message(private_key, message):
+    """
+    Sign a message using the private key.
+    """
+    message_hash = hashlib.sha256(message.encode()).digest()
+    private_key_bytes = private_key.to_bytes(32, "big")
+    signature = secp256k1.ecdsa_raw_sign(message_hash, private_key_bytes)
+    return signature
+
+def verify_signature(message, signature, public_key):
+    """
+    Verify the signature of a message using the public key.
+    """
+    message_hash = hashlib.sha256(message.encode()).digest()
+    recovered_public_key = secp256k1.ecdsa_raw_recover(message_hash, signature)
+    return recovered_public_key == public_key
+
+# Example usage
+private_key = int.from_bytes(os.urandom(32), 'big')
+public_key = secp256k1.multiply(secp256k1.G, private_key) # Calculate the public key
+
+print(f"Private Key: {private_key}")
+print(f"Public Key: {public_key}")
+
+message = "Hello, blockchain world!"
+signature = sign_message(private_key, message) # Sign the message
+is_valid = verify_signature(message, signature, public_key) # Try to recover the public key from the signature
+
+# Compare the original public key and the recovered public key
+print(f"Signature valid: {is_valid}")
+
+# Example output
+# Private Key: 100160191408028635805410835424804882729758587641862022398559246101084514055515
+# Public Key: (94753041202778772959486517607721465828067708966050249355074253521404789962176, 108824044826657285606250531715029407748756362423778933890891533480553307901806)
+# Signature valid: True
+```
+
+## 2. bn128
+
+`bn128`, short for Barreto-Naehrig 128-bit curve, is a widely used pairing-friendly elliptic curve in cryptography. It has an embedding degree of 12, balancing encryption security and pairing efficiency, and is commonly used in zero-knowledge proof algorithms.
+
+The elliptic curve equation of `bn128` is:
+
+$$
+y^2 = x^3 + 3 \mod p
+$$
+
+It is defined over a specific finite field $\mathbb{F}_p$, where `p` is a large prime number.
+
+```
+p = 21888242871839275222246405745257275088548364400416034343698204186575808495617
+```
+
+The point group on `bn128` elliptic curve forms a cyclic group with an order of `21888242871839275222246405745257275088548364400416034343698204186575808495617`. It contains a large number of points, ensuring the security of the algorithm. The base point/generator of `bn128` is denoted as $G_1(1, 2)$ and can generate all points.
+
+In constructing the Ate pairing, the pairing map $\hat{\tau}: C_2 \times C_1 \to G_T$, where $C_1 = E(\mathbb{F}_p), C_2 = E(\mathbb{F}_{p^2}), G_T = \mathbb{F}_{p^{12}}$. $C_2$ is a curve defined on the extension field $\mathbb{F}_{p^2}$ to support pairing operations. The coordinates of each point are represented by complex numbers, and the base point $G_2$ is in the form $(a+bi, c+di)$, where:
+
+```
+a = 10857046999023057135944570762232829481370756359578518086990519993285655852781
+b = 11559732032986387107991004021392285783925812861821192530917403151452391805634
+c = 8495653923123431417604973247489272438418190587263600148770280649306958101930
+d = 4082367875863433681332203403145435568316851327593401208105741076214120093531
+```
+
+### 2.1 Public Key Generation
+
+The process of generating a public key using the `bn128` curve is similar to that of `secp256k1`.
+
+```python
+# bn128 public key generation
+from py_ecc.bn128 import bn128_curve
+import os
+
+def generate_bn128_public_key(private_key):
+    """
+    Generate a public key using the bn_128 curve and a given private key.
+    
+    Parameters:
+    private_key (int): A large integer representing the private key.
+    
+    Returns:
+    (int, int): The public key, a point on the bn_128 curve.
+    """
+    # BN128_G1 is the base point of bn_128 curve
+    public_key = bn128_curve.multiply(bn128_curve.G1, private_key)
+    return public_key
+
+# Example: Use a random private key
+private_key = int.from_bytes(os.urandom(32), 'big')
+
+# Generate the public key
+public_key = generate_bn128_public_key(private_key)
+
+# Print the result
+print(f"Private Key: {private_key}")
+print(f"Public Key: {public_key}")
+
+# Example output
+# Private Key: 98359178994781335595533648854802231427270090895769248482397491373685555850978
+# Public Key: (3661113004864472419130070831996330893639690693841499262022550248113059694488, 16647856845341024716707355890250833951196099189567973816478113518219363325204)
+```
+
+### 2.2 Bilinear Pairing
+
+Implementing pairing on `bn128` is similar to `secp256k1`. One thing to note is that the pairing is performed in $C_2 \times C_1 \to G_T$, so the first point is a multiple of $G_2$ and the second point is a multiple of $G_1`, otherwise an error will occur.
+
+```python
+# bn128 bilinear pairing
+from py_ecc.bn128 import G1, G2, pairing, add, multiply, eq
+
+print(G1)
+print(G2)
+print("\n")
+
+a = 69
+b = 420
+c = a * b
+A = multiply(G2, a)
+B = multiply(G1, b)
+pair_A_B = pairing(A, B)
+print("Pairing of points A and B: ",pair_A_B)
+print("\n")
+
+C = multiply(G2, c)
+pair_G2_C = pairing(C, G1)
+print("Pairing of points G2 and C: ",pair_G2_C)
+print("\n")
+
+print("Is pair_A_B == pair_G2_C? ", pair_A_B == pair_G2_C)
+
+# Output
+# (1, 2)
+# ((10857046999023057135944570762232829481370756359578518086990519993285655852781, 11559732032986387107991004021392285783925812861821192530917403151452391805634), (8495653923123431417604973247489272438418190587263600148770280649306958101930, 4082367875863433681332203403145435568316851327593401208105741076214120093531))
+
+
+# Pairing of points A and B:  (19735667940922659777402175920395455799125563888708961631093487249968872129612, 1976543863057094994989237517814173599120655827589866703826517845909315612857, 19686523416572620016989349096902944934819162198495809257491045534399198954254, 5826646852844954420149583478015267673527445979905768896060072350584178989060, 2064185964405234542610947637037132798744921024553195185441592358018988389207, 8341934863294343910133492936755210611939463215146220944606211376003151106114, 12807669762027938768857302676393862225355612177677457846751491105239425227277, 5741126950795831539169012545403256931813076395529913201048083937620822856065, 11074901068523180915867722424807487877141140784438044188857570704539589417315, 19327019285776193278582429402961044775129507055467003359023290900912857119476, 17306986078986604236447922180440988200852103029519452658980599808670992125088, 13188937242065601189938233945175869194113210620973903647453917247887073581439)
+
+
+# Pairing of points G2 and C:  (19735667940922659777402175920395455799125563888708961631093487249968872129612, 1976543863057094994989237517814173599120655827589866703826517845909315612857, 19686523416572620016989349096902944934819162198495809257491045534399198954254, 5826646852844954420149583478015267673527445979905768896060072350584178989060, 2064185964405234542610947637037132798744921024553195185441592358018988389207, 8341934863294343910133492936755210611939463215146220944606211376003151106114, 12807669762027938768857302676393862225355612177677457846751491105239425227277, 5741126950795831539169012545403256931813076395529913201048083937620822856065, 11074901068523180915867722424807487877141140784438044188857570704539589417315, 19327019285776193278582429402961044775129507055467003359023290900912857119476, 17306986078986604236447922180440988200852103029519452658980599808670992125088, 13188937242065601189938233945175869194113210620973903647453917247887073581439)
+
+
+# Is pair_A_B == pair_G2_C?  True
+```
+
+## 3. bls12_381
+
+`bls12_381` is a member of the Barreto-Lynn-Scott (BLS) curve family, a pairing-friendly elliptic curve. It has an embedding degree of 12, efficient and secure pairings, and is widely used in Ethereum, such as in node signatures for Proof of Stake (PoS).
+
+The elliptic curve equation of `bls12_381` is:
+
+$$
+y^2 = x^3 + 4 \mod p
+$$
+
+It is defined over a specific finite field $\mathbb{F}_p$, where `p` is a large prime number.
+
+```
+p = 21888242871839275222246405745257275088696311157297823662689037894645226208583
+```
+
+The point group on `bls12_381` elliptic curve forms a cyclic group with an order of `52435875175126190479447740508185965837690552500527637822603658699938581184513`. It contains a large number of points, ensuring the security of the algorithm. The base point/generator of `bls12_381` is denoted as $G_1(x_1, x_2)$ and can generate all points.
+
+Where:
+
+```
+x1 = 3685416753713387016781088315183077757961620795782546409894578378688607592378376318836054947676345821548104185464507
+x2 = 1339506544944476473020471379941921221584933875938349620426543736416511423956333506472724655353366534992391756441569
+```
+
+In constructing the Ate pairing, the pairing map $\hat{\tau}: C_2 \times C_1 \to G_T$, where $C_1 = E(\mathbb{F}_p), C_2 = E(\mathbb{F}_{p^2}), G_T = \mathbb{F}_{p^{12}}$. $C_2$ is a curve defined on the extension field $\mathbb{F}_{p^2}$ to support pairing operations. The coordinates of each point are represented by complex numbers, and the base point $G_2$ is in the form $(a+bi, c+di)$, where:
+
+```
+a = 352701069587466618187139116011060144890029952792775240219908644239793785735715026873347600343865175952761926303160
+b = 3059144344244213709971259814753781636986470325476647558659373206291635324768958432433509563104347017837885763365758
+c = 1985150602287291935568054521177171638300868978215655730859378665066344726373823718423869104263333984641494340347905
+d = 927553665492332455747201965776037880757740193453592970025027978793976877002675564980949289727957565575433344219582
+```
+
+### 3.1 Public Key Generation
+
+The process of generating a public key using the `bls12_381` curve is similar to that of `bn128`.
+
+```python
+# bls12_381 public key generation
+from py_ecc.bls12_381 import bls12_381_curve
+import os
+
+def generate_bn12_381_public_key(private_key):
+    """
+    Generate a public key using the bls12_381 curve and a given private key.
+    
+    Parameters:
+    private_key (int): A large integer representing the private key.
+    
+    Returns:
+    (int, int): The public key, a point on the bls12_381 curve.
+    """
+    # G1 is the base point of bls12_381 curve
+    public_key = bls12_381_curve.multiply(bls12_381_curve.G1, private_key)
+    return public_key
+
+# Example: Use a random private key
+private_key = int.from_bytes(os.urandom(32), 'big')
+
+# Generate the public key
+public_key = generate_bn12_381_public_key(private_key)
+
+# Print the result
+print(f"Private Key: {private_key}")
+print(f"Public Key: {public_key}")
+
+# Example output
+# Private Key: 56832202591799069674370871859151631253659339730808373097707650526306669655451
+# Public Key: (2672943242084458229690202553507767493858110823696659228443909079159465919837314837610879707240986236828893077890320, 1516123302208562362629191397278119903430202415903098718379575356530260147717671392463098304288800407793122740332702)
+```
+
+### 3.2 Bilinear Pairing
+
+The implementation of pairing on `bls12_381` is similar to `bn128`. Similarly, pairing is performed in $C_2 \times C_1 \to G_T$, so the first point is a multiple of $G_2$ and the second point is a multiple of $G_1$, otherwise an error will occur.
+
+```python
+# bls12_381 bilinear pairing
+from py_ecc.bls12_381 import G1, G2, pairing, add, multiply, eq
+
+print(G1)
+print(G2)
+print("\n")
+
+a = 69
+b = 420
+c = a * b
+A = multiply(G2, a)
+B = multiply(G1, b)
+pair_A_B = pairing(A, B)
+print("Pairing of points A and B: ",pair_A_B)
+print("\n")
+
+C = multiply(G2, c)
+pair_G2_C = pairing(C, G1)
+print("Pairing of points G2 and C: ",pair_G2_C)
+print("\n")
+
+print("Is pair_A_B == pair_G2_C? ", pair_A_B == pair_G2_C)
+
+# Output
+# (3685416753713387016781088315183077757961620795782546409894578378688607592378376318836054947676345821548104185464507, 1339506544944476473020471379941921221584933875938349620426543736416511423956333506472724655353366534992391756441569)
+# ((352701069587466618187139116011060144890029952792775240219908644239793785735715026873347600343865175952761926303160, 3059144344244213709971259814753781636986470325476647558659373206291635324768958432433509563104347017837885763365758), (1985150602287291935568054521177171638300868978215655730859378665066344726373823718423869104263333984641494340347905, 927553665492332455747201965776037880757740193453592970025027978793976877002675564980949289727957565575433344219582))
+
+
+# Pairing of points A and B:  (559875907953044229256999964908655596470329614681804657067074917348889299656574983763205735263906508658423626306192, 3251387332700024622230711712327939415422447046055926038630362608193945095062996827680637432749053965474170688846803, 1858978301495685148589092187900391308425211794249943939941796868269658435530364461212323465553496690057506398710958, 2821404563389658506867792213698964607416184520400354580766817454079710851304957653749944402097411780097914172680501, 3371394908151563362208243796489511825354821020573987752522791881868987441291678825694507113985550194783443672326288, 2297984649797609740520111469542560058998637859756636710986648527547199594538622957148043186058263511759636104385884, 3480762570907741510541555641785158658308333937734941283300383364697580261225975907843679022209374260264933745191828, 3240728397255321363427476858948130370605249287048803384220203355573990507150386888156524321441752887099266166133108, 2376364160413810038009747479244195484637259359228646277111417852748902100064937901534264975269224589631629799823776, 505616797063036550970852124247959597244795697098930755073121309023649013438395471915981324345265013483679297150493, 283646809217572597374969288842854659843926065997224794730305413934017744924705963601539908633134851567640611976585, 208748941951544416005406635656082534817221797560780462964136211816030039051269393961107822344678318294491041226308)
+
+
+# Pairing of points G2 and C:  (559875907953044229256999964908655596470329614681804657067074917348889299656574983763205735263906508658423626306192, 3251387332700024622230711712327939415422447046055926038630362608193945095062996827680637432749053965474170688846803, 1858978301495685148589092187900391308425211794249943939941796868269658435530364461212323465553496690057506398710958, 2821404563389658506867792213698964607416184520400354580766817454079710851304957653749944402097411780097914172680501, 3371394908151563362208243796489511825354821020573987752522791881868987441291678825694507113985550194783443672326288, 2297984649797609740520111469542560058998637859756636710986648527547199594538622957148043186058263511759636104385884, 3480762570907741510541555641785158658308333937734941283300383364697580261225975907843679022209374260264933745191828, 3240728397255321363427476858948130370605249287048803384220203355573990507150386888156524321441752887099266166133108, 2376364160413810038009747479244195484637259359228646277111417852748902100064937901534264975269224589631629799823776, 505616797063036550970852124247959597244795697098930755073121309023649013438395471915981324345265013483679297150493, 283646809217572597374969288842854659843926065997224794730305413934017744924705963601539908633134851567640611976585, 208748941951544416005406635656082534817221797560780462964136211816030039051269393961107822344678318294491041226308)
+
+
+# Is pair_A_B == pair_G2_C?  True
+```
+
+## 4. Summary
+
+In this lesson, we introduced the commonly used elliptic curves in Bitcoin and Ethereum: `secp256k1`, `bn128`, and `bls12_381`. We also provided simple examples using the `py_ecc` library. `secp256k1` is mainly used for public key generation and digital signatures in Bitcoin and Ethereum, while `bn128` and `bls12_381` are pairing-friendly curves that can be used for signatures and zero-knowledge proof algorithms.

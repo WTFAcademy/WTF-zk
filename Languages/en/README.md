@@ -62,7 +62,6 @@ WTF zk is intro-level Zero-Knowledge Proofs (ZKP) tutorial: The goal is to make 
 
 - **Lecture 20: Rings**  [Tutorial](./20_Ring/readme.md)
 
-<!---
 
 - **Lecture 21: Ideals and Quotient Rings**  
   [Tutorial](./21_Ideal/readme.md)
@@ -89,11 +88,14 @@ WTF zk is intro-level Zero-Knowledge Proofs (ZKP) tutorial: The goal is to make 
 - **Lecture 28: Quadratic Residues**  
   [Tutorial](./28_Quadratic/readme.md)
 
+<!---
+
 - **Milestone 04: Goldwasser-Micali (GM) Algorithm**  
   [Code](./MS04_ProbEncryption/GM.ipynb) | [Tutorial](./MS04_ProbEncryption/readme.md) | [Paper](./papers/Probabilistic_Encryption.pdf)
 
 - **Milestone 05: Introduction to Zero-Knowledge Proofs**  
   [Tutorial](./MS05_zkExample/readme.md) | [Paper](./papers/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf)
+-->
 
 ### Chapter 4: Elliptic Curves
 
@@ -103,7 +105,6 @@ WTF zk is intro-level Zero-Knowledge Proofs (ZKP) tutorial: The goal is to make 
 - **Lecture 30: Elliptic Curves over Finite Fields**  
   [Code](./30_FiniteEC/FiniteEC.ipynb) | [Tutorial](./30_FiniteEC/readme.md)
 
--->
 
 
 ## WTF zk contributors

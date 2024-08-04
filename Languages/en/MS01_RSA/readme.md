@@ -270,6 +270,6 @@ contract RSA {
 }
 ```
 
-## 6. Conclusion
+## 6. Summary
 
 In this tutorial, we learned about the classic RSA algorithm, understood its principles and security, and implemented it in Python and Solidity. This is a milestone that marks the end of the introductory part of number theory in WTF zk. Next, we will briefly embark on an adventure in abstract algebra!
