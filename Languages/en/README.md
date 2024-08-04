@@ -95,25 +95,25 @@ WTF zk is intro-level Zero-Knowledge Proofs (ZKP) tutorial: The goal is to make 
 - **Lecture 30: Elliptic Curves over Finite Fields**  
   [Code](./30_FiniteEC/FiniteEC.ipynb) | [Tutorial](./30_FiniteEC/readme.md)
 
-**Lecture 31: Elliptic Curve Discrete Logarithm Problem**: [Code](./31_ECDLP/ECDLP.ipynb) | [Tutorial](./31_ECDLP/readme.md) 
+- **Lecture 31: Elliptic Curve Discrete Logarithm Problem**: [Code](./31_ECDLP/ECDLP.ipynb) | [Tutorial](./31_ECDLP/readme.md) 
 
-**Lecture 32: Elliptic Curve Cryptography**: [Code](./32_ECC/ECC.ipynb) | [Tutorial](./32_ECC/readme.md) 
+- **Lecture 32: Elliptic Curve Cryptography**: [Code](./32_ECC/ECC.ipynb) | [Tutorial](./32_ECC/readme.md) 
 
-**Lecture 33: Elliptic Curves over Extension Fields**: [Tutorial](./33_ECExtension/readme.md) 
+- **Lecture 33: Elliptic Curves over Extension Fields**: [Tutorial](./33_ECExtension/readme.md) 
 
-**Lecture 34: Bilinear Pairing Basics**: [Tutorial](./34_Pairing/readme.md) 
+- **Lecture 34: Bilinear Pairing Basics**: [Tutorial](./34_Pairing/readme.md) 
 
-**Lecture 35: Torsion Groups and Divisors**: [Code](./35_TorsionGroup/TorsionGroup.sage) | [Tutorial](./35_TorsionGroup/readme.md) 
+- **Lecture 35: Torsion Groups and Divisors**: [Code](./35_TorsionGroup/TorsionGroup.sage) | [Tutorial](./35_TorsionGroup/readme.md) 
 
-**Lecture 36: Weil Pairing**: [Tutorial](./36_WeilPairing/readme.md)
+- **Lecture 36: Weil Pairing**: [Tutorial](./36_WeilPairing/readme.md)
 
-**Lecture 37: Miller Algorithm**: [Code](./37_MillerAlgo/WeilPairing.sage) | [Tutorial](./37_MillerAlgo/readme.md) 
+- **Lecture 37: Miller Algorithm**: [Code](./37_MillerAlgo/WeilPairing.sage) | [Tutorial](./37_MillerAlgo/readme.md) 
 
-**Lecture 38: Tate Pairing**: [Code](./38_TatePairing/Ate.ipynb) | [Tutorial](./38_TatePairing/readme.md) 
+- **Lecture 38: Tate Pairing**: [Code](./38_TatePairing/Ate.ipynb) | [Tutorial](./38_TatePairing/readme.md) 
 
-**Lecture 39: Weil Pairing over Extension Fields**: [Tutorial](./39_PairingExtension/readme.md) 
+- **Lecture 39: Weil Pairing over Extension Fields**: [Tutorial](./39_PairingExtension/readme.md) 
 
-**Lecture 40: Common Elliptic Curves**: [Code](./40_PopularCurves/40_PopularCurves.ipynb) | [Tutorial](./40_PopularCurves/readme.md) 
+- **Lecture 40: Common Elliptic Curves**: [Code](./40_PopularCurves/40_PopularCurves.ipynb) | [Tutorial](./40_PopularCurves/readme.md) 
 
 <!---
 
