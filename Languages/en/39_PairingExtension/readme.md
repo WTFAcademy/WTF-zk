@@ -1,5 +1,5 @@
 ---
-title: 39. Weil Pairing on Extension Fields
+title: 39. Weil Pairing over Extension Fields
 tags:
   - zk
   - abstract algebra
@@ -9,9 +9,9 @@ tags:
   - pairing
 ---
 
-# WTF zk Tutorial Lesson 39: Weil Pairing on Extension Fields
+# WTF zk Tutorial Lesson 39: Weil Pairing over Extension Fields
 
-In this tutorial, we will discuss the Weil pairing on extension fields. This concept involves two important ideas: embedding degree and the MOV algorithm. Understanding these concepts will deepen your understanding of bilinear pairings and elliptic curves.
+In this tutorial, we will discuss the Weil pairing over extension fields. This concept involves two important ideas: embedding degree and the MOV algorithm. Understanding these concepts will deepen your understanding of bilinear pairings and elliptic curves.
 
 ## 1. Embedding Degree
 
@@ -113,4 +113,4 @@ However, if the embedding degree $k$ of an elliptic curve is large, the field $E
 
 ## 3. Summary
 
-In this tutorial, we have discussed the Weil pairing on extension fields and related concepts. The embedding degree is an important parameter that specifies the extension field required for the Weil pairing, and it affects the security and efficiency of elliptic curve applications. The MOV algorithm provides a way to exploit the weakness of elliptic curves with low embedding degrees by transforming the elliptic curve discrete logarithm problem (ECDLP) into the relatively easier discrete logarithm problem (DLP) on a finite field. When selecting elliptic curves, we need to consider both security and pairing efficiency, and choose elliptic curves with moderate embedding degrees.
+In this tutorial, we have discussed the Weil pairing over extension fields and related concepts. The embedding degree is an important parameter that specifies the extension field required for the Weil pairing, and it affects the security and efficiency of elliptic curve applications. The MOV algorithm provides a way to exploit the weakness of elliptic curves with low embedding degrees by transforming the elliptic curve discrete logarithm problem (ECDLP) into the relatively easier discrete logarithm problem (DLP) on a finite field. When selecting elliptic curves, we need to consider both security and pairing efficiency, and choose elliptic curves with moderate embedding degrees.
