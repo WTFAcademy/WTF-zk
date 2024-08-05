@@ -132,6 +132,7 @@ Bob 收到密文 $(C_1, C_2)$ 后，需要使用私钥 $x$ 进行解密：
 
 ```python
 from py_ecc.secp256k1 import secp256k1
+from random import randint
 
 def elgamal_encrypt(G, Y, M):
     k = randint(1, secp256k1.N - 1)

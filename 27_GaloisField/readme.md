@@ -122,9 +122,9 @@ print("有限域 GF(4) 的性质", GF4.properties)
 print("有限域 GF(4) 的元素", GF4.elements)
 
 print("有限域 GF(4) 的加法表")
-print(GF7.arithmetic_table("+"))
+print(GF4.arithmetic_table("+"))
 print("有限域 GF(4) 的乘法表")
-print(GF7.arithmetic_table("*"))
+print(GF4.arithmetic_table("*"))
 
 ## 输出示例
 # 有限域 GF(4) 的性质 Galois Field:

@@ -1,5 +1,5 @@
 ---
-title: Common Elliptic Curves
+title: 40. Common Elliptic Curves
 tags:
   - zk
   - abstract algebra

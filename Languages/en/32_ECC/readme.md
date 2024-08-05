@@ -133,6 +133,7 @@ The following Python code demonstrates the EC Elgamal encryption using the `secp
 
 ```python
 from py_ecc.secp256k1 import secp256k1
+from random import randint
 
 def elgamal_encrypt(G, Y, M):
     k = randint(1, secp256k1.N - 1)

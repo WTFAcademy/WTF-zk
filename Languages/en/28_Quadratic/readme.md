@@ -122,18 +122,3 @@ Finding modular square roots becomes as challenging as factoring large numbers w
 ## 6. Summary
 
 In this chapter, we learned about quadratic residues, Legendre symbols, and Euler's criterion. Quadratic residues are commonly employed in the field of cryptography for constructing encryption algorithms.
-
-<problems in the first translation>
-The direct translation has the following issues:
-1. The abbreviation "WTF" at the beginning of the title does not conform to standard English expression habits.
-2. The expression "Let's take an example with $n = 7$" could be clearer by using a more direct and standard form of language.
-3. The phrase "each occupying half of the group" is slightly obscure and could be improved for better clarity.
-4. In the proof section, the statement "Proof completed" could be more informative and clearer.
-5. The phrase "Taking $Z_7^*$ as an example" could be rephrased for better clarity.
-6. In the proof section, the sentence "Now let's discuss the case where $a$ and $p$ are coprime" is slightly unclear and could be improved.
-7. The phrase "根据拉格朗日定理" could be translated more accurately to "According to Lagrange's theorem" for better clarity and adherence to English expression habits.
-8. In the code example, the comment "示例" could be translated more accurately to "Example".
-9. The phrase "当 $n$ 为大合数时" could be translated more accurately to "When $n$ is a large composite number" for clearer communication.
-10. The phrase "这一特点" could be translated more accurately to "This characteristic" for better clarity.
-11. The phrase "这一讲" could be translated more accurately to "In this chapter" for better alignment with English expression habits.
-<Meaning-Based Translation>

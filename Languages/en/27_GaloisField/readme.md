@@ -122,9 +122,9 @@ print("Properties of the finite field GF(4):", GF4.properties)
 print("Elements of the finite field GF(4):", GF4.elements)
 
 print("Addition table of the finite field GF(4)")
-print(GF7.arithmetic_table("+"))
+print(GF4.arithmetic_table("+"))
 print("Multiplication table of the finite field GF(4)")
-print(GF7.arithmetic_table("*"))
+print(GF4.arithmetic_table("*"))
 
 ## Output Example
 # Properties of the finite field GF(4): Galois Field:
