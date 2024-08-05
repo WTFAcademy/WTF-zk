@@ -78,14 +78,13 @@ WTF zk is intro-level Zero-Knowledge Proofs (ZKP) tutorial: The goal is to make 
 
 - **Lecture 28: Quadratic Residue**  [Tutorial](./28_Quadratic/readme.md)
 
-<!---
 
 - **Milestone 04: Goldwasser-Micali (GM) Algorithm**  
   [Code](./MS04_ProbEncryption/GM.ipynb) | [Tutorial](./MS04_ProbEncryption/readme.md) | [Paper](./papers/Probabilistic_Encryption.pdf)
 
 - **Milestone 05: Introduction to Zero-Knowledge Proofs**  
   [Tutorial](./MS05_zkExample/readme.md) | [Paper](./papers/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf)
--->
+
 
 ### Chapter 4: Elliptic Curves
 
@@ -113,12 +112,13 @@ WTF zk is intro-level Zero-Knowledge Proofs (ZKP) tutorial: The goal is to make 
 
 - **Lecture 40: Common Elliptic Curves**: [Code](./40_PopularCurves/40_PopularCurves.ipynb) | [Tutorial](./40_PopularCurves/readme.md) 
 
-<!---
+
 
 **Milestone 06: Hash Functions** [Code](./MS06_Hash/Hash.ipynb) | [Tutorial](./MS06_Hash/readme.md)
 
 **Milestone 07: Identity-Based Encryption (IBE)** [Code](./MS07_IBE/IBE.ipynb) | [Tutorial](./MS07_IBE/readme.md)
 
+<!---
 ### Chapter 5 Computational Complexity Theory
 
 **Lecture 41: Introduction to Computation Theory**: [Code](./41_Computation/41_Computation.ipynb) | [Tutorial](./41_Computation/readme.md) 
