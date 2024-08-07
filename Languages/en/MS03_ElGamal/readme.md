@@ -247,7 +247,7 @@ print("Verification result:", verification_result)
 # Verification result: True
 ```
 
-## 4. Conclusion
+## 4. Summary
 
 In this lesson, we introduced the ElGamal algorithm, which extends the idea of the Diffie-Hellman algorithm to the fields of encryption and digital signatures. Like the Diffie-Hellman algorithm, the security of the ElGamal algorithm is also based on the difficulty of the discrete logarithm problem.
 

@@ -208,6 +208,6 @@ Or equivalently:
 2. **Closure under multiplication:** For any $a, b \in S$, $ab \in S$.
 3. **Existence of (Multiplicative) identity:** $S$ has a multiplicative identity.
 
-## 6. Conclusion
+## 6. Summary
 
 In this tutorial, we introduced the basic definition and properties of rings, as well as some examples. Rings are an important concept in abstract algebra, providing a foundation for further study.

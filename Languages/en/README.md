@@ -58,36 +58,26 @@ WTF zk is intro-level Zero-Knowledge Proofs (ZKP) tutorial: The goal is to make 
 - **Milestone 03: ElGamal Encryption and Signature Algorithm**  
   [Code](./MS03_ElGamal/ElGamal.ipynb) | [Tutorial](./MS03_ElGamal/readme.md) | [Paper](./papers/ElGamal.pdf)
 
-### Chapter 3: Abstract Algebra: Rings and Fields
+### Chapter 3: Abstract Algebra: Ring and Field
 
-- **Lecture 20: Rings**  [Tutorial](./20_Ring/readme.md)
+- **Lecture 20: Ring**  [Tutorial](./20_Ring/readme.md)
 
-<!---
+- **Lecture 21: Ideal and Quotient Ring**  [Tutorial](./21_Ideal/readme.md)
 
-- **Lecture 21: Ideals and Quotient Rings**  
-  [Tutorial](./21_Ideal/readme.md)
+- **Lecture 22: Homomorphisms and Isomorphisms of Ring** [Tutorial](./22_RingHomo/readme.md)
 
-- **Lecture 22: Ring Homomorphisms and Isomorphisms**  
-  [Tutorial](./22_RingHomo/readme.md)
+- **Lecture 23: Field**  [Tutorial](./23_Field/readme.md)
 
-- **Lecture 23: Fields**  
-  [Tutorial](./23_Field/readme.md)
+- **Lecture 24: Polynomial Basics**  [Tutorial](./24_Polynomial/readme.md)
 
-- **Lecture 24: Basics of Polynomials**  
-  [Tutorial](./24_Polynomial/readme.md)
+- **Lecture 25: Polynomial Ring**  [Tutorial](./25_PolyRing/readme.md)
 
-- **Lecture 25: Polynomial Rings**  
-  [Tutorial](./25_PolyRing/readme.md)
+- **Lecture 26: Field Extension** [Tutorial](./26_FieldExtension/readme.md)
 
-- **Lecture 26: Field Extensions**
+- **Lecture 27: Finite Field**  [Tutorial](./27_GaloisField/readme.md)
 
-  [Tutorial](./26_FieldExtension/readme.md)
+- **Lecture 28: Quadratic Residue**  [Tutorial](./28_Quadratic/readme.md)
 
-- **Lecture 27: Finite Fields**  
-  [Tutorial](./27_GaloisField/readme.md)
-
-- **Lecture 28: Quadratic Residues**  
-  [Tutorial](./28_Quadratic/readme.md)
 
 - **Milestone 04: Goldwasser-Micali (GM) Algorithm**  
   [Code](./MS04_ProbEncryption/GM.ipynb) | [Tutorial](./MS04_ProbEncryption/readme.md) | [Paper](./papers/Probabilistic_Encryption.pdf)
@@ -95,16 +85,50 @@ WTF zk is intro-level Zero-Knowledge Proofs (ZKP) tutorial: The goal is to make 
 - **Milestone 05: Introduction to Zero-Knowledge Proofs**  
   [Tutorial](./MS05_zkExample/readme.md) | [Paper](./papers/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf)
 
+
 ### Chapter 4: Elliptic Curves
 
-- **Lecture 29: Basics of Elliptic Curves**  
-  [Code](./29_EllipticCurve/EllipticCurve.ipynb) | [Tutorial](./29_EllipticCurve/readme.md)
+- **Lecture 29: Introduction to Elliptic Curves**  [Code](./29_EllipticCurve/EllipticCurve.ipynb) | [Tutorial](./29_EllipticCurve/readme.md)
 
-- **Lecture 30: Elliptic Curves over Finite Fields**  
-  [Code](./30_FiniteEC/FiniteEC.ipynb) | [Tutorial](./30_FiniteEC/readme.md)
+- **Lecture 30: Elliptic Curves over Finite Fields**  [Code](./30_FiniteEC/FiniteEC.ipynb) | [Tutorial](./30_FiniteEC/readme.md)
 
+- **Lecture 31: Elliptic Curve Discrete Logarithm Problem**: [Code](./31_ECDLP/ECDLP.ipynb) | [Tutorial](./31_ECDLP/readme.md) 
+
+- **Lecture 32: Elliptic Curve Cryptography**: [Code](./32_ECC/ECC.ipynb) | [Tutorial](./32_ECC/readme.md) 
+
+- **Lecture 33: Elliptic Curves over Extension Fields**: [Tutorial](./33_ECExtension/readme.md) 
+
+- **Lecture 34: Bilinear Pairing Basics**: [Tutorial](./34_Pairing/readme.md) 
+
+- **Lecture 35: Torsion Groups and Divisors**: [Code](./35_TorsionGroup/TorsionGroup.sage) | [Tutorial](./35_TorsionGroup/readme.md) 
+
+- **Lecture 36: Weil Pairing**: [Tutorial](./36_WeilPairing/readme.md)
+
+- **Lecture 37: Miller Algorithm**: [Code](./37_MillerAlgo/WeilPairing.sage) | [Tutorial](./37_MillerAlgo/readme.md) 
+
+- **Lecture 38: Tate Pairing**: [Code](./38_TatePairing/Ate.ipynb) | [Tutorial](./38_TatePairing/readme.md) 
+
+- **Lecture 39: Weil Pairing over Extension Fields**: [Tutorial](./39_PairingExtension/readme.md) 
+
+- **Lecture 40: Common Elliptic Curves**: [Code](./40_PopularCurves/40_PopularCurves.ipynb) | [Tutorial](./40_PopularCurves/readme.md) 
+
+
+
+**Milestone 06: Hash Functions** [Code](./MS06_Hash/Hash.ipynb) | [Tutorial](./MS06_Hash/readme.md)
+
+**Milestone 07: Identity-Based Encryption (IBE)** [Code](./MS07_IBE/IBE.ipynb) | [Tutorial](./MS07_IBE/readme.md)
+
+<!---
+### Chapter 5 Computational Complexity Theory
+
+**Lecture 41: Introduction to Computation Theory**: [Code](./41_Computation/41_Computation.ipynb) | [Tutorial](./41_Computation/readme.md) 
+
+**Lecture 42: Turing Machines**: [Tutorial](./42_TuringMachine/readme.md) 
+
+**Lecture 43: Time Complexity**: [Code](./43_Complexity/43_Complexity.ipynb) | [Tutorial](./43_Complexity/readme.md) 
+
+**Lecture 44: P and NP**: [Code](./44_PandNP/PandNP.ipynb) | [Tutorial](./44_PandNP/readme.md)
 -->
-
 
 ## WTF zk contributors
 <div align="center">

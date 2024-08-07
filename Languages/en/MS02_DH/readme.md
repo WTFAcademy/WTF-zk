@@ -139,6 +139,6 @@ print("Shared secret (Bob):", bob_shared_secret)
 # Shared secret (Bob): 1776
 ```
 
-## 6. Conclusion
+## 6. Summary
 
 The Diffie-Hellman key exchange algorithm is an important cryptographic algorithm that solves the problem of sharing keys over an insecure channel, providing the foundation for modern secure communication. By leveraging the difficulty of the discrete logarithm problem, Diffie-Hellman ensures the security of key sharing. In practical applications, Diffie-Hellman is widely used in scenarios such as TLS/SSL protocols and SSH communication, providing a secure and reliable key sharing mechanism for communicating parties.
