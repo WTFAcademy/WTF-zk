@@ -120,6 +120,8 @@
 
 **第44讲 P和NP**：[Code](./44_PandNP/PandNP.ipynb) | [教程](./44_PandNP/readme.md) 
 
+**第45讲 NP完全** [教程](./45_NPComplete/readme.md) 
+
 ## WTF zk贡献者
 <div align="center">
   <h4 align="center">

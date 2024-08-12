@@ -112,8 +112,6 @@ WTF zk is intro-level Zero-Knowledge Proofs (ZKP) tutorial: The goal is to make 
 
 - **Lecture 40: Common Elliptic Curves**: [Code](./40_PopularCurves/40_PopularCurves.ipynb) | [Tutorial](./40_PopularCurves/readme.md) 
 
-
-
 **Milestone 06: Hash Functions** [Code](./MS06_Hash/Hash.ipynb) | [Tutorial](./MS06_Hash/readme.md)
 
 **Milestone 07: Identity-Based Encryption (IBE)** [Code](./MS07_IBE/IBE.ipynb) | [Tutorial](./MS07_IBE/readme.md)
