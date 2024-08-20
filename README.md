@@ -122,6 +122,8 @@
 
 **第45讲 NP完全** [教程](./45_NPComplete/readme.md) 
 
+**第46讲 电路复杂度** [Code](./46_CircuitComplexity/CircuitComplexity.ipynb) | [教程](./46_CircuitComplexity/readme.md) 
+
 ## WTF zk贡献者
 <div align="center">
   <h4 align="center">
