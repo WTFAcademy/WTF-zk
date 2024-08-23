@@ -124,6 +124,9 @@
 
 **第46讲 电路复杂度** [Code](./46_CircuitComplexity/CircuitComplexity.ipynb) | [教程](./46_CircuitComplexity/readme.md) 
 
+**第47讲 随机计算** [教程](./47_ProbComputation/readme.md) 
+
+
 ## WTF zk贡献者
 <div align="center">
   <h4 align="center">
