@@ -126,6 +126,8 @@
 
 **第47讲 随机计算** [教程](./47_ProbComputation/readme.md) 
 
+**第48讲 交互式证明系统** [教程](./48_InteractiveProof/readme.md) 
+
 
 ## WTF zk贡献者
 <div align="center">
