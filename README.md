@@ -160,3 +160,7 @@
 7. Vitalik's blogs: [Weil Pairing](https://medium.com/@VitalikButerin/exploring-elliptic-curve-pairings-c73c1864e627)
 
 8. [探索零知识证明系列 by 郭宇 SecBit](https://github.com/sec-bit/learning-zkp/tree/master)
+
+9. [Theory of Computation, MIT OpenCourseWare](https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/)
+
+10. [Computational Complexity: A Modern Approach by Arora and Barak](https://www.cs.princeton.edu/theory/complexity/)
