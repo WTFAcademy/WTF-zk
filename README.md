@@ -164,3 +164,5 @@
 9. [Theory of Computation, MIT OpenCourseWare](https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/)
 
 10. [Computational Complexity: A Modern Approach by Arora and Barak](https://www.cs.princeton.edu/theory/complexity/)
+
+11. [Foundations of Probabilistic proofs, Chiesa Alessandro](https://ic-people.epfl.ch/~achiesa/classes/CS294-F2020.html)
