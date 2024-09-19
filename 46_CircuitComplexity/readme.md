@@ -147,9 +147,9 @@ $$\phi = (x_1 + x_2) \times x_2 \times (x_2 + 1)$$
 
 我们可以将 Circuit-SAT 问题转化为算术电路，具体方法是将每个布尔电路转换为算术电路：
  
-1. NOT 门：$\neg x = 1 - x$
-2. AND 门：$x \wedge y = x \times y$
-3. OR 门：$x \vee y = 1 - (1 - x)(1 - y)$
+1. NOT 门： $\neg x = 1 - x$
+2. AND 门： $x \wedge y = x \times y$
+3. OR 门： $x \vee y = 1 - (1 - x)(1 - y)$
 
 转换后，布尔函数 $\phi(x_1, x_2, ..., x_n)$ 可以表示为算术电路 $p(x_1, x_2, ..., x_n)$，其中每个布尔运算都被替换为相应的算术运算。
 

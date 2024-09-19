@@ -130,6 +130,8 @@
 
 **第49讲 概率可检验证明 PCP** [教程](./49_PCP/readme.md) 
 
+**第50讲 线性 PCP 第一部分: R1CS** [教程](./50_R1CS/readme.md)
+
 ## WTF zk贡献者
 <div align="center">
   <h4 align="center">
