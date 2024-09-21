@@ -23,7 +23,7 @@ QAP（Quadratic Arithmetic Program，二次算数程序）通过低度拓展将 
 QAP 的本质就是将 R1CS 中的系数矩阵 $A, B, C$ 的每一列转换为多项式，方便我们验证。它的核心在于以下**多项式等式**：
 
 $$
-\left( \sum_{i=0}^{n} w_i \hat{A}_{:i}(x) \right) \cdot \left( \sum_{i=0}^{n} w_i \hat{B}_{:i}(x) \right) - \left( \sum_{i=0}^{n} w_i \hat{C}_{:i}(x) \right) = H(x) \cdot T(x)
+\left( \sum_{i=0}^{n} w_i \hat{A_{:i}} (x) \right) \cdot \left( \sum_{i=0}^{n} w_i \hat{B_{:i}}(x) \right) - \left( \sum_{i=0}^{n} w_i \hat{C_{:i}}(x) \right) = H(x) \cdot T(x)
 $$
 
 其中：
@@ -32,7 +32,7 @@ $$
 
 2. **变量向量 $\mathbf{w}(x) = (w_0, w_1, ..., w_n)$**：电路中所有的变量，包括输入、输出和中间变量。
 
-3. **系数多项式 $\{\hat{A}_{:j}(x)\}, \{\hat{B}_{:j}(x)\}, \{\hat{C}_{:j}(x)\}$**，其中 $j = 0, 1, ..., n$（ $n$ 表示变量个数）， $\hat{A}_{:j}$ 表示 $A$ 的第 $j$ 列。也就是说，系数矩阵 $A, B, C$ 的每一列都要通过低度拓展转换为相应的多项式。
+3. **系数多项式 $\{\hat{A_{:j}}(x)\}, \{\hat{B_{:j}}(x)\}, \{\hat{C_{:j}}(x)\}$**，其中 $j = 0, 1, ..., n$（ $n$ 表示变量个数）， $\hat{A_{:j}}$ 表示 $A$ 的第 $j$ 列。也就是说，系数矩阵 $A, B, C$ 的每一列都要通过低度拓展转换为相应的多项式。
 
 4. **目标多项式 $T(x)$**：由验证者选择，用于验证多项式关系。$T(x)$ 的根通常对应于电路中各个约束的位置。例如，如果我们有 $m$ 个约束，可以选择 $m$ 个不同的点 $0, 1, ..., m-1$，那么：
 
@@ -43,7 +43,7 @@ $$
 5. **商多项式 $H(x)$**：验证者需要提供的证明的一部分，用于验证多项式的整除关系，有：
 
    $$
-   H(x) = \frac{\left( \sum_{i=0}^{n} w_i \hat{A}_{:i}(x) \right) \cdot \left( \sum_{i=0}^{n} w_i \hat{B}_{:i}(x) \right) - \left( \sum_{i=0}^{n} w_i \hat{C}_{:i}(x) \right)}{T(x)}
+   H(x) = \frac{\left( \sum_{i=0}^{n} w_i \hat{A_{:i}}(x) \right) \cdot \left( \sum_{i=0}^{n} w_i \hat{B_{:i}}(x) \right) - \left( \sum_{i=0}^{n} w_i \hat{C_{:i}}(x) \right)}{T(x)}
    $$
 
 ### 1.2 QAP 构造方法
@@ -52,15 +52,15 @@ $$
 
 #### 4.2.1 低度拓展
 
-我们可以将 R1CS 的系数矩阵 $A, B, C$ 的每一列看作一个定义在 $H = {0, 1, ..., m-1}$ 上的函数，所在的行数 $i$ 为自变量。举个例子，对于系数矩阵 $A$ 的第 $j$ 列，函数 $f_j(i) = A_{ij}$，然后我们在域 $\mathbb{F}_p$ 上对 $f_j(i)$ 进行低度拓展，得到多项式 $\hat{A}_{:j}(x)$。同理，我们可以得到多项式 $\hat{B}_{:j}(x)$ 和 $\hat{C}_{:j}(x)$。
+我们可以将 R1CS 的系数矩阵 $A, B, C$ 的每一列看作一个定义在 $H = {0, 1, ..., m-1}$ 上的函数，所在的行数 $i$ 为自变量。举个例子，对于系数矩阵 $A$ 的第 $j$ 列，函数 $f_j(i) = A_{ij}$，然后我们在域 $\mathbb{F}_p$ 上对 $f_j(i)$ 进行低度拓展，得到多项式 $\hat{A_{:j}}(x)$。同理，我们可以得到多项式 $\hat{B_{:j}}(x)$ 和 $\hat{C_{:j}}(x)$。
 
 我们得到 QAP 的系数矩阵，满足下列等式（由 $Aw \circ Bw - Cw = 0$ 转换而来）：
 
 $$
-\left( \sum_{j=0}^{n} w_j \hat{A}_{:j}(x) \right) \cdot \left( \sum_{j=0}^{n} w_j \hat{B}_{:j}(x) \right) - \left( \sum_{j=0}^{n} w_j \hat{C}_{:j}(x) \right) = 0
+\left( \sum_{j=0}^{n} w_j \hat{A_{:j}}(x) \right) \cdot \left( \sum_{j=0}^{n} w_j \hat{B_{:j}}(x) \right) - \left( \sum_{j=0}^{n} w_j \hat{C_{:j}}(x) \right) = 0
 $$ 
 
-为了方便，我们计 $\mathcal{A}(x) = \sum_{j=0}^{n} w_j \hat{A}_{:j}(x)$，$\mathcal{B}(x) = \sum_{j=0}^{n} w_j \hat{B}_{:j}(x)$，$\mathcal{C}(x) = \sum_{j=0}^{n} w_j \hat{C}_{:j}(x)$，那么上述等式可以表示为：
+为了方便，我们计 $\mathcal{A}(x) = \sum_{j=0}^{n} w_j \hat{A_{:j}}(x)$，$\mathcal{B}(x) = \sum_{j=0}^{n} w_j \hat{B_{:j}}(x)$，$\mathcal{C}(x) = \sum_{j=0}^{n} w_j \hat{C_{:j}}(x)$，那么上述等式可以表示为：
 
 $$
 \mathcal{A}(x) \cdot \mathcal{B}(x) - \mathcal{C}(x) = 0
@@ -135,27 +135,27 @@ $l_3(s) = \frac{(s - 1)(s - 2)(s - 4)}{-2}$
 
 $l_4(s) = \frac{(s - 1)(s - 2)(s - 3)}{6}$
 
-然后，我们可以要计算多项式 $\hat{A}_{:j}, \hat{B}_{:j}, \hat{C}_{:j}$。这里举 2 个例子：
+然后，我们可以要计算多项式 $\hat{A_{:j}}, \hat{B_{:j}}, \hat{C_{:j}}$。这里举 2 个例子：
 
-1. 计算 $\hat{A}_{:1}$：矩阵 $A$ 的第 1 列是 $[0, 0, 0, 5]$，那么我们对 $(1, 0), (2, 0), (3, 0), (4, 5)$ 进行插值，得到：
+1. 计算 $\hat{A_{:1}}$：矩阵 $A$ 的第 1 列是 $[0, 0, 0, 5]$，那么我们对 $(1, 0), (2, 0), (3, 0), (4, 5)$ 进行插值，得到：
 
 $$
 \begin{aligned}
-\hat{A}_{:1}(x) &= 0 \cdot l_1(x) + 0 \cdot l_2(x) + 0 \cdot l_3(x) + 5 \cdot l_4(x) \\
+\hat{A_{:1}}(x) &= 0 \cdot l_1(x) + 0 \cdot l_2(x) + 0 \cdot l_3(x) + 5 \cdot l_4(x) \\
 &= 5 \cdot \frac{(x - 1)(x - 2)(x - 3)}{6} \\
 &= 12x^3 + 62x^2 + 65x + 62 \mod{67}
 \end{aligned}
 $$
 
-你可以验证下 $\hat{A}_{:1}(x)$ 是否满足 $\hat{A}_{:1}(1) = 0, \hat{A}_{:1}(2) = 0, \hat{A}_{:1}(3) = 0, \hat{A}_{:1}(4) = 5$。   
+你可以验证下 $\hat{A_{:1}}(x)$ 是否满足 $\hat{A_{:1}}(1) = 0, \hat{A_{:1}}(2) = 0, \hat{A_{:1}}(3) = 0, \hat{A_{:1}}(4) = 5$。   
 
-2. 计算 $\hat{A}_{:4}$：矩阵 $A$ 的第 4 列是 $[0, 0, 0, 0]$，那么我们对 $(1, 0), (2, 0), (3, 0), (4, 0)$ 进行插值，结果就是零多项式：
+2. 计算 $\hat{A_{:4}}$：矩阵 $A$ 的第 4 列是 $[0, 0, 0, 0]$，那么我们对 $(1, 0), (2, 0), (3, 0), (4, 0)$ 进行插值，结果就是零多项式：
 
 $$
-\hat{A}_{:4}(x) = 0
+\hat{A_{:4}}(x) = 0
 $$
 
-同理，我们可以计算 $\hat{B}_{:j}, \hat{C}_{:j}$。
+同理，我们可以计算 $\hat{B_{:j}}, \hat{C_{:j}}$。
 
 手算效率太低，我们可以利用下面 python 代码计算它们：
 
@@ -359,11 +359,11 @@ assert poly_big_wrong // T * T == poly_big_wrong
 
 ### 2.1.2 查询
 
-线性 PCP 的查询都是线性查询，即查询向量的内积。比如要查询 $\mathcal{A}(r)$，我们要提交的是 $\langle \hat{A}_{:1}(r), ..., \hat{A}_{:n}(r), 0, ..., 0 \rangle$，因为 $\mathcal{A}(r) = \sum_{j=0}^{n} w_j \hat{A}_{:j}(r)$。
+线性 PCP 的查询都是线性查询，即查询向量的内积。比如要查询 $\mathcal{A}(r)$，我们要提交的是 $\langle \hat{A_{:1}}(r), ..., \hat{A_{:n}}(r), 0, ..., 0 \rangle$，因为 $\mathcal{A}(r) = \sum_{j=0}^{n} w_j \hat{A_{:j}}(r)$。
 
-同理，我们可以提交 $\langle \hat{B}_{:1}(r), ..., \hat{B}_{:n}(r), 0, ..., 0 \rangle$ 来查询 $\mathcal{B}(r)$，提交 $\langle \hat{C}_{:1}(r), ..., \hat{C}_{:n}(r), 0, ..., 0 \rangle$ 来查询 $\mathcal{C}(r)$。
+同理，我们可以提交 $\langle \hat{B_{:1}}(r), ..., \hat{B_{:n}}(r), 0, ..., 0 \rangle$ 来查询 $\mathcal{B}(r)$，提交 $\langle \hat{C_{:1}}(r), ..., \hat{C_{:n}}(r), 0, ..., 0 \rangle$ 来查询 $\mathcal{C}(r)$。
 
-> 注意：$\hat{A}_{:j}(r), \hat{B}_{:j}(r), \hat{C}_{:j}(r)$ 均是不需要 witness 的，验证者可以在多项式时间内计算出这些值。
+> 注意：$\hat{A_{:j}}(r), \hat{B_{:j}}(r), \hat{C_{:j}}(r)$ 均是不需要 witness 的，验证者可以在多项式时间内计算出这些值。
 
 最后，我们还需要查询 $Q(r)$。可以通过提交 $0, ..., 0, 1, r, r^2, ..., r^{m-2} \rangle$ 来查询它。
 
