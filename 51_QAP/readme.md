@@ -12,6 +12,8 @@ tags:
 
 在上一讲中，我们介绍了构建线性 PCP 的第一步：将计算问题转换为 R1CS。这一讲，我们将介绍如何进一步转换为 QAP，并利用它构造线性 PCP。
 
+![](./img/51-1.png)
+
 ## 1. QAP 表示
 
 QAP（Quadratic Arithmetic Program，二次算数程序）通过低度拓展将 R1CS 转换为多项式形式，让我们可以高效的验证证明，从而构造线性 PCP。如果你不熟悉低度拓展，可以参考 [WTF zk 第 49 讲：PCP](https://github.com/WTFAcademy/WTF-zk/blob/main/49_PCP/readme.md) 。
@@ -374,7 +376,7 @@ $$
 Q(r)\prod_{i\in H}(r-i) = \mathcal{A}(r) \cdot \mathcal{B}(r) - \mathcal{C}(r)
 $$
 
-因此，线性 PCP 的证明长度仅为 $n+m-1$，并且验证者仅消耗 $1$ 次随机数， $3$ 次线性查询，就完成了对证明的验证。
+因此，线性 PCP 的证明长度仅为 $n+m-1$，并且验证者仅消耗 $1$ 次随机数， $4$ 次线性查询，就完成了对证明的验证。
 
 下面，我们来分析线性 PCP 的完备性和可靠性。
 
@@ -435,3 +437,4 @@ assert A_random * B_random - C_random == Q_random * T_random
 
 ## 3. 总结
 
+这一讲，我们介绍了构建线性 PCP 的第二部分：将 R1CS 转换为 QAP，并利用它构造线性 PCP。QAP 通过将 R1CS 系数矩阵扩展为多项式，让我们可以利用 Schwartz–Zippel 引理更高效的验证证明。基于 QAP 构建的线性 PCP 允许验证者在仅查询 4 位证明的情况下验证一个 NP 问题，大大降低了验证成本。
