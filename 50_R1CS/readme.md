@@ -28,15 +28,19 @@ tags:
 一个线性 PCP 系统 $(P, V)$ 对于某个语言 $L$ 满足以下性质：
 
 1. **完备性（Completeness）**：对于 $x \in L$，存在一个证明 $\pi$ 使得验证者 $V$ 在随机选择某个 $\rho$ 后，能够正确验证证明，满足：
-   $$
-   \Pr_{\rho} \left[ V^{f_{\pi}}(x; \rho) = 1 \right] \geq 1 - \epsilon_c
-   $$
+
+$$
+\Pr_{\rho} \left[ V^{f_{\pi}}(x; \rho) = 1 \right] \geq 1 - \epsilon_c
+$$
+
    其中 $\epsilon_c$ 是完备性误差。
 
 2. **可靠性（Soundness）**：对于 $x \notin L$，无论证明者提供怎样的证明 $\tilde{\pi}$，验证者 $V$ 验证后拒绝错误证明的概率较高，满足：
-   $$
-   \Pr_{\rho} \left[ V^{f_{\tilde{\pi}}}(x; \rho) = 1 \right] \leq \epsilon_s
-   $$
+
+$$
+\Pr_{\rho} \left[ V^{f_{\tilde{\pi}}}(x; \rho) = 1 \right] \leq \epsilon_s
+$$
+
    其中 $\epsilon_s$ 是可靠性误差。
 
 ### 1.2 构造线性 PCP
