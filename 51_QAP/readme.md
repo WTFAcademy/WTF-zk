@@ -60,7 +60,7 @@ $$
 \left( \sum_{j=0}^{n} w_j \hat{A_{:j}}(x) \right) \cdot \left( \sum_{j=0}^{n} w_j \hat{B_{:j}}(x) \right) - \left( \sum_{j=0}^{n} w_j \hat{C_{:j}}(x) \right) = 0
 $$ 
 
-为了方便，我们计 $\mathcal{A}(x) = \sum_{j=0}^{n} w_j \hat{A_{:j}}(x)$，$\mathcal{B}(x) = \sum_{j=0}^{n} w_j \hat{B_{:j}}(x)$，$\mathcal{C}(x) = \sum_{j=0}^{n} w_j \hat{C_{:j}}(x)$，那么上述等式可以表示为：
+为了方便，我们计 $\mathcal{A}(x) = \sum_{j=0}^{n} w_j \hat{A_{:j}}(x), \mathcal{B}(x) = \sum_{j=0}^{n} w_j \hat{B_{:j}}(x), \mathcal{C}(x) = \sum_{j=0}^{n} w_j \hat{C_{:j}}(x)$，那么上述等式可以表示为：
 
 $$
 \mathcal{A}(x) \cdot \mathcal{B}(x) - \mathcal{C}(x) = 0
@@ -125,7 +125,7 @@ $$
 
 满足约束的原方程的根 $x = 3$，见证（witness）为 $w(x = 3) = [1, 3, 9, 27, 30, 35]$。
 
-下面，我们需要对系数矩阵 $A, B, C$ 的每一列在 $\mathbb{F}_{67}$ （实际应用中会选取更大的素数域）中进行低度拓展。首先，我们使用插值点$s = 1, 2, 3, 4$，计算拉格朗日基函数 $l_i(s)$：
+下面，我们需要对系数矩阵 $A, B, C$ 的每一列在 $\mathbb{F}_{67}$ （实际应用中会选取更大的素数域）中进行低度拓展。首先，我们使用插值点 $s = 1, 2, 3, 4$，计算拉格朗日基函数 $l_i(s)$：
 
 $l_1(s) = \frac{(s - 2)(s - 3)(s - 4)}{-6}$
 
@@ -255,7 +255,7 @@ print("poly C: ", C_polys)
 5. $C_{:4}(x) = 33x^3 + 37x^2 + 60x + 4$
 6. $C_{:5}(x) = 56x^3 + 66x^2 + 13x + 66$
 
-注意，以上的步骤都没有用到见证（证明） $w$。下一步，我们将利用这些多项式和见证 $w$ 计算 $\mathcal{A}(x)$，$\mathcal{B}(x)$，$\mathcal{C}(x)$。
+注意，以上的步骤都没有用到见证（证明） $w$。下一步，我们将利用这些多项式和见证 $w$ 计算 $\mathcal{A}(x), \mathcal{B}(x), \mathcal{C}(x)$。
 
 ```python
 from functools import reduce
@@ -364,7 +364,7 @@ assert poly_big_wrong // T * T == poly_big_wrong
 
 同理，我们可以提交 $\langle \hat{B_{:1}}(r), ..., \hat{B_{:n}}(r), 0, ..., 0 \rangle$ 来查询 $\mathcal{B}(r)$，提交 $\langle \hat{C_{:1}}(r), ..., \hat{C_{:n}}(r), 0, ..., 0 \rangle$ 来查询 $\mathcal{C}(r)$。
 
-注意：$\hat{A_{:j}}(r), \hat{B_{:j}}(r), \hat{C_{:j}}(r)$ 均是不需要 witness 的，验证者可以在多项式时间内计算出这些值。
+注意： $\hat{A_{:j}}(r), \hat{B_{:j}}(r), \hat{C_{:j}}(r)$ 均是不需要 witness 的，验证者可以在多项式时间内计算出这些值。
 
 最后，我们还需要查询 $Q(r)$。可以通过提交 $0, ..., 0, 1, r, r^2, ..., r^{m-2} \rangle$ 来查询它。
 
