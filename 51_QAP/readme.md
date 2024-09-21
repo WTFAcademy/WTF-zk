@@ -438,4 +438,4 @@ assert A_random * B_random - C_random == Q_random * T_random
 
 ## 3. 总结
 
-这一讲，我们介绍了构建线性 PCP 的第二部分：将 R1CS 转换为 QAP，并利用它构造线性 PCP。QAP 通过将 R1CS 系数矩阵扩展为多项式，让我们可以利用 Schwartz–Zippel 引理更高效的验证证明。基于 QAP 构建的线性 PCP 允许验证者在仅查询 4 位证明的情况下验证一个 NP 问题，大大降低了验证成本。
+这一讲，我们介绍了构建线性 PCP 的第二部分：将 R1CS 转换为 QAP，并利用它构造线性 PCP。QAP 通过将 R1CS 系数矩阵扩展为多项式，让我们可以利用 Schwartz–Zippel 引理更高效的验证证明：仅需查询证明中的 4 位就可以验证一个 NP 问题。
