@@ -36,15 +36,15 @@ $$
 
 4. **目标多项式 $T(x)$**：由验证者选择，用于验证多项式关系。$T(x)$ 的根通常对应于电路中各个约束的位置。例如，如果我们有 $m$ 个约束，可以选择 $m$ 个不同的点 $0, 1, ..., m-1$，那么：
 
-   $$
-   T(x) = x(x - 1) \cdots (x - n + 1)
-   $$
+$$
+T(x) = x(x - 1) \cdots (x - n + 1)
+$$
 
 5. **商多项式 $H(x)$**：验证者需要提供的证明的一部分，用于验证多项式的整除关系，有：
 
-   $$
-   H(x) = \frac{\left( \sum_{i=0}^{n} w_i \hat{A_{:i}}(x) \right) \cdot \left( \sum_{i=0}^{n} w_i \hat{B_{:i}}(x) \right) - \left( \sum_{i=0}^{n} w_i \hat{C_{:i}}(x) \right)}{T(x)}
-   $$
+$$
+H(x) = \frac{\left( \sum_{i=0}^{n} w_i \hat{A_{:i}}(x) \right) \cdot \left( \sum_{i=0}^{n} w_i \hat{B_{:i}}(x) \right) - \left( \sum_{i=0}^{n} w_i \hat{C_{:i}}(x) \right)}{T(x)}
+$$
 
 ### 1.2 QAP 构造方法
 
