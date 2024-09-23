@@ -1,5 +1,5 @@
 ---
-title: Milestone 03. ElGamal Algorithm
+title: Milestone 03. ElGamal算法
 tags:
   - zk
   - basic
@@ -7,150 +7,150 @@ tags:
   - elgamal
 ---
 
-# WTF zk Tutorial Milestone 03: ElGamal Algorithm
+# WTF zk 教程 里程碑 03：ElGamal 算法
 
-In this lesson, we will introduce the ElGamal encryption and signature algorithms. ElGamal is a public key cryptography algorithm based on the difficulty of computing discrete logarithms. It was proposed by ElGamal in 1985 and extended the Diffie-Hellman key exchange algorithm to the field of encryption and digital signatures.
+在这一讲中，我们将介绍 ElGamal 加密和签名算法。ElGamal 是一种基于离散对数问题的公钥密码学算法，由 ElGamal 在 1985 年提出，将 Diffie-Hellman 密钥交换算法推广到了加密和数字签名领域。
 
 ![](./img/MS03-1.png)
 
-## 1. ElGamal Encryption Algorithm
+## 1. ElGamal 加密算法
 
-The ElGamal algorithm is a public key cryptography algorithm that relies on the difficulty of computing discrete logarithms. The ElGamal algorithm consists of two parts: encryption and digital signatures. Let's take a look at the encryption algorithm.
+ElGamal 算法是一种公钥密码学的算法，其安全性基于计算离散对数的困难性。ElGamal 算法包括加密和数字签名两个部分，我们来看加密算法的流程。
 
-Assume that Alice wants to communicate with Bob using the ElGamal algorithm.
+我们假设 Alice 要通过 ElGamal 算法跟 Bob 通信。
 
-### 1.1 Key Generation
+### 1.1 密钥生成
 
-Bob's key generation using the ElGamal algorithm includes the following steps:
+Bob 使用 ElGamal 算法的密钥生成包括以下步骤：
 
-1. **Choose a large prime number $p$:** Choose a sufficiently large prime number $p$ as the modulus of $Z^*_p$. According to the existence of primitive elements, $Z^*_p$ is a cyclic group with a primitive element.
-2. **Choose a primitive element $g$:** Choose a primitive element $g$ modulo $p$. At this time, the order of $g$ is $p-1$, and the discrete logarithm problem is difficult.
-3. **Choose a private key $x$:** Randomly choose a private key $x$, $1 < x < p$.
-4. **Compute the public key $y$:** Compute the public key $y = g^x \mod p$.
+1. **选择大素数 $p$：** 选择一个足够大的素数 $p$ 作为 $Z^*_p$ 的模数。根据原根的存在性， $Z^*_p$ 为循环群，存在原根。
+2. **选择生成元 $g$：** 选择一个模 $p$ 的原根 $g$，这时 $g$ 的阶是 $p-1$，此时离散对数问题是困难的。
+3. **选择私钥 $x$：** 随机选择一个私钥 $x$，$1 < x < p$。
+4. **计算公钥 $y$：** 计算公钥 $y = g^x \mod p$。
 
-In the end, the public key is $(p, g, y)$, which is made public; the private key is $x$, which is kept private.
+最终，公钥为 $(p, g, y)$，是公开的；私钥为 $x$，不公开。
 
-### 1.2 Encryption
+### 1.2 加密
 
-After obtaining the public key $(p, g, y)$, Alice uses the ElGamal encryption as follows:
+Alice 在获取公钥 $(p, g, y)$ 后使用 ElGamal 加密，过程如下：
 
-1. **Choose a random number $k$:** Randomly choose a $k$, $1 < k < p$.
-2. **Compute the temporary public key $a$ and the temporary ciphertext $b$:** Compute $a \equiv g^k \mod p$ and $b \equiv y^k \cdot M \equiv g^{xk} \cdot M \mod p$, where $M$ is the plaintext message to be encrypted.
-3. **Ciphertext:** The ciphertext is $(a, b)$, which is made public.
+1. **选择随机数 $k$：** 随机选择一个 $k$，$1 < k < p$。
+2. **计算临时公钥 $a$ 和临时密文 $b$：** 计算 $a \equiv g^k \mod p$ 和 $b \equiv y^k \cdot M \equiv g^{xk} \cdot M \mod p$，其中 $M$ 是要加密的消息明文。
+3. **密文：** 密文为 $(a, b)$，是公开的。
 
-The random number $k$ will change with each encryption, ensuring that the ElGamal algorithm will output different temporary ciphertexts even if the same plaintext is encrypted. In the encryption operation, the private key $x$ and the random number $k$ are kept private, while the public key $(p, g, y)$ and the ciphertext $(a, b)$ are made public.
+随机数 $k$ 在每次加密都会变换，保证了 ElGamal 算法即使加密相同的明文也会输出不同的临时密文。在加密操作中，私钥 $x$ 和随机数 $k$ 是隐私的，而公钥 $(p, g, y)$ 和密文 $(a, b)$，是公开的。
 
-### 1.3 Decryption
+### 1.3 解密
 
-After receiving the ciphertext $(a, b)$, Bob decrypts it using the ElGamal decryption process:
+Bob 在收到密文 $(a, b)$ 后，使用 ElGamal 解密过程如下：
 
-1. **Compute the shared key $s$:** Compute $s \equiv a^x \mod p$.
-2. **Compute the modular inverse $s^{-1}$**.
-3. **Restore the plaintext $M$:** Restore the plaintext $M \equiv b \cdot s^{-1} \mod p$. Because $b \cdot s^{-1} = b \cdot a^{-x} = g^{xk} \cdot M \cdot g^{-xk} = M$.
+1. **计算共享密钥 $s$：** 计算 $s \equiv a^x \mod p$。
+2. **计算模逆 $s^{-1}$**。
+3. **还原明文 $M$：** 还原明文 $M \equiv b \cdot s^{-1} \mod p$。因为 $b \cdot s^{-1} = b \cdot a^{-x} = g^{xk} \cdot M \cdot g^{-xk} = M$。
 
-The ElGamal algorithm ingeniously allows $b \cdot s^{-1}$ to restore the original plaintext, and calculating $s$ requires knowledge of the private key $x$. Without the private key, an eavesdropper would have to solve the discrete logarithm problem (which cannot be solved) in order to obtain the plaintext.
+ElGamal 算法就巧妙在 $b \cdot s^{-1}$ 能够还原出原文，而计算 $s$ 需要私钥 $x$ 的信息。没有私钥，窃听者想得到明文，就要解离散对数问题（解不出来）。
 
-### 1.4 Example
+### 1.4 示例
 
-Let's illustrate the ElGamal encryption algorithm with a simple example.
+让我们通过一个简单的例子来说明 ElGamal 加密算法。
 
-Assume that $p = 13$, $g = 6$ is a primitive element of $p$, $x = 4$ is the private key, and $y = g^x = 9$ is the public key. After key generation, Bob makes $(p, g, y)$ public.
+假设 $p = 13$，$g = 6$ 是 $p$ 的原根，私钥 $x = 4$，公钥 $y = g^x =  9 $。密钥生成后，Bob 将 $(p, g, y)$ 公开。
 
-Now, Alice wants to encrypt the message $M = 5$. Alice randomly chooses $k = 7$ (note that it must be coprime to $p$) and calculates:
+现在，Alice 希望加密消息 $M = 5$。Alice 随机选择 $k = 7$（注意要跟 $p$ 互质），并计算：
 
-1. Temporary public key $a \equiv 6^{7} \equiv 7 \pmod{13}$.
-2. Temporary ciphertext $b \equiv 9^{7} \cdot 5 \equiv 6 \pmod{13}$.
+1. 临时公钥 $a \equiv 6^{7} \equiv 7 \pmod{13}$。
+2. 临时密文 $b \equiv 9^{7} \cdot 5 \equiv 6 \pmod{13}$。
 
-Therefore, the ciphertext is $(7, 6)$.
+因此，密文为 $(7, 6)$。
 
-Next, Bob receives the ciphertext and decrypts it:
+接下来，Bob 收到密文，并解密：
 
-1. Compute the shared key $s \equiv 7^{4} \equiv 9 \pmod{13}$.
-2. Compute the modular inverse $s^{-1} \equiv 9^{-1} \equiv 3 \pmod{13}$.
-3. Restore the plaintext $M \equiv 6 \cdot 3 \equiv 5 \pmod{13}$.
+1. 计算共享密钥 $s \equiv 7^{4} \equiv 9 \pmod{13}$。
+2. 计算模逆 $s^{-1} \equiv 9^{-1} \equiv 3 \pmod{13}$。
+3. 还原明文 $M \equiv 6 \cdot 3 \equiv 5 \pmod{13}$。
 
-In the end, Bob successfully decrypts and restores the original message $M = 5$.
+最终，Bob 成功解密，还原出原始消息 $M = 5$。
 
-## 2. ElGamal Signature Algorithm
+## 2. ElGamal 签名算法
 
-Before introducing the algorithm, let's first understand what a digital signature is. In traditional industries, people sign paper contracts with handwritten signatures, which have legal effects. A digital signature is a technology used to ensure the integrity of digital information, authenticate the identity of the sender, and prevent denial. A digital signature generates a unique identifier (signature) attached to a message or document using encryption algorithms. This digital signature can be verified to confirm that the message was generated by a specific sender and has not been tampered with during transmission.
+在介绍算法之前，我们先介绍什么是数字签名。传统行业中，人们会在合同签上纸质签名，具有法律效应。数字签名是一种用于确保数字信息完整性、认证发送方身份以及防止抵赖的技术。数字签名通过使用加密算法生成一个独特的标识符（签名），该标识符附加到消息或文档上。这个数字签名可以被验证，以确认消息是由特定的发送方生成，并且在传输过程中没有被篡改。
 
-Digital signatures typically involve two key components: private keys and public keys. The sender uses the private key to sign the message, and the recipient uses the public key to verify the validity of the signature. This method is based on asymmetric encryption, where the private key is used for signature generation and the public key is used for signature verification.
+数字签名通常涉及两个关键的密钥：私钥和公钥。发送方使用私钥对消息进行签名，而接收方使用公钥验证签名的有效性。这种方法建立在非对称加密的基础上，其中私钥用于签名生成，而公钥用于验证签名。
 
-Digital signatures have the following key properties:
+数字签名具有以下关键属性：
 
-1. **Identity authentication:** Proving that the signer is the holder of the private key.
-2. **Non-repudiation:** The sender cannot deny sending the message.
-3. **Integrity:** By verifying the digital signature generated for the transmitted message, it can be determined whether the message has been tampered with during transmission.
+1. **身份认证**：证明签名方是私钥的持有人。
+2. **不可否认**：发送方不能否认发送过这个消息。
+3. **完整性**：通过验证针对传输消息生成的数字签名，可以验证消息是否在传输过程中被篡改。
 
-Similar to the ElGamal encryption algorithm, the ElGamal signature algorithm also uses the difficulty of the discrete logarithm problem to ensure the security of the signature. The algorithm is mainly divided into three steps: key generation, signature generation, and signature verification. Let's demonstrate with Alice (the signer) and Bob (the verifier).
+与 ElGamal 加密算法相似，ElGamal 签名算法也使用了离散对数问题的困难性来保证签名的安全性。算法主要分为密钥生成、签名生成和签名验证三个步骤，我们用 Alice（签名方）和 Bob（验证方）做演示。
 
-### 2.1 Key Generation
+### 2.1 密钥生成
 
-Alice generates a key for signing:
+Alice 生成密钥，用于签名：
 
-1. **Choose parameters:** Choose a large prime number $p$ and a primitive element $g$.
-2. **Generate a private key:** Randomly choose a private key $x$, with $1 < x < p-1$.
-3. **Compute the public key:** Compute the public key $y \equiv g^x \pmod{p}$.
+1. **选择参数：** 选择一个大素数 $p$ 和一个原根 $g$。
+2. **生成私钥：** 随机选择一个私钥 $x$，要求 $1 < x < p-1$。
+3. **计算公钥：** 计算公钥 $y \equiv g^x \pmod{p}$。
 
-The key generation steps are the same as the ElGamal encryption algorithm, and the final public key is $(p, g, y)$, which is made public; the private key is $x$, which is kept private.
+密钥生成步骤和 ElGamal 加密算法相同，最终的公钥为$(p, g, y)$，公开的；私钥为$x$，隐私的。
 
-### 2.2 Signature Generation
+### 2.2 生成签名
 
-Alice uses the private key and the hash of the message to generate a signature:
+Alice 利用密钥和消息哈希生成签名：
 
-1. **Choose a random number:** Randomly choose an integer $k$, ensuring that $1 < k < p-1$ and $gcd(k, p-1) = 1$. This is because we will later calculate $k^{-1} \pmod{p-1}$, which requires the existence of the inverse element of $k$ modulo $p-1$.
-2. **Compute the intermediate value $r$:** Compute $r \equiv g^k \pmod{p}$.
-3. **Compute the signature:** Compute $s \equiv k^{-1}(H(M) - xr) \pmod{p-1}$, where $H(M)$ is the hash value of the message. Note that the modulus used here is $p-1$.
+1. **选择随机数：** 随机选择一个整数 $k$，确保 $1 < k < p-1$ 且 $gcd(k, p-1) = 1$。这是因为我们之后会计算 $k^{-1} \pmod{p-1}$，需要 $k$ 在模 $p-1$ 下存在逆元素。
+2. **计算中间值 $r$：** 计算 $r \equiv g^k \pmod{p}$。
+3. **计算签名：** 计算 $s \equiv k^{-1}(H(M) - xr) \pmod{p-1}$，其中 $H(M)$ 是消息 $M$ 的哈希值。注意，这里用的模数是 $p-1$。
 
-If $s=0$, then we need to re-generate a random number $k$ and calculate again. Originally, the paper used the message $M$ itself instead of the hash $H(M)$, but this would bring [security issues](https://en.wikipedia.org/wiki/ElGamal_signature_scheme#Security). The final signature is $(r, s)$, which is made public.
+如果 $s=0$，那么需要重新生成一个随机数 $k$ 再次计算。最初论文里用的不是哈希 $H(M)$ 而是消息 $M$ 本身，但这会带来[安全问题](https://en.wikipedia.org/wiki/ElGamal_signature_scheme#Security)。最终的签名为 $(r, s)$，公开的。
 
-### 2.3 Signature Verification
+### 2.3 验证签名
 
-Bob can use the public information $(g, p, r, s, M)$ to verify the authenticity of the signature.
+Bob 可以利用公开的信息 $(g, p, r, s, M)$ 来验证签名是否真实。
 
-1. **Verify parameters:** If $0 < r < p$ and $0 < s < p-1$ are satisfied, proceed to the next step.
-2. **Verify the signature:** If $g^{H(M)} \equiv y^rr^s \pmod{p}$ holds, then the signature is valid.
+1. **验证参数：** 如果满足 $0<r<p$ 且 $0 < s<p-1$，可以进行下一步。
+2. **验证签名：** 如果 $g^{H(M)} \equiv y^rr^s \pmod{p}$ 成立，则签名有效。
 
-Because $y^rr^s = g^{xr}r^{s} = g^{xr}g^{ks} = g^{xr+ks}$, and $xr+ks = xr +k(k^{-1}(H(M) - xr)) = H(M) \pmod{p-1}$. Therefore, if $g^{H(M)} \equiv y^rr^s \pmod{p}$, that is, $xr+ks = H(M) \pmod{p-1}$ holds, then the signature is valid.
+因为 $y^rr^s = g^{xr}r^{s}=g^{xr}g^{ks} = g^{xr+ks}$，而 $xr+ks = xr +k(k^{-1}(H(M) - xr)) = H(M) \pmod{p-1}$。所以，如果 $g^{H(M)} \equiv y^rr^s \pmod{p}$，也就是 $xr+ks = H(M) \pmod{p-1}$ 成立，那么签名就是有效的。
 
-### 2.4 Example
+### 2.4 示例
 
-Let's illustrate the ElGamal signature algorithm with a simple example. Suppose we already have a key pair $(p, g, x, y)$, where $p = 13$, $g = 6$, $x = 4$, $y = 9$, and the hash of the message is $H(M) = 5$.
+让我们通过一个简单的例子来说明 ElGamal 签名算法。假设我们已经有一个密钥对 $(p, g, x, y)$，其中 $p = 13$，$g = 6$，$x = 4$，$y = 9$ 与签名消息哈希 $H(M) = 5$。
 
-During signing, we randomly choose $k = 7$, which is relatively prime to $p-1 = 12$, and calculate:
+签名时，我们随机选择 $k = 7$，它与 $p-1 = 12$ 互质，计算：
 
-1. Temporary value $r \equiv 6^7 \equiv 7 \mod 13$.
-2. Compute $s \equiv 7^{-1} \cdot (5 - 4 \cdot 7) \equiv 7 \mod 12$.
+1. 临时值 $r \equiv 6^7  \equiv 7 \mod 13$。
+2. 计算 $s \equiv 7^{-1} \cdot (5 - 4 \cdot 7) \equiv 7 \mod 12$。
 
-Therefore, the signature is $(7, 7)$.
+因此，签名为 $(7, 7)$。
 
-Next, we verify whether the signature is valid:
+接下来，我们验证签名是否有效：
 
-Calculating $g^{H(M)} \equiv y^rr^s \pmod{p}$ is complicated, so we can directly verify whether $xr+ks = H(M) \mod 12$ holds. $xr+ks = 4 \times 7 + 7 \times 7 = 77 = 5 = H(M) \mod 12$, and $g^{5} \equiv g^{77} \equiv 2 \pmod{13}$. Therefore, the signature is valid.
+$g^{H(M)} \equiv y^rr^s \pmod{p}$ 计算比较复杂，我们可以直接验证 $xr+ks = H(M) \mod 12$ 是否成立。 $xr+ks = 4 \times 7 + 7 \times 7 = 77 = 5 = H(M) \mod 12$，$g^{5} \equiv g^{77} \equiv 2 \pmod{13}$因此签名有效。
 
-## 3. Code Implementation
+## 3. 代码实现
 
-### 3.1 ElGamal Encryption Algorithm
+### 3.1 ElGamal 加密算法
 
 ```python
-## ElGamal Encryption Algorithm
+## ElGamal 加密算法
 
 from random import randint
 from sympy import isprime, mod_inverse
 
 def generate_keys():
-    # Generate the large prime number p and the primitive element g
+    # 生成大素数 p 和原根 g
     while True:
         p = randint(1000, 2000)
         if isprime(p):
             break
     g = randint(2, p-1)
 
-    # Private key x
+    # 私钥 x
     x = randint(1, p-2)
 
-    # Public key y
+    # 公钥 y
     y = pow(g, x, p)
 
     return (p, g, y), x
@@ -159,7 +159,7 @@ def encrypt(public_key, message):
     p, g, y = public_key
     k = randint(1, p-2)
 
-    # Encryption
+    # 加密
     C1 = pow(g, k, p)
     C2 = (message * pow(y, k, p)) % p
 
@@ -169,47 +169,47 @@ def decrypt(private_key, p, ciphertext):
     C1, C2 = ciphertext
     a = private_key
 
-    # Decryption
+    # 解密
     s = pow(C1, a, p)
     m = (C2 * mod_inverse(s, p)) % p
 
     return m
 
-# Example
-public_key, private_key = generate_keys() # Generate keys
-message = 123  # Plaintext message
-ciphertext = encrypt(public_key, message) # Ciphertext
-decrypted_message = decrypt(private_key, public_key[0], ciphertext) # Decryption
+# 示例
+public_key, private_key = generate_keys() # 生成密钥
+message = 123  # 消息明文
+ciphertext = encrypt(public_key, message) #密文
+decrypted_message = decrypt(private_key, public_key[0], ciphertext) # 解密
 
-print("Public key (p, g, y):", public_key)
-print("Private key x:", private_key)
-print("Plaintext message:", message)
-print("Ciphertext:", ciphertext)
-print("Decrypted plaintext:", decrypted_message)
+print("公钥 (p, g, y):", public_key)
+print("私钥 x:", private_key)
+print("消息明文:", message)
+print("密文:", ciphertext)
+print("解密还原明文:", decrypted_message)
 
-## Output Example
-# Public key (p, g, y): (1307, 643, 698)
-# Private key x: 11
-# Plaintext message: 123
-# Ciphertext: (690, 1225)
-# Decrypted plaintext: 123
+## 输出样例
+# 公钥 (p, g, y): (1307, 643, 698)
+# 私钥 x: 11
+# 消息明文: 123
+# 密文: (690, 1225)
+# 解密还原明文: 123
 ```
 
-### 3.2 ElGamal Signature Algorithm
+### 3.2 ElGamal 签名算法
 
 ```python
-## ElGamal Signature Algorithm
+## ElGamal 签名算法
 
 from sympy import gcd
 
 def generate_keys_signature():
-    # Same as the ElGamal encryption algorithm
+    # 和 ElGamal 加密算法一样
     return generate_keys()
 
 def sign(private_key, p, g, message):
     while True:
         k = randint(1, p-1)
-        if gcd(k, p-1) == 1:  # k is coprime to p-1
+        if gcd(k, p-1) == 1:  # k 与 p-1 互质
             break
 
     r = pow(g, k, p)
@@ -227,30 +227,30 @@ def verify(public_key, p, g, message, signature):
 
     return pow(g, message, p) == (pow(y, r, p) * pow(r, s, p)) % p
 
-# Example
-public_key, private_key = generate_keys_signature() # Generate keys
-message = 123  # Plaintext message
-signature = sign(private_key, public_key[0], public_key[1], message) # Generate signature
-verification_result = verify(public_key, public_key[0], public_key[1], message, signature) # Verify signature
+# 示例
+public_key, private_key = generate_keys_signature() # 生成密钥
+message = 123  # 消息明文
+signature = sign(private_key, public_key[0], public_key[1], message) # 生成签名
+verification_result = verify(public_key, public_key[0], public_key[1], message, signature) # 验证签名
 
 public_key, private_key, signature, verification_result
 
-print("Public key (p, g, y):", public_key)
-print("Private key x:", private_key)
-print("Plaintext message:", message)
-print("Signature:", signature)
-print("Verification result:", verification_result)
+print("公钥 (p, g, y):", public_key)
+print("私钥 x:", private_key)
+print("消息明文:", message)
+print("签名:", signature)
+print("验证结果:", verification_result)
 
-## Output Example
-# Public key (p, g, y): (1409, 853, 1193)
-# Private key x: 1035
-# Plaintext message: 123
-# Signature: (1126, 1403)
-# Verification result: True
+## 输出样例
+# 公钥 (p, g, y): (1409, 853, 1193)
+# 私钥 x: 1035
+# 消息明文: 123
+# 签名: (1126, 1403)
+# 验证结果: True
 ```
 
-## 4. Summary
+## 4. 总结
 
-In this lesson, we introduced the ElGamal algorithm, which extends the ideas of the Diffie-Hellman algorithm to the fields of encryption and digital signatures. Like the Diffie-Hellman algorithm, the security of the ElGamal algorithm is also based on the difficulty of the discrete logarithm problem.
+这一讲，我们介绍了 ElGamal 算法，它将 Diffie-Hellman 算法的思想推广到了加密和数字签名领域。和 Diffie-Hellman 算法一样，ElGamal 算法的安全性也基于离散对数问题的困难性。
 
-> Thought question: Why is the calculation of the signature $s$ in the ElGamal signature algorithm performed modulo $p-1$?
+> 思考题：为什么在 ElGamal 签名算法中，签名 $s$ 的计算是在模 $p-1$ 下的？
