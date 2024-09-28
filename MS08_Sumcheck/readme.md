@@ -1,5 +1,5 @@
 ---
-title: Milestones 08. Sumcheck 协议
+title: Milestones 08. Sumcheck Protocol
 tags:
   - zk
   - computation theory
@@ -7,9 +7,9 @@ tags:
   - sumcheck protocol
 ---
 
-# WTF zk 教程 里程碑 08：Sumcheck 协议
+# WTF zk 教程 里程碑 08：Sumcheck Protocol
 
-在本讲中，我们将介绍 Sumcheck 协议（Sumcheck Protocol），一个非常经典的交互式证明系统的协议。它允许验证者通过与证明者的交互，以很小的开销验证拥有非常多项的多项式的求和。
+在本讲中，我们将介绍 Sumcheck 协议（Sumcheck Protocol），一个非常经典的交互式证明系统的协议。在这个协议中，验证者通过与证明者的交互，以很小的开销验证一个非常复杂的多项式求和结果。
 
 ## 1. 多项式求和问题
 
@@ -95,7 +95,7 @@ $$
 
 ## 3. 示例
 
-我们还是以之前的 3 元多项式为例演示 Sumcheck Protocol，其中 $\mathbb{F} = \mathbb{F_{17}}$。
+我们还是以之前的 3 元多项式为例演示 Sumcheck Protocol，其中 $\mathbb{F} = \mathbb{F_{31}}$。
 
 $$
 P(x_1, x_2, x_3) = x_1 x_2 x_3 + 3 x_1 x_2 + x_3^2

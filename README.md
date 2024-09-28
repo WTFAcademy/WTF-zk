@@ -134,6 +134,8 @@
 
 **第51讲 线性 PCP 第二部分: QAP** [教程](./51_QAP/readme.md)
 
+**里程碑08 Sumcheck Protocol** [教程](./MS08_Sumcheck/readme.md)
+
 ## WTF zk贡献者
 <div align="center">
   <h4 align="center">
