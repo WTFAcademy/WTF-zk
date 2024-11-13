@@ -82,7 +82,7 @@ def generate_keys():
     q = next(primerange(10000, 11000))
     n = p * q
     x = 2
-    while is_quad_residue(x, p) and is_quad_residue(x, q):
+    while not (is_quad_residue(x, p) == False and is_quad_residue(x, q) == False):
         x += 1
     return (n, x), (p, q)
 
@@ -118,10 +118,10 @@ print("密文:", encrypted_message)
 print("解密消息:", decrypted_message)
 
 ## 输出样例
-# 公钥 (N, x): (10097063, 5)
+# 公钥 (N, x): (10097063, 17)
 # 私钥 (p, q): (1009, 10007)
 # 原始消息明文: 1010
-# 密文: [4261321, 8377247, 969148, 6082662]
+# 密文: [7768272, 4772911, 6227949, 799047]
 # 解密消息: 1010
 ```
 
