@@ -2,7 +2,7 @@
 
 [English Version](https://github.com/WTFAcademy/WTF-zk/blob/main/Languages/en/README.md)
 
-零知识证明（zero-knowledge proof）入门教程，目的是让仅有高中数学基础的人也能入门zk。我们会使用python复现一些算法，所以你也需要学python。
+[零知识证明（zero-knowledge proof）](https://zh.wikipedia.org/wiki/零知识证明)入门教程，目的是让仅有高中数学基础的人也能入门zk。我们会使用python复现一些算法，所以你也需要学python。
 
 > 我们最近在学习zero-knowledge proof，巩固一下细节，也写一个“WTF zk极简入门”，供小白们使用（编程大佬可以另找教程），每周更新1-3讲。
 
