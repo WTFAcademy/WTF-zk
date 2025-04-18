@@ -101,6 +101,31 @@ $$
 \text{div}(f_P) = m[P] - [mP] - (m-1)[O]
 $$
 
+<details><summary>点我展开证明👀</summary>
+
+设正整数 $m$ 的二进制表示为 $m = \overline{b_{n-1}b_{n-2}...b_0}, b_i \in \{0, 1\}, b_{n-1} = 1$
+
+首先 $m_1 = b_{n-1}$ 时，算法返回 $1$ 且 $T = P$，$1$是常数，既没有零点也没有极点。将$m=1$ 代入 $\text{div}(f_P)$，所有的项都消掉了，因此 $m_1 = b_{n-1}$ 成立。
+
+设 $m_i = \overline{b_{n-1}b_{n-2}...b_{n-i}}$。有 $T = m_iP$，$\text{div}(f_P) = m_i[P] - [m_iP] - (m_i-1)[\mathcal{O}]$ 成立。我们需要证明 $m_{i+1} = \overline{b_{n-1}b_{n-2}...b_{n-i-1}}$ 时的情况成立：
+
+假设 $b_{n-i-1} = 0$，则不走 if 分支，我们实际的运算为 $f' = f^2 \cdot g_{m_iP, m_iP}, m_iP = 2m_iP$。则此时新的 $\text{div}(f')$：
+
+
+$$ = 2(m_i[P] - [m_iP] - (m_i-1)[\mathcal{O}]) + ([m_iP] + [m_iP] - [2m_iP] - [\mathcal{O}])$$
+
+$$ = m_{i+1}[P] - 2[m_iP] - 2(m_i - 1)[\mathcal{O}] + 2[m_iP] - [m_{i+1}]P - [\mathcal{O}]$$
+
+$$ = m_{i+1}[P] - [m_{i+1}]P - (m_{i+1} - 1)[\mathcal{O}]$$
+
+
+结果正确，并且此时 $T' = 2T = 2m_iP = m_{i+1}P$，也符合归纳要求，因此归纳在 $b_{n-i-1} = 0$ 分支下成立。同理也可证得 $b_{n-i-1} = 1$ 分支下成立。
+
+综上所述，该算法可以生成有理函数 $f_P$, 使得 $\text{div}(f_P) = m[P] - [mP] - (m-1)[\mathcal{O}]$。Q.E.D
+
+
+</details>
+
 ## 2. 例子
 
 下面我们举个稍微复杂的 Weil 配对的例子，过程使用 Sage 计算，内置了 Miller 算法。Sage（也称为SageMath）是一个开源的数学软件系统，旨在提供一个强大、全面的环境，用于解决各种数学问题和进行数学研究。它的语法与python类似，你可以使用 [SageMathCell](https://sagecell.sagemath.org/) 在浏览器中运行 Sage 程序。
