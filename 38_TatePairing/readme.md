@@ -33,7 +33,7 @@ Tate 配对具有以下性质：
 
 **性质1. 双线性：** Tate 配对满足 $\hat{\tau}(P + R, Q) = \hat{\tau}_m(P, Q) \hat{\tau}_m(R, Q)$ 和 $\hat{\tau}_m(P, Q + R) = \hat{\tau}_m(P, Q) \hat{\tau}_m(P, Q)$。
 
-**性质2. 非退化性：** 若对于非零的点 $P \in E[m]$，有 $\hat{\tau}_m(P,P) \in \mu_m$ 成立，即 $\hat{\tau}_m(P,P) ^m = 1$ 且 $\hat{\tau}_m(P,P) ^m \neq 1$
+**性质2. 非退化性：** 若对于非零的点 $P \in E[m]$，有 $\hat{\tau}_m(P,P) \in \mu_m$ 成立，即 $\hat{\tau}_m(P,P) ^m = 1$ 且 $\hat{\tau}_m(P,P) \neq 1$
 
 **性质3. 计算高效：** Weil 配对需要我们计算 $f_P$ 和 $f_Q$，但 Tate 配对只需要我们计算 $f_P$，可以用 Miller 算法更加高效的计算。
 
