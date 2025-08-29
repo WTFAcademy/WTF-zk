@@ -128,7 +128,7 @@ $$
 于是，我们可以得到结论：Sigma 协议中， $\mathcal{P}$ 能以不可忽略的概率说服 $\mathcal{V}$ 相信它拥有知识 $w$，并且 $\mathcal{V}$ 可以恢复（或者说提取）出来知识。
 
 > 这里需要特别强调 Soundness 和 Knowledge Soundness之间的区别：
-> - Soundness: Verifer 可以相信 Prover 中拥有可以通过协议的证明（proof），但不要求 Prover 一定有相应的知识（knowledge）。
+> - Soundness: Verifier 可以相信 Prover 中拥有可以通过协议的证明（proof），但不要求 Prover 一定有相应的知识（knowledge）。
 > - Knowledge Soundness: Verifier 可以相信 Prover 中拥有知识。
 >
 > KS 是一个比 Soundness 更强的概念，因为Prover拥有知识，则一定可以生成相应证明。因此 KS 蕴含 Soundness，反之不一定成立。
@@ -189,7 +189,7 @@ print(long_to_bytes(flag))
 
 这是一个冗长的概念，比我们之前所预期的零知识性还加了一个前缀，我们来拆分解读：
 
-- Honest Verifer：这个特性是说 Verifier 会严格遵循协议要求，随机挑选合适位数的 $e$，而与协议的其他值无关。
+- Honest Verifier：这个特性是说 Verifier 会严格遵循协议要求，随机挑选合适位数的 $e$，而与协议的其他值无关。
 - Zero Knowledge：这个特性是说 Verifier 无法从协议过程中获取有关知识 $w$ 的任何信息。
 
 为了证明零知识性，我们需要引入一个概念 “Simulator” ，译为模拟器，它的作用是模拟 Prover 的行为，但是它不具有知识。Verifier 会给模拟器 $S$ 正常按照协议规定发送随机数 $e$ ，如果模拟器同样可以像 Prover 一样产生可通过协议检查的 transcript，且整个协议过程和 Prover 与 Verifier 在真实世界中是不可区分的。那么就称这个协议是零知识的。
@@ -202,7 +202,7 @@ print(long_to_bytes(flag))
 > - 统计不可区分：如果两个世界中消息的概率分布相差很小，即使作为强计算能力 Verifier （比如无穷算力）无法感知到这一差距。我们称这样的两个世界是统计不可区分的。
 > - 完美不可区分：如果两个世界中消息的概率分布没有差距，则称这样的两个世界是完美不可区分的。
 
-现在，我们身处理想世界，体验一下模拟器的超能力。在真实世界中，Prover 需要首先向 Verifier 发送 $a$ ，然后 Verifier 再随机选择并发送 $e$，最后 Prover 发送 $z$。这样的设计是有重要含义的，因为如果 Verifer 可以先发送 $e$ ，Prover 再发送 $a, z$。那么任意的恶意 Prover 总是能够通过 Verifier 的质询。这样的协议设计下 Prover 具有**优势**，总是可以欺骗 Verifier。
+现在，我们身处理想世界，体验一下模拟器的超能力。在真实世界中，Prover 需要首先向 Verifier 发送 $a$ ，然后 Verifier 再随机选择并发送 $e$，最后 Prover 发送 $z$。这样的设计是有重要含义的，因为如果 Verifier 可以先发送 $e$ ，Prover 再发送 $a, z$。那么任意的恶意 Prover 总是能够通过 Verifier 的质询。这样的协议设计下 Prover 具有**优势**，总是可以欺骗 Verifier。
 
 具体欺骗步骤如下：
 
@@ -256,7 +256,7 @@ print(conn.recvline())
 
 </details>
 
-## 5. Non-interactice
+## 5. Non-interactive
 
 经过前 3 小节，我们了解了 zkp 协议最基本的三个性质，这一节我们来学习如何使用 Fiat-Shamir 变换把协议做成非交互式。
 
