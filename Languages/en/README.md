@@ -28,7 +28,7 @@ WTF zk is intro-level Zero-Knowledge Proofs (ZKP) tutorial: The goal is to make 
 
 
 - **Milestone 01: RSA Algorithm**  
-  [Code](./MS01_RSA/RSA.ipynb) | [Tutorial](./MS01_RSA/readme.md) | [Paper](./papers/RSA_paper.pdf)
+  [Code](./MS01_RSA/RSA.ipynb) | [Tutorial](./MS01_RSA/readme.md) | [Paper](../../papers/RSA_paper.pdf)
 
 
 ### Chapter 2: Abstract Algebra: Group Theory
@@ -53,10 +53,10 @@ WTF zk is intro-level Zero-Knowledge Proofs (ZKP) tutorial: The goal is to make 
 
 
 - **Milestone 02: Diffie-Hellman Key Exchange Algorithm**  
-  [Code](./MS02_DH/Difie_Hellman.ipynb) | [Tutorial](./MS02_DH/readme.md) | [Paper](./papers/Diffie_Hellman.pdf)
+  [Code](./MS02_DH/Diffie_Hellman.ipynb) | [Tutorial](./MS02_DH/readme.md) | [Paper](../../papers/Diffie_Hellman.pdf)
 
 - **Milestone 03: ElGamal Encryption and Signature Algorithm**  
-  [Code](./MS03_ElGamal/ElGamal.ipynb) | [Tutorial](./MS03_ElGamal/readme.md) | [Paper](./papers/ElGamal.pdf)
+  [Code](./MS03_ElGamal/ElGamal.ipynb) | [Tutorial](./MS03_ElGamal/readme.md) | [Paper](../../papers/ElGamal.pdf)
 
 ### Chapter 3: Abstract Algebra: Ring and Field
 
@@ -80,10 +80,10 @@ WTF zk is intro-level Zero-Knowledge Proofs (ZKP) tutorial: The goal is to make 
 
 
 - **Milestone 04: Goldwasser-Micali (GM) Algorithm**  
-  [Code](./MS04_ProbEncryption/GM.ipynb) | [Tutorial](./MS04_ProbEncryption/readme.md) | [Paper](./papers/Probabilistic_Encryption.pdf)
+  [Code](./MS04_ProbEncryption/GM.ipynb) | [Tutorial](./MS04_ProbEncryption/readme.md) | [Paper](../../papers/Probabilistic_Encryption.pdf)
 
 - **Milestone 05: Introduction to Zero-Knowledge Proofs**  
-  [Tutorial](./MS05_zkExample/readme.md) | [Paper](./papers/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf)
+  [Tutorial](./MS05_zkExample/readme.md) | [Paper](../../papers/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf)
 
 
 ### Chapter 4: Elliptic Curves
