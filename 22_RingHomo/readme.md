@@ -56,19 +56,19 @@ tags:
 
 </details>
 
-**性质4. 理想的保持： 如果 $I$ 是 $R$ 的理想，那么 $f(I)$ 是 $S$ 的理想。** 
+**性质4. 理想的保持： 如果 $I$ 是 $R$ 的理想，那么 $f(I)$ 是 $f(R)$ 的理想。** 
 
 <details><summary>点我展开证明👀</summary>
 
 **加法子群**
 
-对于任意 $a, b \in I$，有 $f(a), f(b) \in f(I)$。根据加法同态，有 $f(a) - f(b) = f(a - b) \in f(I)$。因此 $f(I)$ 为 $S$ 的加法子群。
+对于任意 $a, b \in I$，有 $f(a), f(b) \in f(I)$。根据加法同态，有 $f(a) - f(b) = f(a - b) \in f(I)$。因此 $f(I)$ 为 $f(R)$ 的加法子群。
 
 **乘法吸收律**
 
-对于任意 $a \in I$ 和 $b \in R$，根据吸收律，有 $ab = a'$，其中 $a' \in I$。因此，对于任意 $f(a) \in f(I)$ 和 $f(b) \in S$，根据乘法同态，有 $f(a)f(b) = f(ab) = f(a') \in f(I)$。因此 $f(I)$ 满足乘法吸收律。
+对于任意 $a \in I$ 和 $b \in R$，根据吸收律，有 $ab = a'$，其中 $a' \in I$。因此，对于任意 $f(a) \in f(I)$ 和 $f(b) \in f(R)$，根据乘法同态，有 $f(a)f(b) = f(ab) = f(a') \in f(I)$。因此 $f(I)$ 满足乘法吸收律。
 
-因此 $f(I)$ 是 $S$ 的理想。证毕。
+因此 $f(I)$ 是 $f(R)$ 的理想。证毕。
 
 </details>
 
@@ -85,14 +85,6 @@ tags:
 对于任意 $r \in R$ 和 $a \in \text{ker}(f)$，即 $f(a) = 0_S$。我们考虑 $ra$，有 $f(ra) = f(r)f(a) = f(r) \cdot 0_S = 0_S$。因此，$ra$ 属于 $\text{ker}(f)$，满足乘法吸收律。
 
 因此同态核 $\text{Ker}(f)$ 是 $R$ 的理想，证毕。
-
-</details>
-
-**性质6. 同态像 $\text{Im}(f)$ 是 $S$ 的理想。** 
-
-<details><summary>点我展开证明👀</summary>
-
-根据定义 $\text{Im}(f) = f(R)$，又因为环 $R$ 是自身的平凡理想，根据理想的保持，同态像 $\text{Im}(f) = f(R)$ 是环 $S$ 的理想。证毕。
 
 </details>
 
